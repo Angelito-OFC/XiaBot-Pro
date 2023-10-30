@@ -197,7 +197,7 @@ const connectionOptions = {
     creds: state.creds,
     keys: makeCacheableSignalKeyStore(state.keys, pino({level: 'silent'})),
   },
-  browser: ['MichiBot', 'Safari', '1.0.0'],
+  browser: ['LudmiBot', 'Safari', '1.0.0'],
   version,
   defaultQueryTimeoutMs: undefined,
 };
@@ -380,14 +380,14 @@ global.reloadHandler = async function(restatConn) {
     conn.ev.off('creds.update', conn.credsUpdate);
   }
 
-conn.welcome = '-------------------------------------------------\nMichiBot\n│HOLA @user\n│▢𝙱𝙸𝙴𝙽𝚅𝙴𝙽𝙸𝙳@\n│▢NUMERO DE MI CREADOR\n│https://wa.me/56954390663\n│▢📚EN ESTE GRUPO PODRAS ENCONTRAR\n│▢🍀AMISTADES\n│▢🤝AMIGOS\n│▢📚DESMADRE\n│▢😇ᩭCOTORREO Y MAS\n│▢AVISO IMPORTANTE:\n𝙿𝚘𝚛 𝚏𝚊𝚟𝚘𝚛 𝙻𝚎𝚎 𝚕𝚊𝚜 𝚛𝚎𝚐𝚕𝚊𝚜 𝚍𝚎𝚕 𝚐𝚛𝚞𝚙𝚘 𝚙𝚊𝚛𝚊 𝚚𝚞𝚎 𝚎𝚟𝚒𝚝𝚎𝚜 𝚜𝚎𝚛 𝚎𝚕𝚒𝚖𝚒𝚗𝚊𝚍𝚘 𝚢 𝚎𝚟𝚒𝚝𝚎𝚜 𝚝𝚎𝚗𝚎𝚛 𝚙𝚛𝚘𝚋𝚕𝚎𝚖𝚊𝚜 𝚌𝚘𝚗 𝚌𝚛𝚎𝚊𝚍𝚘𝚛 𝚍𝚎𝚕 𝚐𝚛𝚞𝚙𝚘\n@desc\nMichiBot\n-------------------------------------------------'
+conn.welcome = '-------------------------------------------------\n𝐋𝐮𝐝𝐦𝐢𝐁𝐨𝐭\n│HOLA @user\n│▢𝙱𝙸𝙴𝙽𝚅𝙴𝙽𝙸𝙳@\n│▢NUMERO DE MI PROPIETARIO\nwa.me/5492915267624\n│▢NUMERO DE MI CREADOR\n│https://wa.me/56954390663\n│▢📚EN ESTE GRUPO PODRAS ENCONTRAR\n│▢🍀AMISTADES\n│▢🤝AMIGOS\n│▢📚DESMADRE\n│▢😇ᩭCOTORREO Y MAS\n│▢AVISO IMPORTANTE:\n𝙿𝚘𝚛 𝚏𝚊𝚟𝚘𝚛 𝙻𝚎𝚎 𝚕𝚊𝚜 𝚛𝚎𝚐𝚕𝚊𝚜 𝚍𝚎𝚕 𝚐𝚛𝚞𝚙𝚘 𝚙𝚊𝚛𝚊 𝚚𝚞𝚎 𝚎𝚟𝚒𝚝𝚎𝚜 𝚜𝚎𝚛 𝚎𝚕𝚒𝚖𝚒𝚗𝚊𝚍𝚘 𝚢 𝚎𝚟𝚒𝚝𝚎𝚜 𝚝𝚎𝚗𝚎𝚛 𝚙𝚛𝚘𝚋𝚕𝚎𝚖𝚊𝚜 𝚌𝚘𝚗 𝚌𝚛𝚎𝚊𝚍𝚘𝚛 𝚍𝚎𝚕 𝚐𝚛𝚞𝚙𝚘\n@desc\n𝐋𝐮𝐝𝐦𝐢𝐁𝐨𝐭\n-------------------------------------------------'
 conn.bye = '-------------------------------------------------\n@user\n𝐒𝐚𝐥𝐢ó 𝐝𝐞𝐥 𝐠𝐫𝐮𝐩𝐨 𝐧𝐢 𝐦𝐨𝐝𝐨 𝐪𝐮𝐞 𝐭𝐞 𝐯𝐚𝐲𝐚 𝐛𝐢𝐞𝐧 𝐇𝐚𝐬𝐭𝐚 𝐥𝐚 𝐩𝐫ó𝐱𝐢𝐦𝐚 𝐪𝐮𝐞 𝐃𝐢𝐨𝐬 𝐭𝐞 𝐛𝐞𝐧𝐝𝐢𝐠𝐚🌱\n\n *HE LEFT THE GROUP NO WAY THAT YOU GO WELL UNTIL THE NEXT TIME GOD BLESS YOU*\nMichiBot\n-------------------------------------------------'
-conn.spromote = '*𝐌𝐈𝐂𝐇𝐈 𝐁𝐎𝐓 𝐀𝐍𝐔𝐍𝐂𝐈𝐀 𝐐𝐔𝐄  @user 𝐒𝐄 𝐒𝐔𝐌𝐀 𝐀𝐋 𝐆𝐑𝐔𝐏𝐎 𝐃𝐄 𝐀𝐃𝐌𝐈𝐍𝐒*\n\n*𝐀𝐃𝐌𝐈𝐍𝐒 𝐆𝐑𝐎𝐔𝐏 𝐉𝐎𝐈𝐍𝐒!!*'
-conn.sdemote = '*𝐌𝐈𝐂𝐇𝐈 𝐁𝐎𝐓 𝐀𝐍𝐔𝐍𝐂𝐈𝐀 𝐐𝐔𝐄 @user 𝐀𝐁𝐀𝐍𝐃𝐎𝐍𝐀 𝐄𝐋 𝐆𝐑𝐔𝐏𝐎 𝐃𝐄 𝐀𝐃𝐌𝐈𝐍𝐒 !!\n\n*𝐀𝐁𝐀𝐍𝐃𝐎𝐍𝐄𝐃 𝐓𝐇𝐄 𝐀𝐃𝐌𝐈𝐍 𝐆𝐑𝐎𝐔𝐏*'
+conn.spromote = '*𝐋𝐔𝐃𝐌𝐈 𝐁𝐎𝐓 𝐀𝐍𝐔𝐍𝐂𝐈𝐀 𝐐𝐔𝐄  @user 𝐒𝐄 𝐒𝐔𝐌𝐀 𝐀𝐋 𝐆𝐑𝐔𝐏𝐎 𝐃𝐄 𝐀𝐃𝐌𝐈𝐍𝐒*\n\n*𝐀𝐃𝐌𝐈𝐍𝐒 𝐆𝐑𝐎𝐔𝐏 𝐉𝐎𝐈𝐍𝐒!!*'
+conn.sdemote = '*𝐋𝐔𝐃𝐌𝐈 𝐁𝐎𝐓 𝐀𝐍𝐔𝐍𝐂𝐈𝐀 𝐐𝐔𝐄 @user 𝐀𝐁𝐀𝐍𝐃𝐎𝐍𝐀 𝐄𝐋 𝐆𝐑𝐔𝐏𝐎 𝐃𝐄 𝐀𝐃𝐌𝐈𝐍𝐒 !!\n\n*𝐀𝐁𝐀𝐍𝐃𝐎𝐍𝐄𝐃 𝐓𝐇𝐄 𝐀𝐃𝐌𝐈𝐍 𝐆𝐑𝐎𝐔𝐏*'
 conn.sDesc = '*𝐒𝐄 𝐇𝐀 𝐌𝐎𝐃𝐈𝐅𝐈𝐂𝐀𝐃𝐎 𝐋𝐀 𝐃𝐄𝐒𝐂𝐑𝐈𝐏𝐂𝐈𝐎𝐍 𝐃𝐄𝐋 𝐆𝐑𝐔𝐏𝐎*\n\n *𝐆𝐑𝐎𝐔𝐏 𝐃𝐄𝐒𝐂𝐑𝐈𝐏𝐓𝐈𝐎𝐍 𝐇𝐀𝐒 𝐁𝐄𝐄𝐍 𝐂𝐇𝐀𝐍𝐆𝐄𝐃*\n*𝐍𝐔𝐄𝐕𝐀 𝐃𝐄𝐒𝐂𝐑𝐈𝐏𝐂𝐈𝐎𝐍:* @desc'
-conn.sSubject = '*𝐌𝐈𝐂𝐇𝐈 𝐁𝐎𝐓 𝐀𝐍𝐔𝐍𝐂𝐈𝐀 𝐐𝐔𝐄 𝐒𝐄 𝐇𝐀 𝐌𝐎𝐃𝐈𝐅𝐈𝐂𝐀𝐃𝐎 𝐄𝐋 𝐍𝐎𝐌𝐁𝐑𝐄 𝐃𝐄𝐋 𝐆𝐑𝐔𝐏𝐎\n\n*𝐓𝐇𝐄 𝐍𝐀𝐌𝐄 𝐎𝐅 𝐓𝐇𝐄 𝐆𝐑𝐎𝐔𝐏 𝐇𝐀𝐒 𝐁𝐄𝐄𝐍 𝐂𝐇𝐀𝐍𝐆𝐄𝐃*\n*𝐍𝐔𝐄𝐕𝐎 𝐍𝐎𝐌𝐁𝐑𝐄:* @subject'
-conn.sIcon = '*𝐌𝐈𝐂𝐇𝐈 𝐁𝐎𝐓 𝐀𝐍𝐔𝐍𝐂𝐈𝐀 𝐐𝐔𝐄 𝐒𝐄 𝐇𝐀 𝐂𝐀𝐌𝐁𝐈𝐀𝐃𝐎 𝐋𝐀 𝐅𝐎𝐓𝐎 𝐃𝐄𝐋 𝐆𝐑𝐔𝐏𝐎!!!*\n\n\n*𝐆𝐑𝐎𝐔𝐏 𝐏𝐇𝐎𝐓𝐎 𝐇𝐀𝐒 𝐁𝐄𝐄𝐍 𝐂𝐇𝐀𝐍𝐆𝐄𝐃*'
-conn.sRevoke = '*𝐌𝐈𝐂𝐇𝐈 𝐁𝐎𝐓 𝐀𝐍𝐔𝐍𝐂𝐈𝐀 𝐐𝐔𝐄 𝐒𝐄 𝐇𝐀 𝐀𝐂𝐓𝐔𝐀𝐋𝐈𝐙𝐀𝐃𝐎 𝐄𝐋 𝐋𝐈𝐍𝐊 𝐃𝐄𝐋 𝐆𝐑𝐔𝐏𝐎!!!\n\n*𝐓𝐇𝐄 𝐆𝐑𝐎𝐔𝐏 𝐋𝐈𝐍𝐊 𝐇𝐀𝐒 𝐁𝐄𝐄𝐍 𝐔𝐏𝐃𝐀𝐓𝐄𝐃*\n*𝐋𝐈𝐍𝐊 𝐍𝐔𝐄𝐕𝐎:* @revoke'
+conn.sSubject = '*𝐋𝐔𝐃𝐌𝐈 𝐁𝐎𝐓 𝐀𝐍𝐔𝐍𝐂𝐈𝐀 𝐐𝐔𝐄 𝐒𝐄 𝐇𝐀 𝐌𝐎𝐃𝐈𝐅𝐈𝐂𝐀𝐃𝐎 𝐄𝐋 𝐍𝐎𝐌𝐁𝐑𝐄 𝐃𝐄𝐋 𝐆𝐑𝐔𝐏𝐎\n\n*𝐓𝐇𝐄 𝐍𝐀𝐌𝐄 𝐎𝐅 𝐓𝐇𝐄 𝐆𝐑𝐎𝐔𝐏 𝐇𝐀𝐒 𝐁𝐄𝐄𝐍 𝐂𝐇𝐀𝐍𝐆𝐄𝐃*\n*𝐍𝐔𝐄𝐕𝐎 𝐍𝐎𝐌𝐁𝐑𝐄:* @subject'
+conn.sIcon = '*𝐋𝐔𝐃𝐌𝐈 𝐁𝐎𝐓 𝐀𝐍𝐔𝐍𝐂𝐈𝐀 𝐐𝐔𝐄 𝐒𝐄 𝐇𝐀 𝐂𝐀𝐌𝐁𝐈𝐀𝐃𝐎 𝐋𝐀 𝐅𝐎𝐓𝐎 𝐃𝐄𝐋 𝐆𝐑𝐔𝐏𝐎!!!*\n\n\n*𝐆𝐑𝐎𝐔𝐏 𝐏𝐇𝐎𝐓𝐎 𝐇𝐀𝐒 𝐁𝐄𝐄𝐍 𝐂𝐇𝐀𝐍𝐆𝐄𝐃*'
+conn.sRevoke = '*𝐋𝐔𝐃𝐌𝐈 𝐁𝐎𝐓 𝐀𝐍𝐔𝐍𝐂𝐈𝐀 𝐐𝐔𝐄 𝐒𝐄 𝐇𝐀 𝐀𝐂𝐓𝐔𝐀𝐋𝐈𝐙𝐀𝐃𝐎 𝐄𝐋 𝐋𝐈𝐍𝐊 𝐃𝐄𝐋 𝐆𝐑𝐔𝐏𝐎!!!\n\n*𝐓𝐇𝐄 𝐆𝐑𝐎𝐔𝐏 𝐋𝐈𝐍𝐊 𝐇𝐀𝐒 𝐁𝐄𝐄𝐍 𝐔𝐏𝐃𝐀𝐓𝐄𝐃*\n*𝐋𝐈𝐍𝐊 𝐍𝐔𝐄𝐕𝐎:* @revoke'
 
   conn.handler = handler.handler.bind(global.conn);
   conn.participantsUpdate = handler.participantsUpdate.bind(global.conn);
