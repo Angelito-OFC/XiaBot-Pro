@@ -1,4 +1,4 @@
-const toxicRegex = /SJADJASDJASJGFHJDFKHGFDJKGDFHKGDFJKHGDKAHSKIDHUITOAIDXFOKJNFVBNCM,VBNCV,MB6/i;
+const toxicRegex = /SJADJASDJASJGFHJDFKHGFDJKGDFHKGDaFJKHGDKAHSKIDHUITOAIDXFOKJNFVBNCM,VBNCV,MB6/i;
 
 export async function before(m, {isAdmin, isBotAdmin, isOwner}) {
   if (m.isBaileys && m.fromMe) {
