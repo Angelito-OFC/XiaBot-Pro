@@ -7,9 +7,9 @@ const handler = async (m, {conn, args, usedPrefix, command}) => {
     'abrir': 'not_announcement',
     'cerrar': 'announcement',
   }[(args[0] || '')];
+const taguser = '@' + m.sender.split('@s.whatsapp.net')[0];
   if (isClose === undefined) {
     throw `
-const taguser = '@' + m.sender.split('@s.whatsapp.net')[0];
 ‎ ‎ ‎ ‎ ‎ ‎ ❱❱ 𝘼  𝙑  𝙄  𝙎  𝙊 ❰❰
 
 » 𝘾𝙤𝙢𝙖𝙣𝙙𝙤 𝙀𝙧𝙧𝙤𝙣𝙚𝙤.
