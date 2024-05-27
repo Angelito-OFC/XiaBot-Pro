@@ -24,7 +24,6 @@ _${usedPrefix + command} cerrar_
   {m.reply('» 𝙂𝙧𝙪𝙥𝙤 𝘾𝙤𝙣𝙛𝙞𝙜𝙪𝙧𝙖𝙙𝙤 𝘾𝙤𝙧𝙧𝙚𝙘𝙩𝙖𝙢𝙚𝙣𝙩𝙚');}
 };
 handler.help = ['group open / close', 'grupo abrir / cerrar'];
-handler.tags = ['0@s.whatsapp.net'];
 handler.command = /^(group|grupo)$/i;
 handler.admin = true;
 handler.botAdmin = true;
