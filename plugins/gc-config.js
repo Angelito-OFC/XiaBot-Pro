@@ -9,7 +9,7 @@ const handler = async (m, {conn, args, usedPrefix, command}) => {
   }[(args[0] || '')];
   if (isClose === undefined) {
     throw `
-‎ ‎ ‎ ‎ ‎ ‎ ❱❱ 𝘼 𝙑 𝙄 𝙎 𝙊 ❰❰
+‎ ‎ ‎ ‎ ‎ ‎ ❱❱ 𝘼  𝙑  𝙄  𝙎  𝙊 ❰❰
 
 » 𝘾𝙤𝙢𝙖𝙣𝙙𝙤 𝙀𝙧𝙧𝙤𝙣𝙚𝙤.
 
