@@ -1,3 +1,4 @@
+const taguser = '@' + m.sender.split('@s.whatsapp.net')[0];
 const handler = async (m, {conn, args, usedPrefix, command}) => {
   const isClose = { // Switch Case Like :v
     'open': 'not_announcement',
