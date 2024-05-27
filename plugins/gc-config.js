@@ -6,8 +6,7 @@ const handler = async (m, {conn, args, usedPrefix, command}) => {
     'cerrado': 'announcement',
     'abrir': 'not_announcement',
     'cerrar': 'announcement',
-  }[(args[0] || '')];
-let fkontak = { "key": { "participants":"0@s.whatsapp.net", "remoteJid": "status@broadcast", "fromMe": false, "id": "Halo" }, "message": { "contactMessage": { "vcard": `BEGIN:VCARD\nVERSION:3.0\nN:Sy;Bot;;;\nFN:y\nitem1.TEL;waid=${m.sender.split('@')[0]}:${m.sender.split('@')[0]}\nitem1.X-ABLabel:Ponsel\nEND:VCARD` }}, "participant": "0@s.whatsapp.net" }
+  }[(args[0] || '')] + '@s.whatsapp.net';
   if (isClose === undefined) {
     throw `
 ‎ ‎ ‎ ‎ ‎ ‎ ❱❱ 𝘼  𝙑  𝙄  𝙎  𝙊 ❰❰
@@ -20,7 +19,7 @@ _${usedPrefix + command} abrir_
 _${usedPrefix + command} cerrar_
 `.trim();
   }
-  await conn.groupSettingUpdate(m.chat, isClose) + '@s.whatsapp.net';
+  await conn.groupSettingUpdate(m.chat, isClose);
   {m.reply('» 𝙂𝙧𝙪𝙥𝙤 𝘾𝙤𝙣𝙛𝙞𝙜𝙪𝙧𝙖𝙙𝙤 𝘾𝙤𝙧𝙧𝙚𝙘𝙩𝙖𝙢𝙚𝙣𝙩𝙚');}
 };
 handler.help = ['group open / close', 'grupo abrir / cerrar'];
