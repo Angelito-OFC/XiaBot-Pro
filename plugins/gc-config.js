@@ -8,7 +8,8 @@ const handler = async (m, {conn, args, usedPrefix, command}) => {
     'cerrar': 'announcement',
   }[(args[0] || '')];
   if (isClose === undefined) {
-    throw `   ❱❱ 𝘼 𝙑 𝙄 𝙎 𝙊 ❰❰
+    throw `
+         ❱❱ 𝘼 𝙑 𝙄 𝙎 𝙊 ❰❰
 
 » 𝘾𝙤𝙢𝙖𝙣𝙙𝙤 𝙀𝙧𝙧𝙤𝙣𝙚𝙤.
 
