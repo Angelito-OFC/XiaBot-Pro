@@ -217,7 +217,19 @@ const handler = async (m, {conn, usedPrefix, command, args, isOwner, isAdmin, is
         global.dfail('owner', m, conn);
         throw false;
       }
-      chat.detect2 = isEnable;
+      chat.detect3 = isEnable;
+      break;
+    case 'detect3':
+      if (!m.isGroup) {
+        if (!isOwner) {
+          global.dfail('group', m, conn);
+          throw false;
+        }
+      } else if (!isAdmin) {
+        global.dfail('owner', m, conn);
+        throw false;
+      }
+      chat.detect3 = isEnable;
       break;
     case 'simsimi':
       if (m.isGroup) {
