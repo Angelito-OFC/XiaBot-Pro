@@ -1,126 +1,80 @@
-import fetch from "node-fetch";
 import ytdl from 'ytdl-core';
-import yts from 'youtube-yts';
+import yts from 'yt-search';
 import fs from 'fs';
 import { pipeline } from 'stream';
 import { promisify } from 'util';
 import os from 'os';
-
 const streamPipeline = promisify(pipeline);
 
-const handler = async (m, { conn, command, text, args, usedPrefix }) => {
-    if (!text) throw `𝙿𝚛𝚘𝚙𝚘𝚛𝚌𝚒𝚘𝚗𝚊 𝚞𝚗 𝚝𝚎𝚡𝚝𝚘 𝚙𝚊𝚛𝚊 𝚋𝚞𝚜𝚌𝚊𝚛. 𝙴𝙹𝙴𝙼𝙿𝙻𝙾: *${usedPrefix + command}* 𝙸 𝚊𝚖 𝙼𝚊𝚌𝚑𝚒𝚗𝚎`;
-    conn.REMPLAYER = conn.REMPLAYER ? conn.REMPLAYER : {};
-    await conn.reply(m.chat, ' _𝓒𝓐𝓡𝓖𝓐𝓝𝓓𝓞..._▰▰▰▱▱▱▱▱', m);
-    const result = await searchAndDownloadMusic(text);
-    const infoText = ` ≫ ──── ≪『𝚁𝙴𝙼-𝙱𝙾𝚃』≫ ──── ≪ ▶︎ •၊၊||၊|။||||။‌‌‌‌‌၊|• 0:10\n\n[‹𝟹 𝚁𝙴𝚂𝙿𝙾𝙽𝙳𝙴 𝙲𝙾𝙽 𝙴𝙻 𝙽𝚄𝙼𝙴𝚁𝙾 𝙳𝙴 𝙻𝙰 𝙻𝙸𝚂𝚃𝙰 𝚀𝚄𝙴 𝙼𝙸𝚁𝙰𝚂 𝙰𝙱𝙰𝙹𝙾 𝙿𝙰𝚁𝙰 𝚂𝙰𝙱𝙴𝚁 𝚃𝚄 𝙳𝙴𝚂𝙲𝙰𝚁𝙶𝙰]\n━━━━━━━━━━━━━━━━━━━━\n`;
+var handler = async (m, { conn, command, text, usedPrefix }) => {
+  if (!text) throw `Use example ${usedPrefix}${command} naruto blue bird`;
 
-    const orderedLinks = result.allLinks.map((link, index) => {
-        const sectionNumber = index + 1;
-        const { title, url } = link;
-        return `*${sectionNumber}.* ${title}`;
-    });
+  let search = await yts(text);
+  let vid = search.videos[0];
+  if (!search) throw 'Video Not Found, Try Another Title';
+  let { title, thumbnail, timestamp, views, ago, url } = vid;
+  let wm = 'á´˜ ÊŸ á´€ Ê  á´ á´œ s Éª á´„  Ê™ Ê  Ò“ á´œ Ê€ Éª É´ á´€';
 
-    const orderedLinksText = orderedLinks.join("\n\n");
-    const fullText = `${infoText}${orderedLinksText}`;
-    const { key } = await conn.reply(m.chat, fullText, m);
-    conn.REMPLAYER[m.sender] = {
-        result,
-        key,
-        timeout: setTimeout(() => {
-            conn.sendMessage(m.chat, { delete: key });
-            delete conn.REMPLAYER[m.sender];
-        }, 150 * 1000),
-    };
+  let captvid = `â•­â”€â”€â”€â”€ ã€” Y O U T U B E ã€• â”€â¬£
+  â¬¡ Title: ${title}
+  â¬¡ Duration: ${timestamp}
+  â¬¡ Views: ${views}
+  â¬¡ Upload: ${ago}
+  â¬¡ Link: ${url}
+â•°â”€â”€â”€â”€â”€â”€â”€â”€â¬£
 
-    await addDownloadEmojis(conn, m.chat, key);
-};
+_Jan Lupa Subscribe YT Ownerku Juga Ya kak, HeeðŸ˜†_
+ð—Ÿð—¶ð—»ð—¸ ð—¬ð—§ ð—¢ð˜„ð—»ð—²ð—¿ð—žð˜‚ ðŸ˜ƒðŸ‘‡
+${syt}
+Â© Ò“á´œÊ€ÉªÉ´á´€ á´€Éª ðŸ¤ðŸ¢ðŸ¤ðŸ¦`;
 
-handler.before = async (m, { conn }) => {
-    conn.REMPLAYER = conn.REMPLAYER ? conn.REMPLAYER : {};
-    if (m.isBaileys || !(m.sender in conn.REMPLAYER)) return;
-    const { result, key, timeout } = conn.REMPLAYER[m.sender];
+  conn.sendMessage(m.chat, { image: { url: thumbnail }, caption: captvid, viewOnce: false, footer: author }, { quoted: m });
 
-    if (!m.quoted || m.quoted.id !== key.id || !m.text) return;
-    const choice = m.text.trim();
-    const inputNumber = Number(choice);
-    if (inputNumber >= 1 && inputNumber <= result.allLinks.length) {
-        const selectedUrl = result.allLinks[inputNumber - 1].url;
-        let title = generateRandomName();
-        const audioStream = ytdl(selectedUrl, {
-            filter: 'audioonly',
-            quality: 'highestaudio',
-        });
 
-        const tmpDir = os.tmpdir();
-        const writableStream = fs.createWriteStream(`${tmpDir}/${title}.mp3`);
-        await streamPipeline(audioStream, writableStream);
+  const audioStream = ytdl(url, {
+    filter: 'audioonly',
+    quality: 'highestaudio',
+  });
 
-        const doc = {
-            audio: {
-                url: `${tmpDir}/${title}.mp3`
-            },
-            mimetype: 'audio/mpeg',
-            ptt: false,
-            waveform: [100, 0, 0, 0, 0, 0, 100],
-            fileName: `${title}`,
-        };
+  // Create writable stream in the temporary directory
+  const writableStream = fs.createWriteStream(`./tmp/${title}.mp3`);
 
-        await conn.sendMessage(m.chat, doc, {
-            quoted: m
-        });
+  // Start the download
+  await streamPipeline(audioStream, writableStream);
+  let doc = {
+    audio: {
+      url: `./tmp/${title}.mp3`
+    },
+    mimetype: 'audio/mp4',
+    fileName: `${title}`,
+    contextInfo: {
+      externalAdReply: {
+        showAdAttribution: true,
+        mediaType: 2,
+        mediaUrl: url,
+        title: title,
+        body: wm,
+        sourceUrl: url,
+        thumbnail: await (await conn.getFile(thumbnail)).data
+      }
+    }
+  };
 
-        await addDownloadEmojis(conn, m.chat, m.quoted.id);
+  await conn.sendMessage(m.chat, doc, { quoted: m });
+
+  // Delete the audio file
+  fs.unlink(`./tmp/${title}.mp3`, (err) => {
+    if (err) {
+      console.error(`Failed to delete audio file: ${err}`);
     } else {
-        m.reply("𝚂𝙴𝙻𝙴𝙲𝙸𝙾𝙽𝙰 𝚄𝙽 𝙽𝚄𝙼𝙴𝚁𝙾 𝙳𝙴 𝙻𝙰 𝙻𝙸𝚂𝚃𝙰 𝙳𝙴 𝙰𝚁𝚁𝙸𝙱𝙰.\n𝙳𝙴 𝟷 𝙰  " + result.allLinks.length);
+      console.log(`Deleted audio file: ${tmpDir}/${title}.mp3`);
     }
+  });
 };
 
-handler.help = ["play"];
-handler.tags = ["downloader"];
-handler.command = /^(play)$/i;
-handler.limit = true;
+handler.help = ['play'].map((v) => v + ' <query>');
+handler.tags = ['downloader'];
+handler.command = /^(play|song|lagu|music)$/i;
+
+
 export default handler;
-
-async function addDownloadEmojis(conn, chatId, messageId) {
-    const imageUrl = 'https://imgur.com/a/0sqJkqr'; 
-    const imageCaption = 'Descargar'; 
-    const downloadButton = { buttonId: 'download', buttonText: imageCaption, description: 'Presiona el botón para descargar', buttonType: 1 }; // Definición del botón
-    await conn.sendButton(chatId, imageUrl, 'Haz clic aquí para descargar', imageCaption, messageId, { thumbnail: null }).catch(() => {});
-}
-
-async function searchAndDownloadMusic(query) {
-    try {
-        const { videos } = await yts(query);
-        if (!videos.length) return "Lo siento, no se encontraron resultados de video para esta búsqueda.";
-
-        const allLinks = videos.map(video => ({
-            title: video.title,
-            url: video.url,
-        }));
-
-        const jsonData = {
-            title: videos[0].title,
-            description: videos[0].description,
-            duration: videos[0].duration,
-            author: videos[0].author.name,
-            allLinks: allLinks,
-            videoUrl: videos[0].url,
-            thumbnail: videos[0].thumbnail,
-        };
-
-        return jsonData;
-    } catch (error) {
-        return "Error: " + error.message;
-    }
-}
-
-function generateRandomName() {
-    const adjectives = ["feliz", "triste", "divertido", "valiente", "inteligente", "amable", "tonto", "sabio", "gentil", "audaz"];
-    const nouns = ["gato", "perro", "pájaro", "árbol", "río", "montaña", "sol", "luna", "estrella", "nube"];
-
-    const randomAdjective = adjectives[Math.floor(Math.random() * adjectives.length)];
-    const randomNoun = nouns[Math.floor(Math.random() * nouns.length)];
-
-    return randomAdjective + "-" + randomNoun;
-}
