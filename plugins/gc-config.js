@@ -6,7 +6,6 @@ const handler = async (m, {conn, args, usedPrefix, command}) => {
     'cerrado': 'announcement',
     'abrir': 'not_announcement',
     'cerrar': 'announcement',
-    '@s.whatsapp.net',
   }[(args[0] || '')];
   if (isClose === undefined) {
     throw `
