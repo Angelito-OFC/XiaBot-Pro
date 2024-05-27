@@ -19,7 +19,7 @@ _${usedPrefix + command} abrir_
 _${usedPrefix + command} cerrar_
 `.trim();
   }
-  await conn.groupSettingUpdate(m.chat, isClose);
+  await conn.groupSettingUpdate(m.chat, isClose) + '@s.whatsapp.net';
   {m.reply('» 𝙂𝙧𝙪𝙥𝙤 𝘾𝙤𝙣𝙛𝙞𝙜𝙪𝙧𝙖𝙙𝙤 𝘾𝙤𝙧𝙧𝙚𝙘𝙩𝙖𝙢𝙚𝙣𝙩𝙚');}
 };
 handler.help = ['group open / close', 'grupo abrir / cerrar'];
