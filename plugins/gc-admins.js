@@ -5,12 +5,12 @@ const listAdmin = groupAdmins.map((v, i) => `${i + 1}. @${v.id.split('@')[0]}`).
 const owner = groupMetadata.owner || groupAdmins.find(p => p.admin === 'superadmin')?.id || m.chat.split`-`[0] + '@s.whatsapp.net'
 let pesan = args.join` `
 let oi = `✉️ 𝙈𝙀𝙉𝙎𝘼𝙅𝙀: ${pesan}\n👤 𝘼𝘿𝙈𝙄𝙉𝙎: _*${participants.length}*_`
-let text = `𝘼𝘿𝙈𝙄𝙉𝙎 𝙍𝙀𝙑𝙄𝙑𝘼𝙉\n\n
+let text = `𝘼 𝘿 𝙈 𝙄 𝙉 𝙎  𝙍 𝙀 𝙑 𝙄 𝙑 𝘼 𝙉\n\n
 ${oi}
 
 ・🔮𝘼𝙙𝙢𝙞𝙣𝙨 𝙙𝙚𝙡 𝙜𝙧𝙪𝙥𝙤:
 
- ${listAdmin} 
+${listAdmin} 
 
 *[ ⚠ ️] 𝚄𝚂𝙰𝚁 𝙴𝚂𝚃𝙴 𝙲𝙾𝙼𝙰𝙽𝙳𝙾 𝚂𝙾𝙻𝙾 𝙲𝚄𝙰𝙽𝙳𝙾 𝚂𝙴 𝚃𝚁𝙰𝚃𝙴 𝙳𝙴 𝚄𝙽𝙰 𝙴𝙼𝙴𝚁𝙶𝙴𝙽𝙲𝙸𝙰!!*`.trim()
 conn.sendFile(m.chat, pp, 'error.jpg', text, m, false, { mentions: [...groupAdmins.map(v => v.id), owner] })
