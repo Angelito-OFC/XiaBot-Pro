@@ -28,18 +28,18 @@ if (!db.data.chats[m.chat].modohorny && m.isGroup) throw `*[❗] Los comandos +1
 ┏━━━━━━━━━━━━━━━━┓
 ┃ *< MENU+18 />*
 ┃≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡┃
-┣ ඬ⃟ 🔞 _${usedPrefix}pack_
-┣ ඬ⃟ 🔞 _${usedPrefix}pack2_
-┣ ඬ⃟ 🔞 _${usedPrefix}pack3_
-┣ ඬ⃟ 🔞 _${usedPrefix}videoxxx_
-┣ ඬ⃟ 🔞 _${usedPrefix}videolesbixxx_
-┣ ඬ⃟ 🔞 _${usedPrefix}tetas_
-┣ ඬ⃟ 🔞 _${usedPrefix}booty_
-┣ ඬ⃟ 🔞 _${usedPrefix}ecchi_
-┣ ඬ⃟ 🔞 _${usedPrefix}furro_
-┣ ඬ⃟ 🔞 _${usedPrefix}imagenlesbians_
-┣ ඬ⃟ 🔞 _${usedPrefix}panties_
-┣ ඬ⃟ 🔞 _${usedPrefix}pene_
+pack
+pack2
+pack3
+videoxxx
+videolesbixxx
+tetas
+booty
+ecchi
+furro
+imagenlesbians
+panties
+pene
 ┣ ඬ⃟ 🔞 _${usedPrefix}porno_
 ┣ ඬ⃟ 🔞 _${usedPrefix}randomxxx_
 ┣ ඬ⃟ 🔞 _${usedPrefix}pechos_
