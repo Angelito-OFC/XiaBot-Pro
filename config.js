@@ -10,7 +10,7 @@ import moment from 'moment-timezone';
 global.botnumber = ""
 
 global.owner = [
-  ['51955095498', 'Richetti', true],
+  ['59168683798', 'Richetti', true],
   ['56945086055', '@ceogeripium.dzn', true],
   ['51933348947', 'Richetti2', true],
   ['56954390663', 'GeriPium', true],
