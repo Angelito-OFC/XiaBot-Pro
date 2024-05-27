@@ -4,6 +4,7 @@ const handler = async function(m, {conn, text, usedPrefix, command}) {
   const user = global.db.data.users[m.sender];
   const name2 = conn.getName(m.sender);
   const pp = imagen4;
+let fkontak = { "key": { "participants":"0@s.whatsapp.net", "remoteJid": "status@broadcast", "fromMe": false, "id": "Halo" }, "message": { "contactMessage": { "vcard": `BEGIN:VCARD\nVERSION:3.0\nN:Sy;Bot;;;\nFN:y\nitem1.TEL;waid=${m.sender.split('@')[0]}:${m.sender.split('@')[0]}\nitem1.X-ABLabel:Ponsel\nEND:VCARD` }}, "participant": "0@s.whatsapp.net" }
   if (user.registered === true) throw `❱❱ 𝙄 𝙉 𝙁 𝙊 𝙍 𝙈 𝘼 𝘾 𝙄 𝙊 𝙉 ❰❰\n\n🔮 𝙔𝙖 𝙚𝙨𝙩𝙖𝙨 𝙧𝙚𝙜𝙞𝙨𝙩𝙧𝙖𝙙𝙤\n\n¿𝙌𝙪𝙞𝙚𝙧𝙚𝙨 𝙫𝙤𝙡𝙫𝙚𝙧 𝙖 𝙧𝙚𝙜𝙞𝙨𝙩𝙧𝙖𝙧𝙩𝙚?\n\n 🔮𝙐𝙨𝙚 𝙚𝙨𝙩𝙚 𝙘𝙤𝙢𝙖𝙣𝙙𝙤 𝙥𝙖𝙧𝙖 𝙚𝙡𝙞𝙢𝙞𝙣𝙖𝙧 𝙨𝙪 𝙧𝙚𝙜𝙞𝙨𝙩𝙧𝙤\n*${usedPrefix}unreg* <Número de serie>`;
   if (!Reg.test(text)) throw `❱❱ 𝙄 𝙉 𝙁 𝙊 𝙍 𝙈 𝘼 𝘾 𝙄 𝙊 𝙉 ❰❰\n\n🔮 𝙁𝙤𝙧𝙢𝙖𝙩𝙤 𝙞𝙣𝙘𝙤𝙧𝙧𝙚𝙘𝙩𝙤\n\n» 𝙐𝙨𝙚 𝙚𝙡 𝙘𝙤𝙢𝙖𝙣𝙙𝙤: 𝘌𝘫𝘦𝘮𝘱𝘭𝘰: .𝘳𝘦𝘨 𝘯𝘰𝘮𝘣𝘳𝘦.𝘦𝘥𝘢𝘥\n𝘌𝘫𝘦𝘮𝘱𝘭𝘰: .𝘳𝘦𝘨 𝘈𝘯𝘨𝘦𝘭𝘪𝘵𝘰.18`;
   let [_, name, splitter, age] = text.match(Reg);
