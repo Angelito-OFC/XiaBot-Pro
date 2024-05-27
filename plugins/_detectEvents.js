@@ -7,59 +7,13 @@
 import {WAMessageStubType} from '@whiskeysockets/baileys';
 import fetch from 'node-fetch';
 
-export async function before(m, {conn, participants}) {
-  if (!m.messageStubType || !m.isGroup) return !0;
+export async function before(m, { conn, participants}) {
+if (!m.messageStubType || !m.isGroup) return
   const groupName = (await conn.groupMetadata(m.chat)).subject;
-  const groupAdmins = participants.filter((p) => p.admin);
-  const pp = await conn.profilePictureUrl(m.chat, 'image').catch((_) => null) || './src/avatar_contact.png';
-  const img = await (await fetch(pp)).buffer();
-  const chat = global.db.data.chats[m.chat];
-  const mentionsString = [m.sender, m.messageStubParameters[0], ...groupAdmins.map((v) => v.id)];
-  const mentionsContentM = [m.sender, m.messageStubParameters[0]];
-  const fkontak2 = {'key': {'participants': '0@s.whatsapp.net', 'remoteJid': 'status@broadcast', 'fromMe': false, 'id': 'Halo'}, 'message': {'contactMessage': {'vcard': `BEGIN:VCARD\nVERSION:3.0\nN:Sy;Bot;;;\nFN:y\nitem1.TEL;waid=${m.sender.split('@')[0]}:${m.sender.split('@')[0]}\nitem1.X-ABLabel:Ponsel\nEND:VCARD`}}, 'participant': '0@s.whatsapp.net'};
-
-  if (chat.detect2 && m.messageStubType == 27) {
-    let txt3 = `*Recientemente se ha incorporado al grupo un nuevo miembro.*\n\n`;
-    txt3 += `*◦  Grupo:* ${groupName}\n`;
-    if (!m.sender.endsWith('@g.us')) {
-      txt3 += `*◦  Se añadió a:* @${m.messageStubParameters[0].split`@`[0]}\n`;
-      txt3 += `*◦  Ejecutado por:* @${m.sender.split`@`[0]}`;
-    } else {
-      txt3 += `*◦  Se añadió:* @${m.messageStubParameters[0].split`@`[0]}\n`;
-    }
-    await conn.sendMessage(m.chat, {image: img, caption: txt3, mentions: mentionsContentM}, {quoted: fkontak2});
-  }
-
-  if (chat.detect2 && m.messageStubType == 28) {
-    let txt4 = `*Recientemente se ha eliminado un miembro del grupo.*\n\n`;
-    txt4 += `*◦  Grupo:* ${groupName}\n`;
-    if (!m.sender.endsWith('@g.us')) {
-      txt4 += `*◦  Se eliminó a:* @${m.messageStubParameters[0].split`@`[0]}\n`;
-      txt4 += `*◦  Ejecutado por:* @${m.sender.split`@`[0]}`;
-    } else {
-      txt4 += `*◦  Se eliminó a:* @${m.messageStubParameters[0].split`@`[0]}\n`;
-    }
-    await conn.sendMessage(m.chat, {image: {url: pp}, caption: txt4, mentions: mentionsContentM}, {quoted: fkontak2});
-  }
-
-  if (chat.detect2 && m.messageStubType == 32) {
-    let ax;
-    if (m.messageStubParameters[0] === m.sender) {
-      ax = 'salido';
-    } else {
-      ax = 'eliminado';
-    }
-    let txt5 = `*Recientemente se ha ${ax} un miembro del grupo.*\n\n`;
-    txt5 += `*◦  Grupo:* ${groupName}\n`;
-    if (ax === 'eliminado') {
-      txt5 += `*◦  Se eliminoó a:* @${m.messageStubParameters[0].split`@`[0]}\n`;
-      txt5 += `*◦  Ejecutado por:* @${m.sender.split`@`[0]}`;
-    } else {
-      txt5 += `*◦  Se salió:* @${m.messageStubParameters[0].split`@`[0]}\n`;
-    }
-    await conn.sendMessage(m.chat, {image: {url: pp}, caption: txt5, mentions: mentionsContentM}, {quoted: fkontak2});
-  }
-
+let usuario = `@${m.sender.split`@`[0]}`
+let fkontak = { "key": { "participants":"0@s.whatsapp.net", "remoteJid": "status@broadcast", "fromMe": false, "id": "Halo" }, "message": { "contactMessage": { "vcard": `BEGIN:VCARD\nVERSION:3.0\nN:Sy;Bot;;;\nFN:y\nitem1.TEL;waid=${m.sender.split('@')[0]}:${m.sender.split('@')[0]}\nitem1.X-ABLabel:Ponsel\nEND:VCARD` }}, "participant": "0@s.whatsapp.net" }
+let users = participants.map(u => conn.decodeJid(u.id))
+if (m.messageStubType == 21) {
 await this.sendMessage(m.chat, { text: `${usuario} 𝙃𝘼𝙎 𝘾𝘼𝙈𝘽𝙄𝘼𝘿𝙊 𝙀𝙇 𝙉𝙊𝙈𝘽𝙍𝙀́ 𝘿𝙀𝙇 𝙂𝙍𝙐𝙋𝙊 𝘼:\n\n*${m.messageStubParameters[0]}*`, mentions: [m.sender], mentions: (await conn.groupMetadata(m.chat)).participants.map(v => v.id) }, { quoted: fkontak, ephemeralExpiration: 24*60*100, disappearingMessagesInChat: 24*60*100}) 
 } else if (m.messageStubType == 22) {
 await this.sendMessage(m.chat, { text: `${usuario} 𝙃𝘼𝙎 𝘾𝘼𝙈𝘽𝙄𝘼𝘿𝙊 𝙇𝘼𝙎 𝙁𝙊𝙏𝙊 𝘿𝙀𝙇 𝙂𝙍𝙐𝙋𝙊`, mentions: [m.sender] }, { quoted: fkontak, ephemeralExpiration: 24*60*100, disappearingMessagesInChat: 24*60*100}) 
@@ -82,4 +36,3 @@ console.log({messageStubType: m.messageStubType,
 messageStubParameters: m.messageStubParameters,
 type: WAMessageStubType[m.messageStubType], 
 })}}
-} /* Cierre del comando */
