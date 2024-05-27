@@ -14,7 +14,7 @@ additionalText = '𝙓𝙞𝙖𝘽𝙤𝙩-𝙈𝘿'
 } else if (command === 'play2') {
 additionalText = 'video 🎥'}
 await conn.sendMessage(m.chat, {
-text: `*⇄ㅤ     ◁   ㅤ  ❚❚ㅤ     ▷ㅤ     ↻*
+text: ` *⇄ㅤ     ◁   ㅤ  ❚❚ㅤ     ▷ㅤ     ↻*
 03:24 ━━━━━◉─────── 06:37`, 
 contextInfo: {
 externalAdReply: {
