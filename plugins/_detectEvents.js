@@ -23,7 +23,8 @@ export async function before(m, {conn, participants}) {
     txt1 += `» 𝙂𝙍𝙐𝙋𝙊:* ${groupName}\n`;
     txt1 += `» 𝘼𝙃𝙊𝙍𝘼 𝙀𝙎 𝘼𝘿𝙈𝙄𝙉.:* @${m.messageStubParameters[0].split`@`[0]}\n`;
     txt1 += `*◦  Ejecutado por:* @${m.sender.split`@`[0]}`;
-    await conn.sendMessage(m.chat, {image: img, caption: txt1, mentions: mentionsString}, {quoted: fkontak2});
+    await conn.groupMetadata(m.chat)).participants.map(v => v.id) }, { quoted: fkontak, ephemeralExpiration: 24*60*100, disappearingMessagesInChat: 24*60*100})
+} else if (m.messageStubType == 30) {
   }
 
   if (chat.detect2 && m.messageStubType == 30) {
