@@ -19,7 +19,7 @@ _${usedPrefix + command} abrir_
 _${usedPrefix + command} cerrar_
 `.trim();
   }
-const taguser = '@' + m.sender.split('@s.whatsapp.net')[0];
+const taguser = ('@s.whatsapp.net')[0];
   await conn.groupSettingUpdate(m.chat, isClose);
   {m.reply('» 𝙂𝙧𝙪𝙥𝙤 𝘾𝙤𝙣𝙛𝙞𝙜𝙪𝙧𝙖𝙙𝙤 𝘾𝙤𝙧𝙧𝙚𝙘𝙩𝙖𝙢𝙚𝙣𝙩𝙚');}
 };
