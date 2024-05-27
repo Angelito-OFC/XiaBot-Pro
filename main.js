@@ -108,7 +108,7 @@ loadChatgptDB();
 
 /* ------------------------------------------------*/
 
-global.authFile = `MichiBot`;
+global.authFile = `XiaBot`;
 const {state, saveState, saveCreds} = await useMultiFileAuthState(global.authFile);
 const msgRetryCounterMap = (MessageRetryMap) => { };
 const msgRetryCounterCache = new NodeCache()
@@ -197,7 +197,7 @@ const connectionOptions = {
     creds: state.creds,
     keys: makeCacheableSignalKeyStore(state.keys, pino({level: 'silent'})),
   },
-  browser: ['LudmiBot', 'Safari', '1.0.0'],
+  browser: ['XiaBot', 'Safari', '1.0.0'],
   version,
   defaultQueryTimeoutMs: undefined,
 };
