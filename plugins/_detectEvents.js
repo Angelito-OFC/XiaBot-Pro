@@ -18,22 +18,6 @@ export async function before(m, {conn, participants}) {
   const mentionsContentM = [m.sender, m.messageStubParameters[0]];
   const fkontak2 = {'key': {'participants': '0@s.whatsapp.net', 'remoteJid': 'status@broadcast', 'fromMe': false, 'id': 'Halo'}, 'message': {'contactMessage': {'vcard': `BEGIN:VCARD\nVERSION:3.0\nN:Sy;Bot;;;\nFN:y\nitem1.TEL;waid=${m.sender.split('@')[0]}:${m.sender.split('@')[0]}\nitem1.X-ABLabel:Ponsel\nEND:VCARD`}}, 'participant': '0@s.whatsapp.net'};
 
-  if (chat.detect2 && m.messageStubType == 29) {
-    let txt1 = `*Recientemente se ha promovido un miembro a administrador.*\n\n`;
-    txt1 += `*◦  Grupo:* ${groupName}\n`;
-    txt1 += `*◦  Nuevo admin:* @${m.messageStubParameters[0].split`@`[0]}\n`;
-    txt1 += `*◦  Ejecutado por:* @${m.sender.split`@`[0]}`;
-    await conn.sendMessage(m.chat, {image: img, caption: txt1, mentions: mentionsString}, {quoted: fkontak2});
-  }
-
-  if (chat.detect2 && m.messageStubType == 30) {
-    let txt2 = `*Recientemente se ha degradado un administrador a miembro.*\n\n`;
-    txt2 += `*◦  Grupo:* ${groupName}\n`;
-    txt2 += `*◦  Se quitó a:* @${m.messageStubParameters[0].split`@`[0]}\n`;
-    txt2 += `*◦  Ejecutado por:* @${m.sender.split`@`[0]}`;
-    await conn.sendMessage(m.chat, {image: img, caption: txt2, mentions: mentionsString}, {quoted: fkontak2});
-  }
-
   if (chat.detect2 && m.messageStubType == 27) {
     let txt3 = `*Recientemente se ha incorporado al grupo un nuevo miembro.*\n\n`;
     txt3 += `*◦  Grupo:* ${groupName}\n`;
@@ -74,27 +58,6 @@ export async function before(m, {conn, participants}) {
       txt5 += `*◦  Se salió:* @${m.messageStubParameters[0].split`@`[0]}\n`;
     }
     await conn.sendMessage(m.chat, {image: {url: pp}, caption: txt5, mentions: mentionsContentM}, {quoted: fkontak2});
-  }
-
-  if (chat.detect2 && m.messageStubType == 26) {
-    let accion;
-    if (m.messageStubParameters[0].split`@`[0] === 'on') {
-      accion = 'cerrado';
-    } else {
-      accion = 'abierto';
-    }
-    let txt6 = `*Recientemente se han modificado los ajustes del grupo.*\n\n`;
-    txt6 += `*◦  Grupo:* ${groupName}\n`;
-    txt6 += `*◦  El grupo se ha:* ${'```' + accion + '```'}\n`;
-    txt6 += `*◦  Ejecutado por:* @${m.sender.split`@`[0]}`;
-    await conn.sendMessage(m.chat, {image: {url: pp}, caption: txt6, mentions: mentionsContentM}, {quoted: fkontak2});
-  }
-
-  if (chat.detect2 && m.messageStubType == 21) {
-    let txt7 = `*Recientemente se ha cambiado el nombre del grupo.*\n\n`;
-    txt7 += `*◦  Nuevo nombre:* ${'```' + groupName + '```'}\n`;
-    txt7 += `*◦  Ejecutado por:* @${m.sender.split`@`[0]}`;
-    await conn.sendMessage(m.chat, {image: {url: pp}, caption: txt7, mentions: mentionsContentM}, {quoted: fkontak2});
   }
 
 await this.sendMessage(m.chat, { text: `${usuario} 𝙃𝘼𝙎 𝘾𝘼𝙈𝘽𝙄𝘼𝘿𝙊 𝙀𝙇 𝙉𝙊𝙈𝘽𝙍𝙀́ 𝘿𝙀𝙇 𝙂𝙍𝙐𝙋𝙊 𝘼:\n\n*${m.messageStubParameters[0]}*`, mentions: [m.sender], mentions: (await conn.groupMetadata(m.chat)).participants.map(v => v.id) }, { quoted: fkontak, ephemeralExpiration: 24*60*100, disappearingMessagesInChat: 24*60*100}) 
