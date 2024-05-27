@@ -15,8 +15,7 @@ additionalText = '𝙓𝙞𝙖𝘽𝙤𝙩-𝙈𝘿'
 additionalText = 'video 🎥'}
 await conn.sendMessage(m.chat, {
 text: `*⇄ㅤ     ◁   ㅤ  ❚❚ㅤ     ▷ㅤ     ↻*
-03:24 ━━━━━◉─────── 06:37
-*${additionalText}*`, 
+03:24 ━━━━━◉─────── 06:37`, 
 contextInfo: {
 externalAdReply: {
 title: yt_play[0].title,
