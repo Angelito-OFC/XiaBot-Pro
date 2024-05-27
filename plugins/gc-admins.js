@@ -5,7 +5,7 @@ const listAdmin = groupAdmins.map((v, i) => `${i + 1}. @${v.id.split('@')[0]}`).
 const owner = groupMetadata.owner || groupAdmins.find(p => p.admin === 'superadmin')?.id || m.chat.split`-`[0] + '@s.whatsapp.net'
 let pesan = args.join` `
 let oi = `✉️ 𝙈𝙀𝙉𝙎𝘼𝙅𝙀: ${pesan}\n👤 𝘼𝘿𝙈𝙄𝙉𝙎: _*${participants.length}*_`
-let text = `𝘼 𝘿 𝙈 𝙄 𝙉 𝙎  𝙍 𝙀 𝙑 𝙄 𝙑 𝘼 𝙉\n\n
+let text = `*ＡＤＭＩＮＳ  ＲＥＶＩＶＡＮ*\n\n
 ${oi}
 
 ・🔮𝘼𝙙𝙢𝙞𝙣𝙨 𝙙𝙚𝙡 𝙜𝙧𝙪𝙥𝙤:
