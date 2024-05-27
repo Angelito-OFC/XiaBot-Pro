@@ -10,31 +10,31 @@ import moment from 'moment-timezone';
 global.botnumber = ""
 
 global.owner = [
-  ['59168683798', 'Richetti', true],
-  ['56945086055', '@ceogeripium.dzn', true],
-  ['51933348947', 'Richetti2', true],
-  ['56954390663', 'GeriPium', true],
-  ['5492915267624', 'LudmiBot', true],
-  ['56945086055', '@ceogeripium.dzn', true],
-  ['56945086055', '@ceogeripium.dzn', true],
-  ['56945086055', '@ceogeripium.dzn', false],
-  ['56945086055', '@ceogeripium.dzn', true],
-  ['56945086055', '@ceogeripium.dzn', true],
-  ['56945086055'],
-  ['56945086055'],
-  ['56945086055'],
-  ['56945086055'],
-  ['56945086055'],
-  ['56945086055'],
-  ['56945086055'],
-  ['56945086055'], 
-  ['56945086055'],  
-  ['56945086055'], 
-  ['56945086055']
+  ['59168683798', '𝘾𝙧𝙚𝙖𝙙𝙤𝙧 🔮', true],
+  ['59897246324', '𝙊𝙬𝙣𝙚𝙧 🔮', true],
+  ['5493585753625', '𝘾𝙤𝙡𝙖𝙗... 🔮', true],
+  ['', '', true],
+  ['', '', true],
+  ['', '', true],
+  ['', '', true],
+  ['', '', false],
+  ['', '', true],
+  ['', '', true],
+  ['59168683798'],
+  ['59168683798'],
+  ['59168683798'],
+  ['59168683798'],
+  ['59168683798'],
+  ['59168683798'],
+  ['59168683798'],
+  ['59168683798'], 
+  ['59168683798'],  
+  ['59168683798'], 
+  ['59168683798']
 ];
 
-global.suittag = ['56945086055'];
-global.prems = ['56945086055'];
+global.suittag = ['59168683798'];
+global.prems = ['59168683798'];
 
 global.APIs = {
   xteam: 'https://api.xteam.xyz',
@@ -61,13 +61,13 @@ global.APIKeys = {
   'https://api-fgmods.ddns.net': 'fg-dylux'
 };
 
-global.packname = 'LudmiBot';
-global.author = 'LudmiBot';
-global.wm = 'LudmiBot';
-global.titulowm = 'LudmiBot';
-global.titulowm2 = `LudmiBot`
-global.igfg = 'LudmiBot';
-global.wait = '*[❗] Ƈᴀʀɢᴀɴᴅᴏ, ᴀɢᴜᴀʀᴅᴇ ᴜɴ ᴍᴏᴍᴇɴᴛᴏ...*';
+global.packname = '𝙓𝙞𝙖𝘽𝙤𝙩-𝙈𝘿 🔮';
+global.author = '𝙓𝙞𝙖𝘽𝙤𝙩-𝙈𝘿 🔮';
+global.wm = '𝙓𝙞𝙖𝘽𝙤𝙩-𝙈𝘿 🔮';
+global.titulowm = '𝙓𝙞𝙖𝘽𝙤𝙩-𝙈𝘿 🔮';
+global.titulowm2 = `𝙓𝙞𝙖𝘽𝙤𝙩-𝙈𝘿 🔮`
+global.igfg = '𝙓𝙞𝙖𝘽𝙤𝙩-𝙈𝘿 🔮';
+global.wait = '𝘾𝙖𝙧𝙜𝙖𝙣𝙙𝙤... 🔮';
 
 global.imagen1 = fs.readFileSync('./Menu2.jpg');
 global.imagen2 = fs.readFileSync('./src/nuevobot.jpg');
@@ -87,15 +87,15 @@ global.mes = d.toLocaleDateString('es', {month: 'long'});
 global.año = d.toLocaleDateString('es', {year: 'numeric'});
 global.tiempo = d.toLocaleString('en-US', {hour: 'numeric', minute: 'numeric', second: 'numeric', hour12: true});
 //* ****************************
-global.wm2 = `▸ ${dia} ${fecha}\n▸ LudmiBot`;
-global.gt = 'LudmiBot';
-global.mysticbot = 'LudmiBot';
+global.wm2 = `▸ ${dia} ${fecha}\n▸ XiaBot`;
+global.gt = '𝙓𝙞𝙖𝘽𝙤𝙩-𝙈𝘿 🔮';
+global.mysticbot = '𝙓𝙞𝙖𝘽𝙤𝙩-𝙈𝘿 🔮';
 global.md = 'https://www.instagram.com/ventas_bot_ludmi';
 global.mysticbot = 'https://www.instagram.com/ventas_bot_ludmi';
-global.waitt = '*[❗] Ƈᴀʀɢᴀɴᴅᴏ, ᴀɢᴜᴀʀᴅᴇ ᴜɴ ᴍᴏᴍᴇɴᴛᴏ...*';
-global.waittt = '*[❗] Ƈᴀʀɢᴀɴᴅᴏ, ᴀɢᴜᴀʀᴅᴇ ᴜɴ ᴍᴏᴍᴇɴᴛᴏ...*';
-global.waitttt = '*[❗] Ƈᴀʀɢᴀɴᴅᴏ, ᴀɢᴜᴀʀᴅᴇ ᴜɴ ᴍᴏᴍᴇɴᴛᴏ...*';
-global.nomorown = '56945086055';
+global.waitt = '𝘾𝙖𝙧𝙜𝙖𝙣𝙙𝙤... 🔮';
+global.waittt = '𝘾𝙖𝙧𝙜𝙖𝙣𝙙𝙤... 🔮';
+global.waitttt = '𝘾𝙖𝙧𝙜𝙖𝙣𝙙𝙤... 🔮';
+global.nomorown = '59168683798';
 global.pdoc = ['application/vnd.openxmlformats-officedocument.presentationml.presentation', 'application/vnd.openxmlformats-officedocument.spreadsheetml.sheet', 'application/vnd.openxmlformats-officedocument.wordprocessingml.document', 'application/vnd.ms-excel', 'application/msword', 'application/pdf', 'text/rtf'];
 global.cmenut = '❖––––––『';
 global.cmenub = '┊✦ ';
