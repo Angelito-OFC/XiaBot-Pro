@@ -1,4 +1,4 @@
-console.log('✅ㅤIniciando...');
+console.log('🔮ㅤIniciando XiaBot...');
 import {join, dirname} from 'path';
 import {createRequire} from 'module';
 import {fileURLToPath} from 'url';
@@ -14,7 +14,7 @@ const {say} = cfonts;
 const rl = createInterface(process.stdin, process.stdout);
 
 say('Xia\nBot\nMD', {
-  font: 'chrome',
+  font: 'block',
   align: 'center',
   gradient: ['blue', 'blue']});
 say(`La mejor Bot de WhatsApp By: Angelito`, {
