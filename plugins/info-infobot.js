@@ -1,7 +1,7 @@
-import os from 'os'
-import util from 'util'
-import ws from 'ws';
-import sizeFormatter from 'human-readable'
+import { generateWAMessageFromContent } from "@whiskeysockets/baileys";
+import os from "os";
+import util from "util";
+import sizeFormatter from "human-readable";
 import MessageType from "@whiskeysockets/baileys";
 
 import fs from 'fs'
