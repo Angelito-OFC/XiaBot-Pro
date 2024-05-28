@@ -39,7 +39,7 @@ let info = `*🔮 I N F O R M A C I Ó N 🔮*
 🔮꙰᠁❥ 𝘾𝙝𝙖𝙩𝙨 𝙩𝙤𝙩𝙖𝙡: ${chats.length}
 🔮꙰᠁❥ 𝙎𝙪𝙗-𝘽𝙤𝙩𝙨: ${modejadibot ? "activado" : "desactivado"}`
 
- conn.sendMessage(m.chat, { text: info, contextInfo: { externalAdReply: { title: packname, body: '🔮 Xia Info', thumbnail: imagen6, sourceUrl: '', mediaType: 1, renderLargerThumbnail: true }}})
+ conn.sendMessage(m.chat, { text: info, contextInfo: { externalAdReply: { title: packname, body: '🔮 Xia Info', thumbnail: imagen1, sourceUrl: '', mediaType: 1, renderLargerThumbnail: true }}})
 
 }
 handler.help = ['infobot']
