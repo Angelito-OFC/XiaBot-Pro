@@ -6,7 +6,7 @@ let handler = async (m, { conn, text, args }) => {
 try {
   let res = await fg.ttStalk(args[0])
   let txt = `
-*Ｔ Ｉ Ｋ Ｔ Ｏ Ｋ  Ｓ Ｔ Ａ Ｌ Ｋ*
+_*🔮 Ｔ Ｉ Ｋ Ｔ Ｏ Ｋ  Ｓ Ｔ Ａ Ｌ Ｋ 🔮*_
 
 » 𝙉𝙤𝙢𝙗𝙧𝙚𝙨: ${res.name}
 » 𝙐𝙨𝙚𝙧𝙣𝙖𝙢𝙚: ${res.username}
