@@ -12,7 +12,7 @@ let _uptime = process.uptime() * 1000
 let uptime = clockString(_uptime) 
 let totalreg = Object.keys(global.db.data.users).length
 
-const pp = imagen1;
+const img = imagen1;
 const chats = Object.entries(conn.chats).filter(([id, data]) => id && data.isChats)
 const groupsIn = chats.filter(([id]) => id.endsWith('@g.us'))
 const groups = chats.filter(([id]) => id.endsWith('@g.us'))
@@ -40,7 +40,7 @@ let info = `*🔮 I N F O R M A C I Ó N 🔮*
 🔮꙰᠁❥ 𝘾𝙝𝙖𝙩𝙨 𝙩𝙤𝙩𝙖𝙡: ${chats.length}
 🔮꙰᠁❥ 𝙎𝙪𝙗-𝘽𝙤𝙩𝙨: ${modejadibot ? "activado" : "desactivado"}`
 
- conn.sendMessage(m.chat, { text: info, contextInfo: { externalAdReply: { title: packname, body: '🔮 Xia Info', thumbnail: imagen1, sourceUrl: '', mediaType: 1, renderLargerThumbnail: true }}})
+ conn.sendMessage(m.chat, m.chat, {image: img, caption: txt1, mentions: mentionsString}, {quoted: fkontak2});
 
 }
 handler.help = ['infobot']
