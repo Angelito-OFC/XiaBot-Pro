@@ -35,12 +35,12 @@ global.owner = [
 global.suittag = ['59168683798'];
 global.prems = ['59168683798'];
 
-global.packname = '𝙓𝙞𝙖𝘽𝙤𝙩-𝙈𝘿 🔮';
-global.author = '𝙓𝙞𝙖𝘽𝙤𝙩-𝙈𝘿 🔮';
-global.wm = '𝙓𝙞𝙖𝘽𝙤𝙩-𝙈𝘿 🔮';
-global.titulowm = '𝙓𝙞𝙖𝘽𝙤𝙩-𝙈𝘿 🔮';
-global.titulowm2 = `𝙓𝙞𝙖𝘽𝙤𝙩-𝙈𝘿 🔮`
-global.igfg = '𝙓𝙞𝙖𝘽𝙤𝙩-𝙈𝘿 🔮';
+global.packname = '𝙓𝙄𝘼 𝘽𝙊𝙏 𝙋𝙍𝙊';
+global.author = '𝙓𝙄𝘼 𝘽𝙊𝙏 𝙋𝙍𝙊';
+global.wm = '𝙓𝙄𝘼 𝘽𝙊𝙏 𝙋𝙍𝙊';
+global.titulowm = '𝙓𝙄𝘼 𝘽𝙊𝙏 𝙋𝙍𝙊';
+global.titulowm2 = `𝙓𝙄𝘼 𝘽𝙊𝙏 𝙋𝙍𝙊`
+global.igfg = '𝙓𝙄𝘼 𝘽𝙊𝙏 𝙋𝙍𝙊';
 global.wait = '𝘾𝙖𝙧𝙜𝙖𝙣𝙙𝙤... 🔮';
 
 global.imagen1 = fs.readFileSync('./Menu2.jpg');
@@ -62,8 +62,8 @@ global.año = d.toLocaleDateString('es', {year: 'numeric'});
 global.tiempo = d.toLocaleString('en-US', {hour: 'numeric', minute: 'numeric', second: 'numeric', hour12: true});
 //* ****************************
 global.wm2 = `▸ ${dia} ${fecha}\n▸ XiaBot`;
-global.gt = '𝙓𝙞𝙖𝘽𝙤𝙩-𝙈𝘿 🔮';
-global.mysticbot = '𝙓𝙞𝙖𝘽𝙤𝙩-𝙈𝘿 🔮';
+global.gt = '𝙓𝙄𝘼 𝘽𝙊𝙏 𝙋𝙍𝙊';
+global.mysticbot = '𝙓𝙄𝘼 𝘽𝙊𝙏 𝙋𝙍𝙊';
 global.md = 'https://www.instagram.com/ventas_bot_ludmi';
 global.mysticbot = 'https://www.instagram.com/ventas_bot_ludmi';
 global.waitt = '𝘾𝙖𝙧𝙜𝙖𝙣𝙙𝙤... 🔮';
