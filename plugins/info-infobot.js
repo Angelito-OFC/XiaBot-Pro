@@ -28,7 +28,7 @@ let info = `*🔮 I N F O R M A C I Ó N 🔮*
  
 🔮꙰᠁❥ 𝘾𝙧𝙚𝙖𝙙𝙤𝙧◞: Angelito
 🔮꙰᠁❥ 𝙒𝙖: wa.me/59168683798
-🔮꙰᠁❥ 𝙄𝙜:* @usxr_angelito
+🔮꙰᠁❥ 𝙄𝙜: @usxr_angelito
 🔮꙰᠁❥ 𝙑𝙚𝙧𝙨𝙞𝙤𝙣: 3.2.0
 🔮꙰᠁❥ 𝙋𝙧𝙚𝙛𝙞𝙟𝙤: ( . )
 🔮꙰᠁❥ 𝙈𝙤𝙙𝙤: Publico
