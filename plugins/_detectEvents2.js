@@ -18,7 +18,7 @@ export async function before(m, {conn, participants}) {
   const mentionsContentM = [m.sender, m.messageStubParameters[0]];
   const fkontak2 = {'key': {'participants': '0@s.whatsapp.net', 'remoteJid': 'status@broadcast', 'fromMe': false, 'id': 'Halo'}, 'message': {'contactMessage': {'vcard': `BEGIN:VCARD\nVERSION:3.0\nN:Sy;Bot;;;\nFN:y\nitem1.TEL;waid=${m.sender.split('@')[0]}:${m.sender.split('@')[0]}\nitem1.X-ABLabel:Ponsel\nEND:VCARD`}}, 'participant': '0@s.whatsapp.net'};
 
-  if (chat.detect3 && m.messageStubType == 27) {
+  if (chat.detect2 && m.messageStubType == 27) {
     let txt1 = `*Recientemente se ha incorporado al grupo un nuevo miembro.*\n\n`;
     txt1 += `*◦  Grupo:* ${groupName}\n`;
     if (!m.sender.endsWith('@g.us')) {
@@ -30,7 +30,7 @@ export async function before(m, {conn, participants}) {
     await conn.sendMessage(m.chat, {image: img, caption: txt1, mentions: mentionsContentM}, {quoted: fkontak2});
   }
 
-  if (chat.detect3 && m.messageStubType == 28) {
+  if (chat.detect2 && m.messageStubType == 28) {
     let txt2 = `*Recientemente se ha eliminado un miembro del grupo.*\n\n`;
     txt2 += `*◦  Grupo:* ${groupName}\n`;
     if (!m.sender.endsWith('@g.us')) {
@@ -42,7 +42,7 @@ export async function before(m, {conn, participants}) {
     await conn.sendMessage(m.chat, {image: img, caption: txt2, mentions: mentionsContentM}, {quoted: fkontak2});
   }
 
-  if (chat.detect3 && m.messageStubType == 32) {
+  if (chat.detect2 && m.messageStubType == 32) {
     let ax;
     if (m.messageStubParameters[0] === m.sender) {
       ax = 'salido';
