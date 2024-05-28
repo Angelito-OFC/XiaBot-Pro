@@ -6,7 +6,7 @@ let handler = async (m, { conn, text, args }) => {
 try {
   let res = await fg.ttStalk(args[0])
   let txt = `
-Ｔ Ｉ Ｋ Ｔ Ｏ Ｋ  Ｓ Ｔ Ａ Ｌ Ｋ
+*Ｔ Ｉ Ｋ Ｔ Ｏ Ｋ  Ｓ Ｔ Ａ Ｌ Ｋ*
 
 » 𝙉𝙤𝙢𝙗𝙧𝙚𝙨: ${res.name}
 » 𝙐𝙨𝙚𝙧𝙣𝙖𝙢𝙚: ${res.username}
@@ -16,7 +16,8 @@ try {
  ${res.desc}
 
 » 🔗 𝙇𝙞𝙣𝙠 : https://tiktok.com/${res.username}
-`
+
+𝘽𝙔: 𝙓𝙄𝘼 𝘽𝙊𝙏 𝙋𝙍𝙊`
   await conn.sendFile(m.chat, res.profile, 'tt.png', txt, m)
 } catch {
     m.reply(`✳️ Revisa que el nombre de usuario sea de TikTok`)
