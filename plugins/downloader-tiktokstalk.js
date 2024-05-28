@@ -17,7 +17,7 @@ try {
 
 » 🔗 𝙇𝙞𝙣𝙠 : https://tiktok.com/${res.username}
 
-𝘽𝙔: 𝙓𝙄𝘼 𝘽𝙊𝙏 𝙋𝙍𝙊`
+» 𝘽𝙔: 𝙓𝙄𝘼 𝘽𝙊𝙏 𝙋𝙍𝙊`
   await conn.sendFile(m.chat, res.profile, 'tt.png', txt, m)
 } catch {
     m.reply(`✳️ Revisa que el nombre de usuario sea de TikTok`)
