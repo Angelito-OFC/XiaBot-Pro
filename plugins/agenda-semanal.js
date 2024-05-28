@@ -13,5 +13,5 @@ export default handler
 
 
 global.agenda = [
-"https://cdn.discordapp.com/attachments/1234592983794454530/1243658949845061773/FB_IMG_1716581761671.jpg?ex=665398a7&is=66524727&hm=1a20265565a8a663b671d9015b01d74c5ac16dbe07ed85be7b1f01451fd59506&",
+"https://cdn.discordapp.com/attachments/1234592983794454530/1243658949845061773/FB_IMG_1716581761671.jpg",
 ]
