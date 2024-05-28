@@ -2,7 +2,7 @@ import os from 'os'
 import util from 'util'
 import ws from 'ws';
 import sizeFormatter from 'human-readable'
-let MessageType =  (await import(global.baileys)).default
+import MessageType from "@whiskeysockets/baileys";
 
 import fs from 'fs'
 import { performance } from 'perf_hooks'
