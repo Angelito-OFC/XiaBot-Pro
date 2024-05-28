@@ -40,7 +40,7 @@ let info = `*🔮 I N F O R M A C I Ó N 🔮*
 🔮꙰᠁❥ 𝘾𝙝𝙖𝙩𝙨 𝙩𝙤𝙩𝙖𝙡: ${chats.length}
 🔮꙰᠁❥ 𝙎𝙪𝙗-𝘽𝙤𝙩𝙨: ${modejadibot ? "activado" : "desactivado"}`
 
- conn.sendMessage(m.chat, { text: info, contextInfo: { externalAdReply: { title: 𝙓𝙄𝘼 𝘽𝙊𝙏 𝙋𝙍𝙊, body: '𝘗𝘈𝘚𝘈𝘓𝘈 𝘊𝘏𝘐𝘋𝘖', thumbnail: imagen1, sourceUrl: 'https://www.instagram.com/usxr_angelito', mediaType: 1, renderLargerThumbnail: true }}})
+ conn.sendMessage(m.chat, { text: info, contextInfo: { externalAdReply: { title: 𝙓 𝙄 𝘼  𝘽 𝙊 𝙏  𝙋 𝙍 𝙊, body: '𝘗𝘈𝘚𝘈𝘓𝘈 𝘊𝘏𝘐𝘋𝘖', thumbnail: imagen1, sourceUrl: 'https://www.instagram.com/usxr_angelito', mediaType: 1, renderLargerThumbnail: true }}})
 
 }
 handler.help = ['infobot']
