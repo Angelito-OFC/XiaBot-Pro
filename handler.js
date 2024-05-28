@@ -936,7 +936,6 @@ export async function handler(chatUpdate) {
         if (!('detect' in chat)) chat.detect = true;
         if (!('detect2' in chat)) chat.detect2
 true;
-        if (!('detect3' in chat)) chat.detect3 = true;
         if (!('sWelcome' in chat)) chat.sWelcome = '';
         if (!('sBye' in chat)) chat.sBye = '';
         if (!('sPromote' in chat)) chat.sPromote = '';
