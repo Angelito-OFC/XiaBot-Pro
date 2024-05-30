@@ -1,6 +1,6 @@
 import {search, download} from 'aptoide-scraper';
 const handler = async (m, {conn, usedPrefix: prefix, command, text}) => {
- if (!text) throw `*[❗] Ingrese el nombre de la APK que quiera buscar.*`;
+ if (!text) throw `❱❱ 𝙄 𝙉 𝙁 𝙊 𝙍 𝙈 𝘼 𝘾 𝙄 𝙊 𝙉 ❰❰\n\n🔮 𝙁𝙤𝙧𝙢𝙖𝙩𝙤 𝙞𝙣𝙘𝙤𝙧𝙧𝙚𝙘𝙩𝙤\n\n» 𝙐𝙨𝙚 𝙚𝙡 𝙘𝙤𝙢𝙖𝙣𝙙𝙤:\n𝘌𝘫𝘦𝘮𝘱𝘭𝘰: .𝘢𝘱𝘵𝘰𝘪𝘥𝘦 𝘞𝘩𝘢𝘵𝘴𝘈𝘱𝘱`;
   try {    
     const searchA = await search(text);
     const data5 = await download(searchA[0].id);
