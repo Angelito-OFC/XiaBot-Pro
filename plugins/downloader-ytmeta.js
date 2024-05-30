@@ -35,7 +35,7 @@ const extract = (await ytdl.getBasicInfo(text)).videoDetails.title;
       imageBuffer: await axios.get(s.meta.image, {responseType: "arraybuffer"}).then((response) => Buffer.from(response.data, "binary")),
     },
     mimetype: 'image/jpeg',
-    copyright: "Copyright Darlyn © 2023",
+    copyright: "Copyright Xia © 2024",
   };
   await NodeID3.write(tags, s.path);
   await conn.sendMessage(m.chat, {audio: fs.readFileSync(`./${s.path}`), mimetype: "audio/mpeg", fileName: `${s.meta.title || "-"}.mp3`,}, {quoted: m});
