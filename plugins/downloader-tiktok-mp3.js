@@ -9,10 +9,3 @@ handler.help = ['tiktokmp3', 'tiktokaudio'].map(v => v + ' <url>')
 handler.tags = ['downloader']
 handler.command = /^(tiktokaudio|tiktokmp3|)$/i
 export default handler
-
-const TikTok = require('');
-const got = require('got');
-
-async function downloadTikTokMusic(url) {
-  const tiktok = new TikTok({ username });
-  const profile = await tiktok.users.profile();
