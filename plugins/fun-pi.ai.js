@@ -8,7 +8,7 @@ if (!text) throw `❱❱ 𝘼  𝙑  𝙄  𝙎  𝙊 ❰❰
 𝘌𝘫𝘦𝘮𝘱𝘭𝘰: .𝘱𝘪 𝘲𝘶𝘦 𝘴𝘰𝘴?`
 try {
 conn.sendPresenceUpdate('composing', m.chat);
-var apii = await fetch(`https://aemt.me/pi.ai?text=${text}`)
+var apii = await fetch(`https://aemt.me/pi?text=${text}`)
 var res = await apii.json()
 await m.reply(res.result)
 } catch (e) {
