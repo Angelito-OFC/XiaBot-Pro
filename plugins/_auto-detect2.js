@@ -50,12 +50,12 @@ export async function before(m, {conn, participants}) {
       ax = '𝙀𝙇𝙄𝙈𝙄𝙉𝘼𝘿𝙊';
     }
     let txt3 = `𝙍𝙀𝘾𝙄𝙀𝙉𝙏𝙀𝙈𝙀𝙉𝙏𝙀 𝙎𝙀 𝙃𝘼 ${ax} 𝙐𝙉 𝙈𝙄𝙀𝙈𝘽𝙍𝙊 𝘿𝙀𝙇 𝙂𝙍𝙐𝙋𝙊.\n\n`;
-    txt3 += `» 𝙂𝙍𝙐𝙋𝙊: _${groupName}\n_`;
+    txt3 += `» 𝙂𝙍𝙐𝙋𝙊: _${groupName}_\n`;
     if (ax === 'eliminado') {
       txt3 += `» 𝙎𝙀 𝙀𝙇𝙄𝙈𝙄𝙉𝙊 𝘼: _@${m.messageStubParameters[0].split`@`[0]}_\n`;
       txt3 += `» 𝙀𝙅𝙀𝘾𝙐𝙏𝘼𝘿𝙊 𝙋𝙊𝙍: _@${m.sender.split`@`[0]}_`;
     } else {
-      txt3 += `» 𝙎𝙀 𝙎𝘼𝙇𝙄𝙊: _@${m.messageStubParameters[0].split`@`[0]}_\n`;
+      txt3 += `» 𝙎𝙀 𝙎𝘼𝙇𝙄𝙊:  _@${m.messageStubParameters[0].split`@`[0]}_\n`;
     }
     await conn.sendMessage(m.chat, {image: img, caption: txt3, mentions: mentionsContentM}, {quoted: fkontak2});
   }
