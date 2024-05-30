@@ -229,8 +229,8 @@ const handler = async (m, {conn, usedPrefix, command, args, isOwner, isAdmin, is
           global.dfail('group', m, conn);
           throw false;
         }
-      } else if (!isAdmin) {
-        global.dfail('admin', m, conn);
+      } else if (!isOwner) {
+        global.dfail('owner', m, conn);
         throw false;
       }
       chat.detect = isEnable;
@@ -241,8 +241,8 @@ const handler = async (m, {conn, usedPrefix, command, args, isOwner, isAdmin, is
           global.dfail('group', m, conn);
           throw false;
         }
-      } else if (!isAdmin) {
-        global.dfail('admin', m, conn);
+      } else if (!isOwner) {
+        global.dfail('owner', m, conn);
         throw false;
       }
       chat.detect2 = isEnable;
