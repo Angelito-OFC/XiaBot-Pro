@@ -35,6 +35,6 @@ await conn.sendFile(m.chat, pp, 'error.jpg', text, m, false, { mentions: [...gro
 }
 handler.help = ['infogrup']
 handler.tags = ['group']
-handler.command = /^(scrim|scrim1)$/i
+handler.command = /^(scrim|scrimm)$/i
 handler.group = true
 export default handler
