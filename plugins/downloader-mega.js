@@ -13,7 +13,7 @@ let handler = async (m, { conn, args, usedPrefix, text, command }) => {
         const downloadingMessage = `𝘾𝙖𝙧𝙜𝙖𝙣𝙙𝙤... 🔮`;
         m.reply(downloadingMessage);
 
-        const caption = `🔮 *_Descarga exitosa..._*\n\n» 𝙉𝙤𝙢𝙗𝙧𝙚: ${file.name}\n» 𝙋𝙚𝙨𝙤: ${formatBytes(file.size)}\n» 𝙁𝙚𝙘𝙝𝙖:`;
+        const caption = `🔮 *_Descarga exitosa..._*\n\n» 𝙉𝙤𝙢𝙗𝙧𝙚: ${file.name}\n» 𝙋𝙚𝙨𝙤: ${formatBytes(file.size)}\n» 𝙁𝙚𝙘𝙝𝙖: ${fecha}`;
 
         const data = await file.downloadBuffer();
 
