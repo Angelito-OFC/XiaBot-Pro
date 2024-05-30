@@ -34,8 +34,8 @@ let uwu = `╦══════════════════ ⪨
 ┃│✾ ⋟ *#menucompleto*
 ┃╰══ ⪨`
 conn.sendButton(m.chat, uwu, null, imagen1, [
-['🌐 menucompleto', '.allmenu'],
-['🧳 descargasmenu', '.descargasmenu'],
+['🌐 menucompleto', '.menu'],
+['🚀 menuff', '.menuff'],
 ['👾 estado', '/estado']], null, 
 [['🎭 Grupo de WhatsApp', md]], m)}
 
