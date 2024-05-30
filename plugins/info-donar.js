@@ -1,25 +1,23 @@
-/* ⚠ POR FAVOR NO MODIFIQUES NADA DE AQUÍ ⚠ */
+var handler = async (m, { conn, command }) => {
 
-import {generateWAMessageFromContent} from '@whiskeysockets/baileys';
-import fs from 'fs';
-const handler = async (m, {conn, usedPrefix, command}) => {
-  const name = await conn.getName(m.sender);
-  const donar =`
-*┏ ┅ ━━━━━━━━━━━━━━━━━ ┅ ━*
-*┇          「 COMPRAR 」*
-*┣ ┅ ━━━━━━━━━━━━━━━━━ ┅ ━*
-*┃ 𝙷𝙾𝙻𝙰 ${name}*
-*┃*
-*┃ 👉🏻 SI DESEAS COMPRAR ESTE BOT HABLA A LOS SIGUIENTES NUMEROS*
-*┃ https://walink.co/62efd1*
-*┃ https://walink.co/6ecb77*
-*┗ ┅ ━━━━━━━━━━━━━━━━━ ┅ ━*
-`.trim();
-  const aa = {quoted: m, userJid: conn.user.jid};
-  const res = generateWAMessageFromContent(m.chat, {liveLocationMessage: {degreesLatitude: 0, degreesLongitude: 0, caption: donar, secuenceNumber: '0', contextInfo: {mentionedJid: conn.parseMention()}}}, aa);
-  conn.relayMessage(m.chat, res.message, {});
-};
-handler.help = ['donasi'];
-handler.tags = ['info'];
-handler.command = /^adquir(e|ir)|comprar|compra$/i;
-export default handler;
+let str = `🚩 *Donar*
+
+⬡ *PAYPAL*
+${paypal}
+
+⬡ *Creador del bot*
+wa.me/5217294888993
+
+_Puedes apoyar el bot dando tu estrellita en nuestro repositorio_
+${md}`
+
+conn.reply(m.chat, str, m, fake, )
+
+}
+handler.help = ['donar', 'donate', 'donasi']
+handler.tags = ['info']
+handler.command = /^donar|donate|donasi$/i
+
+handler.register = true
+
+export default handler
