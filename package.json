@@ -1,7 +1,7 @@
 {
-  "name": "TheMystic-Bot-MD",
+  "name": "XiaBot-Pro",
   "version": "1.0.0",
-  "description": "Subs. al canal de YT The Shadow Borkers - TEAM",
+  "description": "Sígueme en ig: @usxr_angelito",
   "main": "index.js",
   "type": "module",
   "directories": {
@@ -16,16 +16,16 @@
     "eslint": "eslint .",
     "eslintfix": "eslint --fix ."
   },
-  "homepage": "https://github.com/BrunoSobrino/TheMystic-Bot-MD",
+  "homepage": "https://github.com/karim-off/XiaBot-Pro",
   "author": {
-    "name": "BrunoSobrino"
+    "name": "Angelito"
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/BrunoSobrino/TheMystic-Bot-MD.git"
+    "url": "git+https://github.com/karim-off/XiaBot-Pro.git"
   },
   "bugs": {
-    "url": "https://github.com/BrunoSobrino/TheMystic-Bot-MD/issues"
+    "url": "https://github.com/karim-off/XiaBot-Pro/issues"
   },
   "license": "GPL-3.0-or-later",
   "dependencies": {
