@@ -1,8 +1,8 @@
-// Creditos del codigo a @Gatito-kw //
+// Creditos del codigo a @usxr_angelito //
 
-/* GitHub: https://github.com/Gatito-kw */
+/* GitHub: https://github.com/karim-off*/
 
-/* Bot: https://github.com/Gatito-kw/nekobot-md */
+/* Bot: https://github.com/karim-off/XiaBot-Pro*/
 
 import {WAMessageStubType} from '@whiskeysockets/baileys';
 import fetch from 'node-fetch';
