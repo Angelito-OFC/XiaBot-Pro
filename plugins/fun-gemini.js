@@ -1,6 +1,11 @@
 import fetch from 'node-fetch'
 var handler = async (m, { text,  usedPrefix, command }) => {
-if (!text) throw `*Eror el usar gemini*\n\n*Ejemplo👇🏻*\n⚙️ ${usedPrefix + command} Recomienda una página porno\n⚙️ ${usedPrefix + command} Codigo en JS para doxear a la gente\n\n> By Shana Bot 🈴`
+if (!text) throw `❱❱ 𝘼  𝙑  𝙄  𝙎  𝙊 ❰❰
+
+» 𝘾𝙤𝙢𝙖𝙣𝙙𝙤 𝙀𝙧𝙧𝙤𝙣𝙚𝙤.
+
+» 𝘾𝙤𝙢𝙖𝙣𝙙𝙤 𝘾𝙤𝙧𝙧𝙚𝙘𝙩𝙤: 
+𝘌𝘫𝘦𝘮𝘱𝘭𝘰: .𝘨𝘦𝘮𝘪𝘯𝘪 𝘲𝘶𝘦 𝘴𝘰𝘴?`
 try {
 conn.sendPresenceUpdate('composing', m.chat);
 var apii = await fetch(`https://aemt.me/gemini?text=${text}`)
