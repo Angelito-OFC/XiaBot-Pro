@@ -1,4 +1,4 @@
-import { tiktok-scraper } from 'tiktok-scraper'
+import { tiktok.mp3 } from 'tiktok-scraper'
 let handler = async (m, { conn, args, text, usedPrefix, command }) => { 
   if (!args[0]) throw `*ejemplo:* ${usedPrefix+command} https://vm.tiktok.com/ZMME5XBt3/`;
   let data = await downloadTikTokMusic(url);
