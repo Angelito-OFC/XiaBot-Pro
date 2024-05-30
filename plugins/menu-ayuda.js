@@ -22,7 +22,7 @@ var shadow = async (m, {
     }
    const db = "./galeria/menudorrat3.jpg"
 
-if (command == "menu" || command == "menú") {
+if (command == "help" || command == "help") {
 let uwu = `╦══════════════════ ⪨
 ┃│✾ ⋟ *${ucapan()}*
 ┃│✾ ⋟ *tenemos varios tipos de menus*
@@ -39,4 +39,4 @@ conn.sendButton(m.chat, uwu, null, imagen1, [
 ['👾 estado', '/estado']], null, 
 [['🎭 Grupo de WhatsApp', md]], m)}
 
-if (command == "menucompleto" || command == "allmenu") {
+if (command == "help" || command == "help") {
