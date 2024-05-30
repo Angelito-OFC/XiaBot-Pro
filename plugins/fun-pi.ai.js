@@ -5,7 +5,7 @@ if (!text) throw `❱❱ 𝘼  𝙑  𝙄  𝙎  𝙊 ❰❰
 » 𝘾𝙤𝙢𝙖𝙣𝙙𝙤 𝙀𝙧𝙧𝙤𝙣𝙚𝙤.
 
 » 𝘾𝙤𝙢𝙖𝙣𝙙𝙤 𝘾𝙤𝙧𝙧𝙚𝙘𝙩𝙤: 
-𝘌𝘫𝘦𝘮𝘱𝘭𝘰: .𝘨𝘦𝘮𝘪𝘯𝘪 𝘲𝘶𝘦 𝘴𝘰𝘴?`
+𝘌𝘫𝘦𝘮𝘱𝘭𝘰: .𝘱𝘪 𝘲𝘶𝘦 𝘴𝘰𝘴?`
 try {
 conn.sendPresenceUpdate('composing', m.chat);
 var apii = await fetch(`https://aemt.me/pi.ai/talk?text=${text}`)
@@ -16,8 +16,8 @@ await conn.reply(m.chat, `${lenguajeGB['smsMalError3']()}#report ${lenguajeGB['s
 console.log(`❗❗ ${lenguajeGB['smsMensError2']()} ${usedPrefix + command} ❗❗`)
 console.log(e)
 }}
-handler.command = ['geminis', 'gemini']
-handler.help = ['geminis', 'gemini']
+handler.command = ['pi', 'piia']
+handler.help = ['pi', 'piia']
 handler.tags = ['herramientas']
 
 handler.premium = false
