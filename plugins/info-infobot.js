@@ -48,21 +48,25 @@ let old = performance.now()
   let totaljadibot = [...new Set([...global.conns.filter(conn => conn.user && conn.state !== 'close').map(conn => conn.user)])]
   let speed = neww - old
 
-let info = `           \`*🔮 I N F O R M A C I Ó N 🔮*\`
- 
-🔮꙰᠁❥ 𝘾𝙧𝙚𝙖𝙙𝙤𝙧◞: Angelito
-🔮꙰᠁❥ 𝙒𝙖: wa.me/59168683798
-🔮꙰᠁❥ 𝙄𝙜: @usxr_angelito
-🔮꙰᠁❥ 𝙑𝙚𝙧𝙨𝙞𝙤𝙣: 3.2.0
-🔮꙰᠁❥ 𝙋𝙧𝙚𝙛𝙞𝙟𝙤: ( . )
-🔮꙰᠁❥ 𝙈𝙤𝙙𝙤: Publico
-🔮꙰᠁❥ 𝘼𝙘𝙩𝙞𝙫𝙞𝙙𝙖𝙙: ${uptime}
-🔮꙰᠁❥ 𝙐𝙨𝙪𝙖𝙧𝙞𝙤𝙨: ${totalreg}
-🔮꙰᠁❥ 𝙑𝙚𝙡𝙤𝙘𝙞𝙙𝙖𝙙: ${speed} ms
-🔮꙰᠁❥ 𝘾𝙝𝙖𝙩 𝙥𝙧𝙞𝙫: ${chats.length - groups.length}
-🔮꙰᠁❥ 𝘾𝙝𝙖𝙩 𝙜𝙧𝙪𝙥𝙖𝙡: ${groups.length}
-🔮꙰᠁❥ 𝘾𝙝𝙖𝙩𝙨 𝙩𝙤𝙩𝙖𝙡: ${chats.length}
-🔮꙰᠁❥ 𝙎𝙪𝙗-𝘽𝙤𝙩𝙨: ${modejadibot ? "activado" : "desactivado"}`
+let info = `           \`『ＩＮＦＯ ＤＥＬ ＢＯＴ 』\`
+
+> 🤴🏻 *CREADOR:* Daniel 🇦🇱
+> #️⃣ *CONTACTO:* ${asistencia}
+> ✅ *VERSION ACTUAL:* ${vs}
+> 🎳 *PREFIJO:* *${usedPrefix}*
+> 🔐 *CHATS PRIVADO:* *${chats.length - groups.length}*
+> 🦜 *CHATS DE GRUPOS:* *${groups.length}* 
+> 💡 *CHATS EN TOTAL:* *${chats.length}* 
+> 🚀 *ACTIVIDAD:* *${uptime}*
+> 🎩 *USUARIOS:* *${totalreg}*
+> 🐢 *VELOCIDAD:* *${speed}*   
+> 🌎 *MODO:* ${global.db.data.settings[conn.user.jid].self ? '*Privado*' : '*Público*'}
+> 💬 *ANTIPRIVADO:* ${global.db.data.settings[conn.user.jid].antiprivado ? '*Activado ✔*' : '*Desactivado ✘*'}
+> 📵 *ANTILLAMADA:* ${global.db.data.settings[conn.user.jid].antiCall ? '*Activado ✔*' : '*Desactivado*'}
+> 🤖 *BOTEMPORAL:* *${global.db.data.settings[conn.user.jid].temporal ? 'Activado ✔' : 'Desactivado ✘'}*
+> ☑️ *AUTOREAD:*  ${autoread ? '*Activado ✔*' : '*Desactivado ✘*'}   
+> 🤖 *BOTS SECUNDARIOS ACTIVOS:* *${totaljadibot.length}*
+> ⛔ *RESTRICT:* ${restrict ? '*Activado ✔*' : '*Desactivado ✘*'}`
 conn.sendMessage(m.chat, { image: { url: "https://telegra.ph/file/0201b8bffdd9981043023.jpg", }, caption: info,
 contextInfo: {
 mentionedJid: [m.sender],
