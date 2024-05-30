@@ -281,7 +281,7 @@ console.log(chalk.bold.red(`=> Algo salio mal durante la eliminación, archivos 
 }}
 
 function purgeOldFiles() {
-const directories = ['./MichiBot/', './jadibts/']
+const directories = ['./XiaBot/', './jadibts/']
 const oneHourAgo = Date.now() - (60 * 60 * 1000)
 directories.forEach(dir => {
 readdirSync(dir, (err, files) => {
@@ -312,7 +312,7 @@ async function connectionUpdate(update) {
   }
   if (global.db.data == null) loadDatabase();
   if (update.qr != 0 && update.qr != undefined) {
-    console.log(chalk.yellow('🚩ㅤMichiBot te pide que escanees este codigo QR, porque expira en 60 segundos.'));
+    console.log(chalk.yellow('🔮ㅤXiaBot te pide que escanees este codigo QR, porque expira en 60 segundos.'));
   }
   if (connection == 'open') {
     console.log(chalk.yellow('▣──────────────────────────────···\n│\n│❧ 𝙲𝙾𝙽𝙴𝙲𝚃𝙰𝙳𝙾 𝙲𝙾𝚁𝚁𝙴𝙲𝚃𝙰𝙼𝙴𝙽𝚃𝙴 𝙰𝙻 𝚆𝙷𝙰𝚃𝚂𝙰𝙿𝙿 ✅\n│\n▣──────────────────────────────···'));
@@ -380,14 +380,14 @@ global.reloadHandler = async function(restatConn) {
     conn.ev.off('creds.update', conn.credsUpdate);
   }
 
-conn.welcome = '-------------------------------------------------\n𝐋𝐮𝐝𝐦𝐢𝐁𝐨𝐭\n│HOLA @user\n│▢𝙱𝙸𝙴𝙽𝚅𝙴𝙽𝙸𝙳@\n│▢NUMERO DE MI PROPIETARIO\nwa.me/5492915267624\n│▢NUMERO DE MI CREADOR\n│https://wa.me/56954390663\n│▢📚EN ESTE GRUPO PODRAS ENCONTRAR\n│▢🍀AMISTADES\n│▢🤝AMIGOS\n│▢📚DESMADRE\n│▢😇ᩭCOTORREO Y MAS\n│▢AVISO IMPORTANTE:\n𝙿𝚘𝚛 𝚏𝚊𝚟𝚘𝚛 𝙻𝚎𝚎 𝚕𝚊𝚜 𝚛𝚎𝚐𝚕𝚊𝚜 𝚍𝚎𝚕 𝚐𝚛𝚞𝚙𝚘 𝚙𝚊𝚛𝚊 𝚚𝚞𝚎 𝚎𝚟𝚒𝚝𝚎𝚜 𝚜𝚎𝚛 𝚎𝚕𝚒𝚖𝚒𝚗𝚊𝚍𝚘 𝚢 𝚎𝚟𝚒𝚝𝚎𝚜 𝚝𝚎𝚗𝚎𝚛 𝚙𝚛𝚘𝚋𝚕𝚎𝚖𝚊𝚜 𝚌𝚘𝚗 𝚌𝚛𝚎𝚊𝚍𝚘𝚛 𝚍𝚎𝚕 𝚐𝚛𝚞𝚙𝚘\n@desc\n𝐋𝐮𝐝𝐦𝐢𝐁𝐨𝐭\n-------------------------------------------------'
-conn.bye = '-------------------------------------------------\n@user\n𝐒𝐚𝐥𝐢ó 𝐝𝐞𝐥 𝐠𝐫𝐮𝐩𝐨 𝐧𝐢 𝐦𝐨𝐝𝐨 𝐪𝐮𝐞 𝐭𝐞 𝐯𝐚𝐲𝐚 𝐛𝐢𝐞𝐧 𝐇𝐚𝐬𝐭𝐚 𝐥𝐚 𝐩𝐫ó𝐱𝐢𝐦𝐚 𝐪𝐮𝐞 𝐃𝐢𝐨𝐬 𝐭𝐞 𝐛𝐞𝐧𝐝𝐢𝐠𝐚🌱\n\n *HE LEFT THE GROUP NO WAY THAT YOU GO WELL UNTIL THE NEXT TIME GOD BLESS YOU*\nMichiBot\n-------------------------------------------------'
-conn.spromote = ''
-conn.sdemote = ''
-conn.sDesc = ''
-conn.sSubject = ''
-conn.sIcon = ''
-conn.sRevoke = ''
+conn.welcome = '‎ '
+conn.bye = '‎ '
+conn.spromote = '‎ '
+conn.sdemote = '‎ '
+conn.sDesc = '‎ '
+conn.sSubject = '‎ '
+conn.sIcon = '‎ '
+conn.sRevoke = '‎ '
 
   conn.handler = handler.handler.bind(global.conn);
   conn.participantsUpdate = handler.participantsUpdate.bind(global.conn);
