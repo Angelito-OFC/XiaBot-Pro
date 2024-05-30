@@ -1,5 +1,8 @@
 const handler = async (m, {conn}) => {
   m.reply(global.Femvivido16);
+const groupAdmins = participants.filter(p => p.admin) 
+const listAdmin = groupAdmins.map((v, i) => `${i + 1}. @${v.id.split('@')[0]}`).join('\n')
+const owner = groupMetadata.owner || groupAdmins.find(p => p.admin === 'superadmin')?.id || m.chat.split`-`[0] + '@s.whatsapp.net'
 };
 handler.command = /^(Femvivido16|femvivido16)$/i;
 export default handler;
