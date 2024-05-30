@@ -72,5 +72,6 @@ await conn.sendFile(m.chat, pp, 'error.jpg', text, m, false, { mentions: [...gro
 handler.help = ['infogrup']
 handler.tags = ['group']
 handler.command = /^(guerra|guerradeclanes)$/i
+handler.admin = true;
 handler.group = true
 export default handler
