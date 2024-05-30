@@ -39,7 +39,7 @@ export async function before(m, {conn, participants}) {
     } else {
       txt2 += `*◦  Se eliminó a:* @${m.messageStubParameters[0].split`@`[0]}\n`;
     }
-    await conn.sendMessage(m.chat, {image: {url: pp}, caption: txt2, mentions: mentionsContentM}, {quoted: fkontak2});
+    await conn.sendMessage(m.chat, {image: img, caption: txt2, mentions: mentionsContentM}, {quoted: fkontak2});
   }
 
   if (chat.detect2 && m.messageStubType == 32) {
@@ -57,6 +57,6 @@ export async function before(m, {conn, participants}) {
     } else {
       txt3 += `*◦  Se salió:* @${m.messageStubParameters[0].split`@`[0]}\n`;
     }
-    await conn.sendMessage(m.chat, {image: {url: pp}, caption: txt3, mentions: mentionsContentM}, {quoted: fkontak2});
+    await conn.sendMessage(m.chat, {image: img, caption: txt3, mentions: mentionsContentM}, {quoted: fkontak2});
   }
 } /* Cierre del comando */
