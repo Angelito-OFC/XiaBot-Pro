@@ -25,24 +25,24 @@ let msg = generateWAMessageFromContent(m.chat, {
           nativeFlowMessage: proto.Message.InteractiveMessage.NativeFlowMessage.create({
             buttons: [
               {
-                "name": "quick_reply",
+                "name": "🔮 MENU COMPLETO",
                 "buttonParamsJson": "{\"display_text\":\".menu\",\"id\":\"message\"}"
               },
               {
                 "name": "quick_reply",
-                "buttonParamsJson": "{\"display_text\":\"..menuff\",\"id\":\"message\"}"
+                "buttonParamsJson": "{\"display_text\":\".menuff\",\"id\":\"message\"}"
               },
               {
                 "name": "quick_reply",
-                "buttonParamsJson": "{\"display_text\":\"..menuowner\",\"id\":\"message\"}"
+                "buttonParamsJson": "{\"display_text\":\".menuowner\",\"id\":\"message\"}"
               },
               {
                 "name": "quick_reply",
-                "buttonParamsJson": "{\"display_text\":\"..labiblia\",\"id\":\"message\"}"
+                "buttonParamsJson": "{\"display_text\":\".labiblia\",\"id\":\"message\"}"
               },
               {
                 "name": "quick_reply",
-                "buttonParamsJson": "{\"display_text\":\"..menuanime\",\"id\":\"message\"}"
+                "buttonParamsJson": "{\"display_text\":\".menuanime\",\"id\":\"message\"}"
               },
               {
                 "name": "quick_reply",
