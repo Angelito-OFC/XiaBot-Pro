@@ -69,6 +69,7 @@ global.mysticbot = 'https://chat.whatsapp.com/LcFTUnvu0Tw1tCnA2ybdR6';
 global.canalbot = 'https://whatsapp.com/channel/0029VaJxgcB0bIdvuOwKTM2Y';
 global.ig = 'https://www.instagram.com/usxr_angelito';
 global.github = 'https://github.com/Karim-off/XiaBot-Pro';
+global.gtb = 'https://github.com/Karim-off';
 global.waitt = '𝘾𝙖𝙧𝙜𝙖𝙣𝙙𝙤... 🔮';
 global.waittt = '𝘾𝙖𝙧𝙜𝙖𝙣𝙙𝙤... 🔮';
 global.waitttt = '𝘾𝙖𝙧𝙜𝙖𝙣𝙙𝙤... 🔮';
