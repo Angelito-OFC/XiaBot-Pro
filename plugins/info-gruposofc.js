@@ -3,28 +3,28 @@ var handler = async (m, { conn, command }) => {
 if (command == 'cuentas' || command == 'cuentasoficiales' || command == 'cuentasof') {
 let str = `🚩 *CUENTAS*
 
-⬡ *Github*
+» *Github*
 
 
-⬡ *Instagram*
+» *Instagram*
 
 
-⬡ *YouTube*
+» *YouTube*
 
 
-⬡ *WhatsApp Bot*
+» *WhatsApp Bot*
 
 
-⬡ *Email*
+» *Email*
 
 
-⬡ *Threads*
+» *Threads*
 
 
-⬡ *X*
+» *X*
 
 
-⬡ *Telegram*
+» *Telegram*
 `
 
 await conn.sendMessage(m.chat, { text: str, contextInfo: { externalAdReply: { title: '', body: wm, thumbnail: imagen2, sourceUrl: '', mediaType: 1, renderLargerThumbnail: true }}})
