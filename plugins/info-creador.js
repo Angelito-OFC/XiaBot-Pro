@@ -6,7 +6,7 @@ let who = m.mentionedJid && m.mentionedJid[0] ? m.mentionedJid[0] : m.fromMe ? c
 let pp = await conn.profilePictureUrl(who).catch(_ => '')
 let name = await conn.getName(who)
 let biografia = await conn.fetchStatus('59168683798' +'@s.whatsapp.net').catch(_ => 'Sin Biografía')
-let biografiaBot = await conn.fetchStatus('59168683798' +'@s.whatsapp.net').catch(_ => 'Sin Biografía')
+let biografiaBot = await conn.fetchStatus('5493584119436' +'@s.whatsapp.net').catch(_ => 'Sin Biografía')
 let bio = biografia.status?.toString() || 'Sin Biografía'
 let biobot = biografiaBot.status?.toString() || 'Sin Biografía'
 
