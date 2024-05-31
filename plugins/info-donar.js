@@ -21,7 +21,7 @@ conn.reply(m.chat, str, m, fake, )
 }
 handler.help = ['donar', 'donate', 'donasi']
 handler.tags = ['info']
-handler.command = /^donar|donate|donarxiai$/i
+handler.command = /^(donar|donate|donarxia)i$/i
 
 handler.register = true
 
