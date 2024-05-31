@@ -1,22 +1,22 @@
 var handler = async (m, { conn, command }) => {
 
 if (command == 'cuentas' || command == 'cuentasoficiales' || command == 'cuentasof') {
-let str = `🚩 *CUENTAS*
+let str = `🔮 𝘾𝙐𝙀𝙉𝙏𝘼𝙎  𝙊𝙁𝙄𝘾𝙄𝘼𝙇𝙀𝙎
 
-» *Github*
+» 𝙂𝙄𝙏 𝙃𝙐𝘽
+${gtb}
 
+» 𝙄𝙉𝙎𝙏𝘼𝙂𝙍𝘼𝙈
+${ig}
 
-» *Instagram*
+» 𝙒𝙃𝘼𝙏𝙎𝘼𝙋𝙋 𝙋𝙀𝙍𝙎𝙊𝙉𝘼𝙇
+wa.me/59897246324
 
+» 𝙒𝙃𝘼𝙏𝙎𝘼𝙋𝙋 𝘽𝙊𝙏
+wa.me/59895294138
 
-» *YouTube*
-
-
-» *WhatsApp Bot*
-
-
-» *Email*
-
+» 𝙀𝙈𝘼𝙄𝙇 𝙓𝘽
+agasistencia2@gmail.com
 
 » *Threads*
 
@@ -24,8 +24,8 @@ let str = `🚩 *CUENTAS*
 » *X*
 
 
-» *Telegram*
-`
+» 𝙏𝙀𝙇𝙀𝙂𝙍𝘼𝙈
+https://t.me/globalxiapro`
 
 await conn.sendMessage(m.chat, { text: str, contextInfo: { externalAdReply: { title: '', body: wm, thumbnail: imagen2, sourceUrl: '', mediaType: 1, renderLargerThumbnail: true }}})
 }
