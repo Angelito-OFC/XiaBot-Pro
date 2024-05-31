@@ -52,7 +52,7 @@ conn.reply(m.chat, text, m, fake, )
 }
 handler.help = ['cuentasoficiales', 'cuentasofc', 'cuentas', 'grupos']
 handler.tags = ['info']
-handler.command = /^cuentasoficiales|cuentasofc|cuentas|grupos$/i
+handler.command = /^(cuentasoficiales|cuentasofc|cuentas|grupos)$/i
 
 handler.register = true
 
