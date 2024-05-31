@@ -18,11 +18,8 @@ wa.me/59895294138
 » 𝙀𝙈𝘼𝙄𝙇 𝙓𝘽
 agasistencia2@gmail.com
 
-» *Threads*
-
-
-» *X*
-
+» 𝙀𝙉𝙇𝘼𝘾𝙀𝙎 𝙊𝙁𝙄𝘾𝙄𝘼𝙇𝙀𝙎
+https://atom.bio/agasistencia
 
 » 𝙏𝙀𝙇𝙀𝙂𝙍𝘼𝙈
 https://t.me/globalxiapro`
@@ -31,18 +28,18 @@ await conn.sendMessage(m.chat, { text: str, contextInfo: { externalAdReply: { ti
 }
 
 if (command == 'grupos') {
-let text = `🚩 *Grupos oficiales*
+let text = `🔮 𝙂𝙍𝙐𝙋𝙊𝙎 𝙊𝙁𝙄𝘾𝙄𝘼𝙇𝙀𝙎
 
-⬡ *XiaBot-Pro*
+» 𝙓𝙄𝘼 𝘽𝙊𝙏 𝙋𝙍𝙊 𝙊𝙁𝘾
+https://chat.whatsapp.com/LcFTUnvu0Tw1tCnA2ybdR6
 
+» 𝙓𝙄𝘼 𝘽𝙊𝙏 𝙋𝙍𝙊 𝙂𝙇𝙊𝘽𝘼𝙇
+https://chat.whatsapp.com/J4GaLNqbzAHEkzNQy9N62O
 
-⬡ *Enlaces Curiosity*
+» 𝙓𝙄𝘼 𝘽𝙊𝙏 𝙋𝙍𝙊 𝘾𝘼𝙉𝘼𝙇
+https://whatsapp.com/channel/0029VaJxgcB0bIdvuOwKTM2Y
 
-
-⬡ *Curiosity Global*
-
-
-🎌 *Colaboraciones*
+» *Colaboraciones*
 
 `
 
