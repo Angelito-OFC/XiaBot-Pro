@@ -26,8 +26,8 @@ export async function before(m, { conn }) {
     }
   };
 
-  // Respuesta con enlace de Canal de WhatsApp
-  global.rcanal = {
+  // Respuesta con enlace de ig de WhatsApp
+  global.rpro = {
     contextInfo: {
             isForwarded: true,
     forwardedNewsletterMessageInfo: {
@@ -36,13 +36,13 @@ export async function before(m, { conn }) {
       newsletterName: nam,
     }, 
       externalAdReply: {
-        mediaUrl: fgcanal,
+        mediaUrl: ig,
         mediaType: 'VIDEO',
-        description: 'canal del grupo',
-        title: packname,
-        body: 'Canal de FG98',
+        description: 'ig del dueño',
+        title: '𝙓𝙞𝙖𝘽𝙤𝙩 - 𝙋𝙧𝙤𝙛𝙚𝙨𝙨𝙞𝙤𝙣𝙖𝙡',
+        body: '𝙇𝙖 𝙗𝙤𝙩 𝙢𝙖𝙨 𝙥𝙧𝙤',
         thumbnailUrl: pp,
-        sourceUrl: fgcanal
+        sourceUrl: ig
       }
     }
   }
