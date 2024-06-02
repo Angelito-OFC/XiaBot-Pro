@@ -1,6 +1,6 @@
 import fetch from 'node-fetch'
 let handler = async (m, { conn, command }) => {
-if (!db.data.chats[m.chat].modohorny && m.isGroup) throw `${lenguajeGB['smsContAdult']()}`
+if (!db.data.chats[m.chat].modohorny && m.isGroup) throw `🔮 𝙇𝙤𝙨 𝙘𝙤𝙢𝙖𝙣𝙙𝙤𝙨 +18 𝙚𝙨𝙩𝙖𝙣 𝙙𝙚𝙨𝙖𝙘𝙩𝙞𝙫𝙖𝙙𝙤𝙨 𝙚𝙣 𝙚𝙨𝙩𝙚 𝙜𝙧𝙪𝙥𝙤, 𝙨𝙞 𝙚𝙨 𝙖𝙙𝙢𝙞𝙣 𝙮 𝙙𝙚𝙨𝙚𝙖 𝙖𝙘𝙩𝙞𝙫𝙖𝙧𝙡𝙤𝙨 𝙪𝙨𝙚 .𝘦𝘯𝘢𝘣𝘭𝘦 𝘮𝘰𝘥𝘰𝘩𝘰𝘳𝘯𝘺`
 let url = pies[Math.floor(Math.random() * pies.length)]
 conn.sendFile(m.chat, url, 'error.jpg', `🥵 ♥ PIES ♥  🥵`, m)
 //conn.sendButton(m.chat, `🥵 ♥ PIES ♥  🥵`, author, url, [['𝙎𝙄𝙂𝙐𝙄𝙀𝙉𝙏𝙀 | 𝙉𝙀𝙓𝙏 🆕', `/${command}`]], m)
