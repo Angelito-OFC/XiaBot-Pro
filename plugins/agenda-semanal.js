@@ -40,6 +40,6 @@ const handler = async (m, {conn, command, usedPrefix}) => {
 handler.command = /^(agendasemanal|agendaff)$/i;
 export default handler;
 
-global.pack = [
+global.agendaff = [
   'https://telegra.ph/file/8d762cd280250591f4011.jpg',
 ];
