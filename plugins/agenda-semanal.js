@@ -33,7 +33,7 @@ const handler = async (m, {conn, command, usedPrefix}) => {
   switch (command) {
     case 'pack':
       const url = await pack[Math.floor(Math.random() * pack.length)];
-      conn.sendMessage(m.chat, {image: {url: url}, caption: `_🥵 Pack 🥵_`}, {quoted: m});
+      conn.sendMessage(m.chat, {image: {url: url}, caption: `» 𝘼𝙂𝙀𝙉𝘿𝘼 𝙎𝙀𝙈𝘼𝙉𝘼𝙇 🔮`}, {quoted: m});
       break;
   }
 };
