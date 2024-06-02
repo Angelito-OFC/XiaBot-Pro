@@ -25,3 +25,13 @@ global.db.data.users[m.sender].lastcofre = new Date * 1
 handler.command = ['agendasemanal'] 
 handler.register = true
 export default handler
+
+
+import fetch from 'node-fetch';
+const handler = async (m, {conn, command, usedPrefix}) => {
+  if (!db.data.chats[m.chat].modohorny && m.isGroup) throw '🔮 𝙇𝙤𝙨 𝙘𝙤𝙢𝙖𝙣𝙙𝙤𝙨 +18 𝙚𝙨𝙩𝙖𝙣 𝙙𝙚𝙨𝙖𝙘𝙩𝙞𝙫𝙖𝙙𝙤𝙨 𝙚𝙣 𝙚𝙨𝙩𝙚 𝙜𝙧𝙪𝙥𝙤, 𝙨𝙞 𝙚𝙨 𝙖𝙙𝙢𝙞𝙣 𝙮 𝙙𝙚𝙨𝙚𝙖 𝙖𝙘𝙩𝙞𝙫𝙖𝙧𝙡𝙤𝙨 𝙪𝙨𝙚 .𝘦𝘯𝘢𝘣𝘭𝘦 𝘮𝘰𝘥𝘰𝘩𝘰𝘳𝘯𝘺';
+  switch (command) {
+    case 'pack':
+      const url = await pack[Math.floor(Math.random() * pack.length)];
+      conn.sendMessage(m.chat, {image: {url: url}, caption: `_🥵 Pack 🥵_`}, {quoted: m});
+      break;
