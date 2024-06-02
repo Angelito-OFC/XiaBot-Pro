@@ -1,7 +1,3 @@
-const got = require("got");
-
-async function downloadFile(url) {
-
 import { File } from "got";
 import path from "path";
 
