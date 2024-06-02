@@ -8,7 +8,7 @@ try {
    await conn.sendMessage(m.chat, {text: global.wait}, {quoted: m}); 
    const res = await TwitterDL(text);
  if (res?.result.type == 'video') {
-     const caption = res?.result.caption ? res.result.caption : '𝘼𝙌𝙐𝙄 𝙏𝙄𝙀𝙉𝙀 𝙎𝙐 𝙄𝙈𝘼𝙂𝙀𝙉🔮';
+     const caption = res?.result.caption ? res.result.caption : '𝘼𝙌𝙐𝙄 𝙏𝙄𝙀𝙉𝙀 𝙎𝙐 𝙑𝙄𝘿𝙀𝙊 🔮';
      for (let i = 0; i < res.result.media.length; i++) {
      await conn.sendMessage(m.chat, {video: {url: res.result.media[i].result[0].url}, caption: caption}, {quoted: m});
      };
