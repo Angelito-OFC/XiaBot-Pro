@@ -16,7 +16,7 @@ const handler = async (m, {args, usedPrefix, command}) => {
   if (users.exp < apuesta) {
     throw `*[❗] 𝚃𝚄 𝚇𝙿 𝙽𝙾 𝙴𝚂 𝚂𝚄𝙵𝙸𝙲𝙸𝙴𝙽𝚃𝙴 𝙿𝙰𝚁𝙰 𝙰𝙿𝙾𝚂𝚃𝙰𝚁 𝙴𝚂𝙰 𝙲𝙰𝙽𝚃𝙸𝙳𝙰𝙳, 𝙹𝚄𝙴𝙶𝙰 𝙾𝚃𝚁𝙾𝚂 𝙹𝚄𝙴𝙶𝙾𝚂 𝙾 𝙸𝙽𝚃𝙴𝚁𝙰𝙲𝚃𝚄𝙰 𝙲𝙾𝙽 𝙴𝙻 𝙱𝙾𝚃 𝙿𝙰𝚁𝙰 𝙶𝙰𝙽𝙰𝚁 𝙼𝙰𝚂 𝚇𝙿*`;
   }
-  const emojis = ['🦖', '🐿️', '🪿'];
+  const emojis = ['🐋', '🦀', '🪼'];
   let a = Math.floor(Math.random() * emojis.length);
   let b = Math.floor(Math.random() * emojis.length);
   let c = Math.floor(Math.random() * emojis.length);
@@ -40,29 +40,29 @@ const handler = async (m, {args, usedPrefix, command}) => {
   }
   let end;
   if (a == b && b == c) {
-    end = `*𝙶𝙰𝙽𝙰𝚂𝚃𝙴! 🎁 +${apuesta + apuesta} 𝚇𝙿*`;
+    end = `🔮 𝙂𝙖𝙣𝙖𝙨𝙩𝙚! +${apuesta + apuesta} 𝚇𝙿*`;
     users.exp += apuesta;
   } else if (a == b || a == c || b == c) {
-    end = `*🔮 𝙲𝙰𝚂𝙸 𝙻𝙾 𝙻𝙾𝙶𝚁𝙰𝚂!, 𝚂𝙸𝙶𝚄𝙴 𝙸𝙽𝚃𝙴𝙽𝚃𝙰𝙽𝙳𝙾*\n*𝚃𝙾𝙼𝙰 +10 XP*`;
-    users.exp += 10;
+    end = `🔮 𝘾𝙖𝙨𝙞 𝙡𝙤 𝙡𝙤𝙜𝙧𝙖𝙨! 𝙨𝙞𝙜𝙪𝙚 𝙞𝙣𝙩𝙚𝙣𝙩𝙖𝙣𝙙𝙤\n𝙩𝙤𝙢𝙖 +20 XP`;
+    users.exp += 20;
   } else {
-    end = `*❌ 𝙿𝙴𝚁𝙳𝙸𝚂𝚃𝙴 -${apuesta} 𝚇𝙿*`;
+    end = `🔮 𝙋𝙚𝙧𝙙𝙞𝙨𝙩𝙚 -${apuesta} 𝚇𝙿`;
     users.exp -= apuesta;
   }
   users.lastslot = new Date * 1;
   return await m.reply(
       `
-🎰 | *SLOTS* 
-────────
+🎰 *CASINO* 
+──────────
 ${x[0]} : ${y[0]} : ${z[0]}
 ${x[1]} : ${y[1]} : ${z[1]}
 ${x[2]} : ${y[2]} : ${z[2]}
-────────
-🎰 | ${end}`);
+──────────
+🎰 ${end}`);
 };
-handler.help = ['slot <apuesta>'];
+handler.help = ['casino <apuesta>'];
 handler.tags = ['game'];
-handler.command = ['slot'];
+handler.command = ['casino'];
 export default handler;
 
 function msToTime(duration) {
