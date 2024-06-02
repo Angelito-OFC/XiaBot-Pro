@@ -6,7 +6,7 @@ import {instagramdl} from '@bochilteam/scraper';
 import instagramDl from '@sasmeee/igdl';
 import {fileTypeFromBuffer} from 'file-type';
 const handler = async (m, {conn, args, command, usedPrefix}) => {
-  if (!args[0]) throw `*[❗𝐈𝐍𝐅𝐎❗] 𝙸𝙽𝙶𝚁𝙴𝚂𝙴 𝚄𝙽 𝙴𝙽𝙻𝙰𝙲𝙴 𝙳𝙴 𝙸𝙽𝚂𝚃𝙰𝙶𝚁𝙰𝙼, 𝙴𝙹𝙴𝙼𝙿𝙻𝙾: ${usedPrefix + command}* https://www.instagram.com/reel/Cc0NuYBg8CR/?utm_source=ig_web_copy_link`;
+  if (!args[0]) throw `❱❱ 𝙄 𝙉 𝙁 𝙊 𝙍 𝙈 𝘼 𝘾 𝙄 𝙊 𝙉 ❰❰\n\n🔮 𝙁𝙤𝙧𝙢𝙖𝙩𝙤 𝙞𝙣𝙘𝙤𝙧𝙧𝙚𝙘𝙩𝙤\n\n» 𝙐𝙨𝙚 𝙚𝙡 𝙘𝙤𝙢𝙖𝙣𝙙𝙤:\n𝘌𝘫𝘦𝘮𝘱𝘭𝘰: .𝘪𝘨 <𝘭𝘪𝘯𝘬>`;
   m.reply(global.wait);
   try {
 const img = await instagramDl(args[0]);
@@ -23,7 +23,7 @@ for (let i = 0; i < img.length; i++) {
     const datTa = await instagram.download(args[0]);
     for (const urRRl of datTa) {
       const shortUrRRl = await (await fetch(`https://tinyurl.com/api-create.php?url=${args[0]}`)).text();
-      const tXXxt = `🔗 *Url:* ${shortUrRRl}`.trim();
+      const tXXxt = `🔗 *URL:* ${shortUrRRl}`.trim();
       conn.sendFile(m.chat, urRRl.url, 'error.mp4', tXXxt, m);
       await new Promise((resolve) => setTimeout(resolve, 10000));
     }
@@ -31,13 +31,13 @@ for (let i = 0; i < img.length; i++) {
       try {
         const resultss = await instagramGetUrl(args[0]).url_list[0];
         const shortUrl2 = await (await fetch(`https://tinyurl.com/api-create.php?url=${args[0]}`)).text();
-        const txt2 = `🔗 *Url:* ${shortUrl2}`.trim();
+        const txt2 = `🔗 *URL:* ${shortUrl2}`.trim();
         await conn.sendFile(m.chat, resultss, 'error.mp4', txt2, m);
       } catch {
         try {
           const resultssss = await instagramdl(args[0]);
           const shortUrl3 = await (await fetch(`https://tinyurl.com/api-create.php?url=${args[0]}`)).text();
-          const txt4 = `🔗 *Url:* ${shortUrl3}`.trim();
+          const txt4 = `🔗 *URL:* ${shortUrl3}`.trim();
           for (const {url} of resultssss) await conn.sendFile(m.chat, url, 'error.mp4', txt4, m);
         } catch {
           try {
@@ -48,7 +48,7 @@ for (let i = 0; i < img.length; i++) {
             const txt1 = `🔗 *Url:* ${shortUrl1}`.trim();
             await conn.sendFile(m.chat, videoig, 'error.mp4', txt1, m);
           } catch {
-            throw `*[❗𝐈𝐍𝐅𝐎❗] 𝙴𝚁𝚁𝙾𝚁, 𝙿𝙾𝚁 𝙵𝙰𝚅𝙾𝚁 𝚅𝚄𝙴𝙻𝚅𝙰 𝙰 𝙸𝙽𝚃𝙴𝙽𝚃𝙰𝚁𝙻𝙾*`;
+            throw `❱❱ 𝙄 𝙉 𝙁 𝙊 𝙍 𝙈 𝘼 𝘾 𝙄 𝙊 𝙉 ❰❰\n\n🔮 𝘌𝘳𝘳𝘰𝘳 𝘱𝘰𝘳 𝘧𝘢𝘷𝘰𝘳 𝘷𝘶𝘦𝘭𝘷𝘢 𝘢 𝘪𝘯𝘵𝘦𝘯𝘵𝘢𝘳𝘭𝘰`;
           }
         }
       }
