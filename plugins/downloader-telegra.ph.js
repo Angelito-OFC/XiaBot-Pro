@@ -1,4 +1,8 @@
-import { File } from "megajs";
+const got = require("got");
+
+async function downloadFile(url) {
+
+import { File } from "got";
 import path from "path";
 
 let handler = async (m, { conn, args, usedPrefix, text, command }) => {
@@ -38,9 +42,9 @@ let handler = async (m, { conn, args, usedPrefix, text, command }) => {
     }
 }
 
-handler.help = ["mega"]
+handler.help = ["url"]
 handler.tags = ["downloader"]
-handler.command = /^(mega)$/i
+handler.command = /^(url)$/i
 export default handler
 
 function formatBytes(bytes) {
