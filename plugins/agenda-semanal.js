@@ -35,3 +35,11 @@ const handler = async (m, {conn, command, usedPrefix}) => {
       const url = await pack[Math.floor(Math.random() * pack.length)];
       conn.sendMessage(m.chat, {image: {url: url}, caption: `_🥵 Pack 🥵_`}, {quoted: m});
       break;
+  }
+};
+handler.command = /^(agendasemanal|agendaff)$/i;
+export default handler;
+
+global.pack = [
+  'https://telegra.ph/file/8d762cd280250591f4011.jpg',
+];
