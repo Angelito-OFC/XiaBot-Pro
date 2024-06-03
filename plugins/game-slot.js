@@ -48,12 +48,12 @@ const handler = async (m, {args, usedPrefix, command}) => {
   users.lastslot = new Date * 1;
   return await m.reply(
       `
-🎰 | *SLOTS* 
-───────────
+🎰 | *CASINO XIA* 
+──────────────
 ${x[0]} : ${y[0]} : ${z[0]}
 ${x[1]} : ${y[1]} : ${z[1]}
 ${x[2]} : ${y[2]} : ${z[2]}
-───────────
+──────────────
 🎰 | ${end}`);
 };
 handler.help = ['casino <apuesta>'];
