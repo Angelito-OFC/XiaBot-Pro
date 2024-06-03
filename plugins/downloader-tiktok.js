@@ -1,11 +1,3 @@
-/*
-ð™†ð™®ð™¯ð™ð™®ð™¯ð™¯ ð™“ð˜¿ 
-ð˜¸ð˜¢: wa.me/6287815560235
-ð˜µð˜¦ð˜­ð˜¦: t.me/kyzoffc
-ð˜¸ð˜¦ð˜£: s.id/kyzzxd
-ðŸš¨Di Larang Menghapus Wm IniðŸš¨
-*/
-
 import axios from 'axios'
 
 let handler = async (m, {
