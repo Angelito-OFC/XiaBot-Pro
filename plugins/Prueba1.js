@@ -20,7 +20,7 @@ var shadow = async (m, {
     }
     }
     }
-   const db = "./galeria/menudorrat3.jpg"
+   const db = "./galeria/menu.png"
 
 if (command == "menu" || command == "menú") {
 let uwu = `╦══════════════════ ⪨
@@ -39,5 +39,3 @@ conn.sendButton(m.chat, uwu, null, imagen1, [
 ['🧳 descargasmenu', '.descargasmenu'],
 ['👾 estado', '/estado']], null, 
 [['🎭 Grupo de WhatsApp', md]], m)}
-
-if (command == "menucompleto" || command == "allmenu") {
