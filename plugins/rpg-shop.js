@@ -7,7 +7,7 @@ const handler = async (m, {conn, command, args}) => {
     global.db.data.users[m.sender].exp -= xpperlimit * count;
     global.db.data.users[m.sender].limit += count;
     conn.reply(m.chat, `
-┌─「 *MichiBot* 」
+┌─「 *XiaBot* 」
 ‣ *Compra nominal* : + ${count}💎 
 ‣ *Gastado* : -${xpperlimit * count} XP
 └──────────────`, m);
