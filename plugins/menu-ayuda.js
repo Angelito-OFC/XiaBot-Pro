@@ -20,7 +20,7 @@ let msg = generateWAMessageFromContent(m.chat, {
             text: ""
           }),
           header: proto.Message.InteractiveMessage.Header.create({
-            title: "*HELP MENU*",
+            title: "*MENU DE AYUDA*",
             subtitle: "",
             hasMediaAttachment: false
           }),
