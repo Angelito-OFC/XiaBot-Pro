@@ -7,34 +7,34 @@ let vid
 const isCommand7 = /^(facebook|fb|facebookdl|fbdl)$/i.test(command)
 
 async function reportError(e) {
-await conn.reply(m.chat, `✏️ 𝙾𝙲𝚄𝚁𝚁𝙸𝙾 𝚄𝙽 𝙴𝚁𝚁𝙾𝚁`, m, fake, )
-console.log(`✏️ 𝙴𝚁𝚁𝙾𝚁 𝙴𝙽: ${usedPrefix + command} ⚠️\n`)
+await conn.reply(m.chat, `❱❱ 𝙄 𝙉 𝙁 𝙊 𝙍 𝙈 𝘼 𝘾 𝙄 𝙊 𝙉 ❰❰\n\n🔮 𝘌𝘳𝘳𝘰𝘳 𝘱𝘰𝘳 𝘧𝘢𝘷𝘰𝘳 𝘷𝘶𝘦𝘭𝘷𝘢 𝘢 𝘪𝘯𝘵𝘦𝘯𝘵𝘢𝘳𝘭𝘰`, m, fake, )
+console.log(`🔮 𝙴𝚁𝚁𝙾𝚁 𝙴𝙽: ${usedPrefix + command} ⚠️\n`)
 console.log(e)
 }
 
 switch (true) {   
 case isCommand7:
-if (!text) return conn.reply(m.chat, `✏️ *Ingrese un enlace de facebook*\n\nEjemplo, !fb https://fb.watch/kAOXy3wf2L/?mibextid=Nif5oz`, m, fake, )
-if (!args[0].match(/www.facebook.com|fb.watch|web.facebook.com|business.facebook.com|video.fb.com/g)) return conn.reply(m.chat, '✏️ *ᥒ᥆ ᥱs ᥙᥒ ᥱᥒᥣᥲᥴᥱ ᥎ᥲ́ᥣіძ᥆*', m, fake, )
-await conn.reply(m.chat, '✏️ 𝐄𝐬𝐩𝐞𝐫𝐞 𝐔𝐧 𝐌𝐨𝐦𝐞𝐧𝐭𝐨...', m, fake, )
-m.react('🕒')
+if (!text) return conn.reply(m.chat, `❱❱ 𝙄 𝙉 𝙁 𝙊 𝙍 𝙈 𝘼 𝘾 𝙄 𝙊 𝙉 ❰❰\n\n🔮 𝙁𝙤𝙧𝙢𝙖𝙩𝙤 𝙞𝙣𝙘𝙤𝙧𝙧𝙚𝙘𝙩𝙤\n\n» 𝙐𝙨𝙚 𝙚𝙡 𝙘𝙤𝙢𝙖𝙣𝙙𝙤:\n𝘌𝘫𝘦𝘮𝘱𝘭𝘰: .𝘧𝘣 <𝘭𝘪𝘯𝘬>`, m, fake, )
+if (!args[0].match(/www.facebook.com|fb.watch|web.facebook.com|business.facebook.com|video.fb.com/g)) return conn.reply(m.chat, '❱❱ 𝙄 𝙉 𝙁 𝙊 𝙍 𝙈 𝘼 𝘾 𝙄 𝙊 𝙉 ❰❰\n\n🔮 𝘌𝘳𝘳𝘰𝘳 𝘱𝘰𝘳 𝘧𝘢𝘷𝘰𝘳 𝘷𝘶𝘦𝘭𝘷𝘢 𝘢 𝘪𝘯𝘵𝘦𝘯𝘵𝘢𝘳𝘭𝘰', m, fake, )
+await conn.reply(m.chat, '🔮 𝘾𝙖𝙧𝙜𝙖𝙣𝙙𝙤.....', m, fake, )
+m.react('⏳')
 let messageType = checkMessageType(args[0])
 let message = ''
 switch (messageType) {
 case 'groups':
-message = '𝚅𝙸𝙳𝙴𝙾 𝙳𝙴 𝙶𝚁𝚄𝙿𝙾 𝙳𝙴 𝙵𝙰𝙲𝙴𝙱𝙾𝙾𝙺 ✏️'
+message = '𝙑𝙞𝙙𝙚𝙤 𝙙𝙚 𝙜𝙧𝙪𝙥𝙤 𝙙𝙚 𝙁𝙖𝙘𝙚𝙗𝙤𝙤𝙠 🔮'
 break
 case 'reel':
-message = '𝚅𝙸𝙳𝙴𝙾 𝙳𝙴 𝚁𝙴𝙴𝙻𝚂 𝙳𝙴 𝙵𝙰𝙲𝙴𝙱𝙾𝙾𝙺 ✏️'
+message = '𝙑𝙞𝙙𝙚𝙤 𝙙𝙚 𝙧𝙚𝙚𝙡𝙨 𝙙𝙚 𝙁𝙖𝙘𝙚𝙗𝙤𝙤𝙠 🔮'
 break
 case 'stories':
-message = '𝚅𝙸𝙳𝙴𝙾 𝙳𝙴 𝙷𝙸𝚂𝚃𝙾𝚁𝙸𝙰𝚂 𝙳𝙴 𝙵𝙰𝙲𝙴𝙱𝙾𝙾𝙺 ✏️'
+message = '𝙑𝙞𝙙𝙚𝙤 𝙙𝙚 𝙝𝙞𝙨𝙩𝙤𝙧𝙞𝙖𝙨 𝙙𝙚 𝙁𝙖𝙘𝙚𝙗𝙤𝙤𝙠 🔮'
 break
 case 'posts':
-message = '𝚅𝙸𝙳𝙴𝙾 𝙳𝙴 𝙿𝚄𝙱𝙻𝙸𝙲𝙰𝙲𝙸𝙾𝙽𝙴𝚂 𝙳𝙴 𝙵𝙰𝙲𝙴𝙱𝙾𝙾𝙺 ✏️'
+message = '𝙑𝙞𝙙𝙚𝙤 𝙙𝙚 𝙥𝙪𝙗𝙡𝙞𝙘𝙖𝙘𝙞𝙤𝙣𝙚𝙨 𝙙𝙚 𝙁𝙖𝙘𝙚𝙗𝙤𝙤𝙠 🔮'
 break
 default:
-message = '𝚅𝙸𝙳𝙴𝙾 𝙳𝙴 𝙵𝙰𝙲𝙴𝙱𝙾𝙾𝙺 ✏️'
+message = '𝙑𝙞𝙙𝙚𝙤 𝙙𝙚 𝙁𝙖𝙘𝙚𝙗𝙤𝙤𝙠 🔮'
 break
 }
 try {
