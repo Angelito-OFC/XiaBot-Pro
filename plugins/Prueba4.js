@@ -1,30 +1,29 @@
-
 import yts from 'yt-search'
 let handler = async (m, { conn, command, text, usedPrefix }) => {
 
-  if (!text) throw `✳️ ${mssg.example} *${usedPrefix + command}* Lil Peep hate my life`
+        if (!text) throw `🚫 𝐄𝐑𝐑𝐎𝐑 🚫 іᥒgrᥱsᥲ ᥱᥣ 𝗍і́𝗍ᥙᥣ᥆ ძᥱ ᥙᥒᥲ ᥴᥲᥒᥴі᥆́ᥒ\n\n[ 📌 ] ᥱȷᥱm⍴ᥣ᥆ *${usedPrefix + command}* Lil Peep hate my life`
         let res = await yts(text)
         let vid = res.videos[0]
-        if (!vid) throw `✳️ Vídeo/Audio no encontrado`
+        if (!vid) throw `🚫 𝐀𝐓𝐄𝐍𝐂𝐈𝐎𝐍 🚫 ᥎і́ძᥱ᥆/ᥲᥙძі᥆ ᥒ᥆ ᥱᥒᥴ᥆ᥒ𝗍rᥲძ᥆`
         let { title, description, thumbnail, videoId, timestamp, views, ago, url } = vid
         //const url = 'https://www.youtube.com/watch?v=' + videoId
-        m.react('🎧') 
-  let play = `
-        ≡ *FG MUSIC*
-┌──────────────
-▢ 📌 *${mssg.title}:* ${vid.title}
-▢ 📆 *${mssg.aploud}:* ${vid.ago}
-▢ ⌚ *${mssg.duration}:* ${vid.timestamp}
-▢ 👀 *${mssg.views}:* ${vid.views.toLocaleString()}
-└──────────────`
- await conn.sendButton2(m.chat, play, mssg.ig, thumbnail, [
-    ['🎶 MP3', `${usedPrefix}fgmp3 ${url}`],
-    ['🎥 MP4', `${usedPrefix}fgmp4 ${url}`]
-  ], null, [['Canal', `${md}`]], m)
+        m.react('🎧')
+        let play = `
+        ≡ ${mssg}
+> ┌──────────────
+> 📌 *Título* : ${title}
+> 📆 *Publicado:* ${ago}
+> ⌚ *Duración:* ${timestamp}
+> 👀 *Vistas:* ${views}
+> └──────────────`
+ await conn.sendButton(m.chat, play, fgig, thumbnail, [
+    ['🍧 MP3', `${usedPrefix}fgmp3 ${url}`],
+    ['🍿 MP4', `${usedPrefix}fgmp4 ${url}`]
+  ],
 }
-handler.help = ['play']
-handler.tags = ['']
-handler.command = ['play5', 'play55']
-handler.disabled = false
+handler.help = ['bot']
+handler.tags = ['prueba']
+handler.command = ['prueba2000', 'playqq']
+//handler.disabled = true
 
 export default handler
