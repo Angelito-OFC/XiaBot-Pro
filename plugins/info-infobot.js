@@ -12,7 +12,7 @@ let handler = async (m, {conn, usedPrefix}) => {
   const groups = chats.filter(([id]) => id.endsWith("@g.us"))
   const {restrict, antiCall, antiprivado} = global.db.data.settings[conn.user.jid] || {}
   const {autoread, gconly, pconly, self} = global.opts || {}
-  let pp = "./galeria/menudorrat3.jpg"  
+  let pp = "./galeria/menu.jpg"  
  let formatSize = sizeFormatter({ 
    std: "JEDEC", 
    decimalPlaces: 2, 
@@ -48,7 +48,7 @@ conn.sendMessage(m.chat, { image: { url: "https://telegra.ph/file/7f335b93c1ab52
 contextInfo: {
 mentionedJid: [m.sender],
 externalAdReply: {
-title: `INFO - BOT`,
+title: `INFO - XIA-BOT`,
 sourceUrl: "https://www.instagram.com/usxr_angelito",
 mediaType: 1,
 showAdAttribution: true,
