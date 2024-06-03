@@ -1,6 +1,6 @@
 import pkg from '@whiskeysockets/baileys';
 const { generateWAMessageFromContent, proto } = pkg
-    const pp = imagen2;
+    const pp = imagen4;
 
 var handler = async (m, { conn, usedPrefix }) => {
 }
