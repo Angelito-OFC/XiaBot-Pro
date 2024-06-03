@@ -41,13 +41,13 @@ const handler = async (m, {args, usedPrefix, command}) => {
   let end;
   if (a == b && b == c) {
     end = `*𝙶𝙰𝙽𝙰𝚂𝚃𝙴! 🎁 +${apuesta + apuesta} 𝚇𝙿*`;
-    users.exp += apuesta;
+    users.coin += apuesta;
   } else if (a == b || a == c || b == c) {
     end = `*🔮 𝙲𝙰𝚂𝙸 𝙻𝙾 𝙻𝙾𝙶𝚁𝙰𝚂!, 𝚂𝙸𝙶𝚄𝙴 𝙸𝙽𝚃𝙴𝙽𝚃𝙰𝙽𝙳𝙾*\n*𝚃𝙾𝙼𝙰 +10 XP*`;
-    users.exp += 10;
+    users.coin += 10;
   } else {
     end = `*❌ 𝙿𝙴𝚁𝙳𝙸𝚂𝚃𝙴 -${apuesta} 𝚇𝙿*`;
-    users.exp -= apuesta;
+    users.coin -= apuesta;
   }
   users.lastslot = new Date * 1;
   return await m.reply(
