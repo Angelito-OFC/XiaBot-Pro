@@ -4,6 +4,12 @@ const { generateWAMessageFromContent, proto } = pkg
 
 var handler = async (m, { conn, usedPrefix }) => {
 
+ await conn.sendbuttonParamsJson(m.chat, play, fgig, thumbnail, [
+    ['🍧 MENU-FF', `.menuff`],
+    ['🍿 MP4', ``]
+  ],
+}
+
 let msg = generateWAMessageFromContent(m.chat, {
   viewOnceMessage: {
     message: {
@@ -26,6 +32,7 @@ let msg = generateWAMessageFromContent(m.chat, {
           nativeFlowMessage: proto.Message.InteractiveMessage.NativeFlowMessage.create({
             buttons: [
               {
+               ['🍧 MENU-FF', `.menuff`],
                 "name": "🔮 MENU COMPLETO",
                 "buttonParamsJson": "{\"display_text\":\".menu\",\"id\":\"message\"}"
               },
