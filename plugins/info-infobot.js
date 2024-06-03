@@ -28,44 +28,36 @@ let handler = async (m, {conn, usedPrefix}) => {
    cpu: cpu.avg + " Ghz", 
    disk: formatSize(disk[0].available), 
  };
-let info = `
-╠═〘 𝐈𝐍𝐅𝐎 𝐃𝐄𝐋 𝐁𝐎𝐓 〙 ═
-╠
-║❒  [👑] *CREADOR: DIEGO-OFC*
-║❒  [#️⃣] *NUMERO: +51906662557*
-║❒  [🛠️] *PREFIJO: ${usedPrefix}*
-║❒  [💬] *CHATS PRIVADOS: ${chats.length - groups.length}*
-║❒  [💭] *CHAT DE GRUPOS: ${groups.length}* 
-║❒  [🗯️] *CHATS TOTALES: ${chats.length}* 
-║❒  [🚀] *ACTIVIDAD: ${uptime}*
-║❒  [🎩] *USUARIOS: ${totalreg} 𝚗𝚞𝚖𝚎𝚛𝚘𝚜*
-║❒  [☑️] *AUTOREAD:* ${autoread ? "*𝚊𝚌𝚝𝚒𝚟𝚊𝚍𝚘*" : "*𝚍𝚎𝚜𝚊𝚌𝚝𝚒𝚟𝚊𝚍𝚘*"}
-║❒  [❕] *RESTRICT:* ${restrict ? "*𝚊𝚌𝚝𝚒𝚟𝚊𝚍𝚘*" : "*𝚍𝚎𝚜𝚊𝚌𝚝𝚒𝚟𝚊𝚍𝚘*"} 
-║❒  [🔒] *ANTIPRIVADO*: ${antiprivado ? "*𝚊𝚌𝚝𝚒𝚟𝚊𝚍𝚘*" : "*𝚍𝚎𝚜𝚊𝚌𝚝𝚒𝚟𝚊𝚍𝚘*"}
-║❒  [📞] *ANTILLAMADA:* ${antiCall ? "*𝚊𝚌𝚝𝚒𝚟𝚊𝚍𝚘*" : "*𝚍𝚎𝚜𝚊𝚌𝚝𝚒𝚟𝚊𝚍𝚘*"}
-║❒  [💬] *PCONLY*: ${pconly ? "*𝚊𝚌𝚝𝚒𝚟𝚊𝚍𝚘*" : "*𝚍𝚎𝚜𝚊𝚌𝚝𝚒𝚟𝚊𝚍𝚘*"}
-║❒  [🏢] *GCONLY*: ${gconly ? "*𝚊𝚌𝚝𝚒𝚟𝚊𝚍𝚘*" : "*𝚍𝚎𝚜𝚊𝚌𝚝𝚒𝚟𝚊𝚍𝚘*"}
-║❒  [🗺️] *MODO*: ${self ? "*𝚙𝚛𝚒𝚟𝚊𝚍𝚘*" : "*𝚙𝚞𝚋𝚕𝚒𝚌𝚘*"}
-║❒  [🔴] *RAM USADA:* ${json.memory_used}
-║❒  [📦] *DISCO DURO:*  ${json.disk}
-║❒  [🖥️] *CPU USADA:*  ${json.cpu} 
-╠
-*╠═〘 𝐓𝐡𝐞 𝐒𝐡𝐚𝐝𝐨𝐰 𝐁𝐫𝐨𝐜𝐤𝐞𝐫𝐬 - 𝐁𝐨𝐭 〙 ═*`.trim();
+let info = `*🔮 I N F O R M A C I Ó N 🔮*
+ 
+🔮꙰᠁❥ 𝘾𝙧𝙚𝙖𝙙𝙤𝙧◞: Angelito
+🔮꙰᠁❥ 𝙒𝙖: wa.me/59168683798
+🔮꙰᠁❥ 𝙄𝙜:* @usxr_angelito
+🔮꙰᠁❥ 𝙑𝙚𝙧𝙨𝙞𝙤𝙣: 3.2.0
+🔮꙰᠁❥ 𝙋𝙧𝙚𝙛𝙞𝙟𝙤: ( . )
+🔮꙰᠁❥ 𝙈𝙤𝙙𝙤: Publico
+🔮꙰᠁❥ 𝘼𝙘𝙩𝙞𝙫𝙞𝙙𝙖𝙙: ${uptime}
+🔮꙰᠁❥ 𝙐𝙨𝙪𝙖𝙧𝙞𝙤𝙨: ${totalreg}
+🔮꙰᠁❥ 𝙑𝙚𝙡𝙤𝙘𝙞𝙙𝙖𝙙: ${speed} ms
+🔮꙰᠁❥ 𝘾𝙝𝙖𝙩 𝙥𝙧𝙞𝙫: ${chats.length - groups.length}
+🔮꙰᠁❥ 𝘾𝙝𝙖𝙩 𝙜𝙧𝙪𝙥𝙖𝙡: ${groups.length}
+🔮꙰᠁❥ 𝘾𝙝𝙖𝙩𝙨 𝙩𝙤𝙩𝙖𝙡: ${chats.length}
+🔮꙰᠁❥ 𝙎𝙪𝙗-𝘽𝙤𝙩𝙨: ${modejadibot ? "activado" : "desactivado"}`.trim();
 
-conn.sendMessage(m.chat, { image: { url: "https://telegra.ph/file/7ec5032386dfe878f99ab.jpg", }, caption: info,
+conn.sendMessage(m.chat, { image: { url: "https://telegra.ph/file/7f335b93c1ab52e3f243b.jpg", }, caption: info,
 contextInfo: {
 mentionedJid: [m.sender],
 externalAdReply: {
 title: `INFO - BOT`,
-sourceUrl: "http://paypal.me/DorratBotOficial",
+sourceUrl: "https://www.instagram.com/usxr_angelito",
 mediaType: 1,
 showAdAttribution: true,
-thumbnailUrl: "https://telegra.ph/file/7ec5032386dfe878f99ab.jpg",
+thumbnailUrl: "https://telegra.ph/file/7f335b93c1ab52e3f243b.jpg",
 }}}, { quoted: m })
 }  
 handler.help = ["infobot"]
 handler.tags = ["info", "tools"]
-handler.command = /^(infobot|informacionbot|infodorrat|informacióndorrat|informaciondorrats)$/i;
+handler.command = /^(infobot|informacionbot|infoxia|informaciónxia|informacionxia)$/i;
 export default handler
 function clockString(ms) {
   let h = Math.floor(ms / 3600000);
