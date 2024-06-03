@@ -20,7 +20,7 @@ var shadow = async (m, {
     }
     }
     }
-   const db = "./galeria/menu.png"
+   const db = "imagen4"
 
 if (command == "prueba0" || command == "prueba 0") {
 let uwu = `╦══════════════════ ⪨
