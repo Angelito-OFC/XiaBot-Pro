@@ -1,36 +1,50 @@
-import { tiktokdl } from '@bochilteam/scraper';
-import fg from 'api-dylux';
 
+import fg from 'api-dylux'
+import fetch from 'node-fetch'
 let handler = async (m, { conn, text, args, usedPrefix, command }) => {
 
- if (!args[0] && m.quoted && m.quoted.text) {
-  args[0] = m.quoted.text;
-}
-if (!args[0] && !m.quoted) throw `Dale el enlace del video Tiktok o cita un enlace de tiktok`;
- if (!args[0].match(/tiktok/gi)) throw `Verifica el link del tik tok`;
+        if (!args[0]) throw `✳️ ${mssg.noLink('TikTok')}\n\n 📌 ${mssg.example} : ${usedPrefix + command} https://vm.tiktok.com/ZMYG92bUh/`
+        if (!args[0].match(/tiktok/gi)) throw `❎ ${mssg.noLink('TikTok')}`
+        m.react(rwait)
 
+        try {
+        let res = await fetch(global.API('fgmods', '/api/downloader/tiktok', { url: args[0] }, 'apikey'))
+        let data = await res.json()
 
-  let txt = 'Aqui Esta Tu Video';
+        if (!data.result.images) {
+            let tex = `
+┌─⊷ *TIKTOK DL* 
+▢ *${mssg.name}:* ${data.result.author.nickname}
+▢ *${mssg.username}:* ${data.result.author.unique_id}
+▢ *${mssg.duration}:* ${data.result.duration}
+▢ *Likes:* ${data.result.digg_count}
+▢ *${mssg.views}:* ${data.result.play_count}
+▢ *${mssg.desc}:* ${data.result.title}
+└───────────
+`
+            conn.sendFile(m.chat, data.result.play, 'tiktok.mp4', tex, m);
+            m.react(done)
+        } else {
+            let cap = `
+▢ *Likes:* ${data.result.digg_count}
+▢ *${mssg.desc}:* ${data.result.title}
+`
+            for (let ttdl of data.result.images) {
+                conn.sendMessage(m.chat, { image: { url: ttdl }, caption: cap }, { quoted: m })
+            }
+            conn.sendFile(m.chat, data.result.play, 'tiktok.mp3', '', m, null, { mimetype: 'audio/mp4' })
+            m.react(done)
+        }
 
-  try {
-    const { author: { nickname }, video, description } = await tiktokdl(args[0]);
-    const url = video.no_watermark2 || video.no_watermark || 'https://tikcdn.net' + video.no_watermark_raw || video.no_watermark_hd;
-
-    if (!url) throw global.error;
-
-    conn.sendFile(m.chat, url, 'tiktok.mp4', '', m);
-  } catch (err) {
-    try {
-      let p = await fg.tiktok(args[0]);
-      conn.sendFile(m.chat, p.play, 'tiktok.mp4', txt, m);
-    } catch {
-      m.reply('*Ocurrio un error*');
+      } catch (error) {
+        m.reply(`❎ ${mssg.error}`)
     }
-  }
-};
 
-handler.help = ['tiktok'].map((v) => v + ' <url>');
-handler.tags = ['downloader'];
-handler.command = /^t(t|iktok(d(own(load(er)?)?|l))?|td(own(load(er)?)?|l))$/i;
+}
 
-export default handler;
+handler.help = ['tiktok']
+handler.tags = ['dl']
+handler.command = ['tiktok', 'tt', 'tiktokimg', 'tiktokslide']
+handler.diamond = true
+
+export default handler
