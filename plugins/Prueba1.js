@@ -22,7 +22,7 @@ var shadow = async (m, {
     }
    const db = "./galeria/menu.png"
 
-if (command == "menu" || command == "menú") {
+if (command == "prueba0" || command == "prueba 0") {
 let uwu = `╦══════════════════ ⪨
 ┃│✾ ⋟ *${ucapan()}*
 ┃│✾ ⋟ *tenemos varios tipos de menus*
