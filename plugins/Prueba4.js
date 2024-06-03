@@ -23,8 +23,8 @@ let handler = async (m, { conn, command, text, usedPrefix }) => {
   ], null, [['Canal', `${md}`]], m)
 }
 handler.help = ['play']
-handler.tags = ['dl']
-handler.command = ['play', 'playvid']
+handler.tags = ['']
+handler.command = ['play5', 'play55']
 handler.disabled = false
 
 export default handler
