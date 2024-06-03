@@ -34,7 +34,7 @@ termux-setup-storage
 apt update && apt upgrade && pkg install -y git nodejs ffmpeg imagemagick yarn
 ```
 ```bash
-git clone https://github.com/Karim-off/XiaBot-MD && cd XiaBot-MD 
+git clone https://github.com/Karim-off/XiaBot-Pro && cd XiaBot-Pro
 ```
 ```bash
 yarn install
@@ -54,7 +54,7 @@ npm start
 * #### APLICACIÓN RECOMENDADA PARA EDITAR [`NÚMERO DE OWNER`](https://play.google.com/store/apps/details?id=com.rhmsoft.code)
 > **Note** Guardar los archivos en la ubicación: storage/downloads/RubyBot-MD-master/RubyBot-MD-master   
 ----
-### 💟 USAR RUBY 24/7 EN TERMUX 
+### 💟 USAR XIA 24/7 EN TERMUX 
 > Ejecutar estos comandos dentro de la carpeta RubyBot-MD
 ```bash
 termux-wake-lock && npm i -g pm2 && pm2 start index.js && pm2 save && pm2 logs
