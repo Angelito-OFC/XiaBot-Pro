@@ -20,7 +20,8 @@ const handler = async (m, { conn, text, usedPrefix: prefijo }) => {
   if (!text) throw `⚠️ *Error*`;
 
   if (device !== 'desktop' || device !== 'web') {      
-
+  const pp = imagen1;
+  const img = imagen4;
   const results = await yts(text);
   const videos = results.videos.slice(0, 20);
   const randomIndex = Math.floor(Math.random() * videos.length);
