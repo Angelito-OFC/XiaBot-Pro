@@ -14,5 +14,5 @@ const handler = async (m, {conn, usedPrefix: prefix, command, text}) => {
     throw `❱❱ 𝙄 𝙉 𝙁 𝙊 𝙍 𝙈 𝘼 𝘾 𝙄 𝙊 𝙉 ❰❰\n\n🔮 𝘌𝘳𝘳𝘰𝘳, 𝘯𝘰 𝘴𝘦 𝘦𝘯𝘤𝘰𝘯𝘵𝘳𝘢𝘳𝘰𝘯 𝘳𝘦𝘴𝘶𝘭𝘵𝘢𝘥𝘰𝘴 𝘱𝘢𝘳𝘢 𝘴𝘶 𝘣𝘶𝘴𝘲𝘶𝘦𝘥𝘢`;
   }    
 };
-handler.command = /^(apkmod|modapk|dapk2|aptoide|aptoidedl)$/i;
+handler.command = /^(apk|modapk|dapk2|aptoide|aptoidedl)$/i;
 export default handler;
