@@ -13,7 +13,6 @@ let handler = async (m, { conn, args }) => {
       txt += `        ◦  *Forks* : ${json.forks_count}\n`
       txt += `        ◦  *Stars* : ${json.stargazers_count}`
    await conn.sendFile(m.chat, 'https://telegra.ph/file/9468197456d862aae9387.jpg', m)
-
 }
 
 handler.help = ['script']
