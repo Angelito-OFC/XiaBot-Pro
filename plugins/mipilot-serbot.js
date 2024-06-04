@@ -93,14 +93,14 @@ msgRetry,
 msgRetryCache,
 version,
 syncFullHistory: true,
-browser: mcode ? ['Ubuntu', 'Chrome', '110.0.5585.95'] : ['CuriosityBot', 'Opera', '5.0'],
+browser: mcode ? ['Ubuntu', 'Chrome', '110.0.5585.95'] : ['XiaBot', 'Opera', '5.0'],
 defaultQueryTimeoutMs: undefined,
 getMessage: async (key) => {
 if (store) {
 const msg = store.loadMessage(key.remoteJid, key.id)
 return msg.message && undefined
 } return {
-conversation: 'CuriosityBot-MD',
+conversation: 'XiaBot-Pro',
 }}}
 
 let conn = makeWASocket(connectionOptions)
