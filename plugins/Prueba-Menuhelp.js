@@ -6,7 +6,7 @@ import moment from 'moment-timezone'
 import os from 'os'
 import fs from 'fs'
 import fetch from 'node-fetch'
-const { generateWAMessageFromContent, proto } = (await import('@adiwajshing/baileys')).default
+const { generateWAMessageFromContent, proto } = (await import('@whiskeysockets/baileys')).default
 let handler = async (m, { conn, usedPrefix: _p, __dirname, args, command}) => {
 let loadd = [
     "â– â– â– â– â– â– â– â– â– â– â– â– ðŸš—\n             ðŸ·ðŸ¶Ùª",
