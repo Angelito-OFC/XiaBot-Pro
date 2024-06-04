@@ -10,7 +10,7 @@ handler.all = async function(m) {
     conn.sendPresenceUpdate('recording', m.chat);
     await m.reply(`𝘏𝘰𝘭𝘢 𝘲𝘶𝘦𝘳𝘪𝘥𝘰 𝘩𝘶𝘮𝘢𝘯𝘰 𝘦𝘯 𝘲𝘶𝘦́ 𝘱𝘶𝘦𝘥𝘰 𝘢𝘺𝘶𝘥𝘢𝘳 ? 🔮`);
     m.conn.sendMessage(m.chat, {audio: {url: vn}, fileName: 'error.mp3', mimetype: 'audio/mpeg', ptt: true}, {quoted: m});
-    // conn.sendFile(m.chat, vn, 'bot.mp3', null, m, true, { type: 'audioMessage', seconds: '4556', ptt: true, sendEphemeral: true, quoted: m })
+    // conn.sendFile(m.chat, vn, 'HolaXiaBot.mp3', null, m, true, { type: 'audioMessage', seconds: '4556', ptt: true, sendEphemeral: true, quoted: m })
   }
   return !0;
 };
