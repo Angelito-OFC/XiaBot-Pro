@@ -37,13 +37,13 @@ const handler = async (m, {args, usedPrefix, command}) => {
   let end;
   if (a == b && b == c) {
     end = `🥳 𝙂𝘼𝙉𝘼𝙎𝙏𝙀!  +${apuesta + apuesta} 𝘟𝘪𝘢𝘊𝘰𝘪𝘯𝘴 🪙`;
-    users.coins += apuesta;
+    users.coin += apuesta;
   } else if (a == b || a == c || b == c) {
     end = `😮‍💨 𝘾𝘼𝙎𝙄 𝙇𝙊 𝙇𝙊𝙂𝙍𝘼𝙎!, 𝘴𝘪𝘨𝘶𝘦 𝘪𝘯𝘵𝘦𝘯𝘵𝘢𝘯𝘥𝘰\n𝙏𝙤𝙢𝙖 +10 𝘟𝘪𝘢𝘊𝘰𝘪𝘯𝘴 🪙`;
-    users.coins += 10;
+    users.coin += 10;
   } else {
     end = `😣 𝙋𝙀𝙍𝘿𝙄𝙎𝙏𝙀 -${apuesta} 𝘟𝘪𝘢𝘊𝘰𝘪𝘯𝘴 🪙`;
-    users.coins -= apuesta;
+    users.coin -= apuesta;
   }
   users.lastslot = new Date * 1;
   return await m.reply(
