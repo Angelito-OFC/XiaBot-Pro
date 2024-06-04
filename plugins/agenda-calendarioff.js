@@ -5,7 +5,7 @@ const handler = async (m, {conn, text, command}) => {
 };
 handler.command = /^(calendario|calendarioff)$/i;
 handler.tags = ['internet'];
-handler.help = ['agenda'];
+handler.help = ['calendario'];
 export default handler;
 
 global.calendario = [
