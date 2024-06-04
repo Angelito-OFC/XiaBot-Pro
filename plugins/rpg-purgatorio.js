@@ -9,5 +9,5 @@ handler.help = ['mapa'];
 export default handler;
 
 global.purgatorio = [
-  'https://cdn.discordapp.com/attachments/1009154096588140605/1157519401713684510/8ea51a3f-cc3d-428f-af0c-0175ccd3ce30.png',
+  'https://telegra.ph/file/906cbccf4259b5395abb5.jpg',
 ];
