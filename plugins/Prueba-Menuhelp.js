@@ -270,7 +270,7 @@ let furina = {
 }               
 handler.help = ['menu']
 handler.tags = ['main']
-handler.command = /^(menu|help|i\?)$/i
+handler.command = /^(menuhelp|help|i\?)$/i
 
 handler.register = false
 
