@@ -9,7 +9,7 @@ handler.help = ['pies']
 handler.tags = ['internet']
 handler.command = /^(pies)$/
 handler.exp = 50
-handler.level = 3
+handler.level = 0
 export default handler
 
 
