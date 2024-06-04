@@ -1,13 +1,13 @@
 const handler = async (m, {conn, text, command}) => {
-  const yh = global.agenda;
+  const yh = global.calendario;
   const url = yh[Math.floor(Math.random() * yh.length)];
   conn.sendMessage(m.chat, {image: {url: url}, caption: '*🔮 CALENDARIO 🔮*'}, {quoted: m});
 };
-handler.command = /^(agendasemanal|agenda)$/i;
+handler.command = /^(calendario|calendarioff)$/i;
 handler.tags = ['internet'];
 handler.help = ['agenda'];
 export default handler;
 
-global.agenda = [
-  'https://telegra.ph/file/8d762cd280250591f4011.jpg',
+global.calendario = [
+  'https://telegra.ph/file/78c7aa2304517d2e896ec.jpg',
 ];
