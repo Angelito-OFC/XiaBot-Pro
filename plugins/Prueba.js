@@ -28,10 +28,20 @@ const handler = async (m, { conn, text, usedPrefix: prefijo }) => {
 
   var messa = await prepareWAMessageMedia({ image: {url: randomVideo.thumbnail}}, { upload: conn.waUploadToServer })
   const interactiveMessage = {
-    body: { text: `-›🧸 𝗥𝗘𝗦𝗨𝗟𝗧𝗔𝗗𝗢𝗦 𝗢𝗕𝗧𝗘𝗡𝗜𝗗𝗢𝗦: ${results.videos.length}\n-›🧸 𝗩𝗜𝗗𝗘𝗢 𝗔𝗟𝗘𝗔𝗧𝗢𝗥𝗜𝗢:\n-›🧸 𝗧𝗜𝗧𝗨𝗟𝗢: ${randomVideo.title}\n-›🧸 𝗔𝗨𝗧𝗢𝗥: ${randomVideo.author.name}\n-›🧸 𝗩𝗜𝗦𝗜𝗧𝗔𝗦: ${randomVideo.views}\n-›🧸 𝗨𝗥𝗟: ${randomVideo.url}\n-›🧸𝗜𝗠𝗔𝗚𝗘𝗡: ${randomVideo.thumbnail}`.trim() },
+    body: { text: `•🔮𝘾𝙍𝙀𝘼𝘿𝙊𝙍 
+•🔮 wa.me/59897246324
+•🔮𝙑𝙀𝙍𝙎𝙄𝙊𝙉 𝘿𝙀𝙇 𝘽𝙊𝙏: 𝟹.𝟸.𝟷
+•🔮𝙁𝙀𝘾𝙃𝘼: ${date}
+•🔮𝙉𝙄𝙑𝙀𝙇: ${level}
+•🔮𝙀𝙓𝙋: ${exp} 
+•🔮𝙍𝘼𝙉𝙂𝙊: ${role} 
+•🔮𝘿𝙄𝘼𝙈𝘼𝙉𝙏𝙀𝙎: ${limit}
+•🔮𝙓𝙄𝘼𝘾𝙊𝙄𝙉𝙎: ${money}
+•🔮𝙏𝙊𝙆𝙀𝙉𝙎: ${joincount}
+•🔮𝙏𝙄𝙀𝙈𝙋𝙊 𝘼𝘾𝙏: ${uptime}`.trim() },
     footer: { text: `${global.wm}`.trim() },  
       header: {
-          title: `*⛩️  𝘠  𝘖  𝘜  𝘛  𝘜  𝘉  𝘌    𝘚  𝘌  𝘈  𝘙  𝘊  𝘏  ⛩️*\n`,
+          title: `*🔮 ＨＥＬＰ ＭＥＮＵ 🔮*\n`,
           hasMediaAttachment: true,
           imageMessage: messa.imageMessage,
       },
@@ -40,7 +50,7 @@ const handler = async (m, { conn, text, usedPrefix: prefijo }) => {
         {
           name: 'single_select',
           buttonParamsJson: JSON.stringify({
-            title: 'OPCIONES DISPONIBLES',
+            title: 'MENUS DISPONIBLES',
             sections: videos.map((video) => ({
               title: video.title,
               rows: [
