@@ -15,7 +15,7 @@ let msg = generateWAMessageFromContent(m.chat, {
             text: ""
           }),
           footer: proto.Message.InteractiveMessage.Footer.create({
-            text: ""
+            text: "•🔮𝘾𝙍𝙀𝘼𝘿𝙊𝙍\n•🔮 wa.me/59897246324\n•🔮𝙑𝙀𝙍𝙎𝙄𝙊𝙉 𝘿𝙀𝙇 𝘽𝙊𝙏: 𝟹.𝟸.𝟷\n•🔮𝙁𝙀𝘾𝙃𝘼: ${fecha}"
           }),
           header: proto.Message.InteractiveMessage.Header.create({
             title: "*HELP MENU*",
