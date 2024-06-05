@@ -26,7 +26,6 @@ let msg = generateWAMessageFromContent(m.chat, {
             buttons: [
               {
                 "header": "⭐ Menú completo"
-                "description": "Visita todos los comandos"
                 "name": "quick_reply",
                 "buttonParamsJson": "{\"display_text\":\".menu\",\"id\":\"message\"}"
               },
