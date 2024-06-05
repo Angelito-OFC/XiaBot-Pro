@@ -5,6 +5,8 @@ import fs from 'fs';
 const handler = async (m, { conn, text, usedPrefix: prefijo }) => {
     const datas = global;
     const device = await getDevice(m.key.id);
+const pp = imagen1;
+const img = imagen4;
 
   if (!text) throw `⚠️ *Error*`;
 
@@ -15,7 +17,7 @@ const handler = async (m, { conn, text, usedPrefix: prefijo }) => {
   const randomIndex = Math.floor(Math.random() * videos.length);
   const randomVideo = videos[randomIndex];
 
-  var messa = await prepareWAMessageMedia({ image: {url: randomVideo.thumbnail}}, { upload: conn.waUploadToServer })
+  var messa = await prepareWAMessageMedia({ image: img, { upload: conn.waUploadToServer })
   const interactiveMessage = {
     body: { text: `•🔮𝘾𝙍𝙀𝘼𝘿𝙊𝙍 
 •🔮 wa.me/59897246324\n•🔮𝙑𝙀𝙍𝙎𝙄𝙊𝙉 𝘿𝙀𝙇 𝘽𝙊𝙏: 𝟹.𝟸.𝟷\n•🔮𝙁𝙀𝘾𝙃𝘼: \n•🔮𝙉𝙄𝙑𝙀𝙇: \n•🔮𝙀𝙓𝙋: \n•🔮𝙍𝘼𝙉𝙂𝙊: \n•🔮𝘿𝙄𝘼𝙈𝘼𝙉𝙏𝙀𝙎: \n•🔮𝙓𝙄𝘼𝘾𝙊𝙄𝙉𝙎:\n•🔮𝙏𝙊𝙆𝙀𝙉𝙎:\n•🔮𝙏𝙄𝙀𝙈𝙋𝙊 𝘼𝘾𝙏:`.trim() },
