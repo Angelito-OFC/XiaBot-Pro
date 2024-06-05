@@ -69,26 +69,6 @@ if (!db.data.chats[m.chat].modohorny && m.isGroup) throw `🔮 𝙇𝙤𝙨 𝙘
 ┃╰───────⧟⭑⧟───────•
 ┗━━━━━━━━━━━━━━━━━━━━━┛`.trim();
     if (m.isGroup) {
-
-const buttonParamsJson = JSON.stringify({
-title: "LISTA MENUS",
-description: "Infórmate por medios oficiales sobre XiaBot",
-sections: [
-{ title: "🔮 MENUS XIA", highlight_label: "Popular",
-rows: [
-{ header: "🔮 Menú Completo", title: "", description: "🍀 Menucompleto", id: usedPrefix + "allmenu" },
-{ header: "🏹 Menú Freefire", title: "", description: "🍂 Menufreefire", id: usedPrefix + "menuff" },
-{ header: "🔞 Menú Hot", title: "", description: "🔞 Menu+18", id: usedPrefix + "labiblia" },
-{ header: "🔊 Menú Audios", title: "", description: "🍂 Menuaudios", id: usedPrefix + "menuaudios" }
-]},
-{ title: "🔖 Atajos", highlight_label: "Popular",
-rows: [
-{ header: "👻 Ser Bot (código)", title: "🔓 Para: Todos", description: "¡Conviértete en Bot con el método de código de 8 dígitos!", id: usedPrefix + "serbot --code" },
-{ header: "🤖 Ser Bot (qr)", title: "🔓 Para: Todos", description: "Forma estándar de ser bot con código QR", id: usedPrefix + "serbot" },
-{ header: "🚄 Velocidad", title: "🔓 Para: Todos", description: "Seleccione esto si desea saber el ping del Bot", id: usedPrefix + "ping" },
-{ header: "😺 Estado", title: "🔓 Para: Todos", description: "Conoce en que estado se encuentra GataBot", id: usedPrefix + "estado" }
-]}
-]})
       await conn.sendMessage(m.chat, {image: pp, caption: str.trim(), mentions: [...str.matchAll(/@([0-9]{5,16}|0)/g)].map((v) => v[1] + '@s.whatsapp.net')}, {quoted: m});
       await conn.sendFile(m.chat, vn, 'La biblia.mp3', null, m, true, {type: 'audioMessage', ptt: true});
     } else {
