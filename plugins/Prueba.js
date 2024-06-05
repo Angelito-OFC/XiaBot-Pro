@@ -89,36 +89,54 @@ const horarioFecha = lugarFecha.format('dddd, DD [de] MMMM [del] YYYY || HH:mm A
 
 if (!/web|desktop|unknown/gi.test(dispositivo)) {  
 let menu = `
-⎔ \`\`\`${Fecha}\`\`\`
+⎔ \`\`\`${horarioFecha}\`\`\`
+⎔ *${lenguajeGB['smsTotalUsers']()}* ➺ _${Object.keys(global.db.data.users).length}_ 
+⎔ *Registrados »* ${rtotalreg}/${totalreg}    
+⎔ *${lenguajeGB['smsUptime']()}* ➺ _${uptime}_ 
+⎔ *${lenguajeGB['smsVersion']()}* ➺ _${vs}_
+⎔ *${lenguajeGB['smsMode']()} ➺* _${global.opts['self'] ? `${lenguajeGB['smsModePrivate']().charAt(0).toUpperCase() + lenguajeGB['smsModePrivate']().slice(1).toLowerCase()}` : `${lenguajeGB['smsModePublic']().charAt(0).toUpperCase() + lenguajeGB['smsModePublic']().slice(1).toLowerCase()}`}_
+⎔ *${lenguajeGB['smsBanChats']()}* ➺ _${Object.entries(global.db.data.chats).filter(chat => chat[1].isBanned).length}_ 
+⎔ *${lenguajeGB['smsBanUsers']()}* ➺ _${Object.entries(global.db.data.users).filter(user => user[1].banned).length}_ ${(conn.user.jid == global.conn.user.jid ? '' : `\n⎔ *SOY SUB BOT DE: https://wa.me/${global.conn.user.jid.split`@`[0]}*`) || ''}
 
-✨ *◜INFO DEL USUARIO◞* ✨
+✨ *◜INFORMACIÓN DEL USUARIO◞* ✨
+⊜ *Tipo de registro »* ${user.registered === true ? `_${user.registroC === true ? 'Registro Completo 🗂️' : 'Registro Rápido 📑'}_` : '❌ _Sin registro_'}
+⊜ *Mi estado »* ${typeof user.miestado !== 'string' ? '❌ _' + usedPrefix + 'miestado_' : '_Me siento ' + user.miestado + '_'}
+⊜ *Registrado »* ${user.registered === true ? '✅' : '❌ _' + usedPrefix + 'verificar_'}
+⊜ *${lenguajeGB['smsBotonM7']().charAt(0).toUpperCase() + lenguajeGB['smsBotonM7']().slice(1).toLowerCase()} »* ${user.premiumTime > 0 ? '✅' : '❌ _' + usedPrefix + 'pase premium_'}
+⊜ *${lenguajeGB['smsBotonM5']().charAt(0).toUpperCase() + lenguajeGB['smsBotonM5']().slice(1).toLowerCase()} »* ${role}
+⊜ *${lenguajeGB['smsBotonM6']().charAt(0).toUpperCase() + lenguajeGB['smsBotonM6']().slice(1).toLowerCase()} »* ${emoji} || ${user.exp - min}/${xp}
+⊜ *${lenguajeGB['smsPareja']()}* ${pareja ? `\n*»* ${name} 💕 ${conn.getName(pareja)}` : `🛐 ${lenguajeGB['smsResultPareja']()}`}
+⊜ *Pasatiempo(s)* ➺ ${user.pasatiempo === 0 ? '*Sin Registro*' : user.pasatiempo + '\n'}
 ⊜ *Experiencia ➟* ${exp} ⚡
 ⊜ *Diamantes ➟* ${limit} 💎
-⊜ *XiaCoins ➟* ${money} 🐈
+⊜ *GataCoins ➟* ${money} 🐈
 ⊜ *Tokens ➟* ${joincount} 🪙`.trim()
 
 const buttonParamsJson = JSON.stringify({
-title: "LISTA MENUS",
-description: "Infórmate por medios oficiales sobre XiaBot",
+title: "VER LISTA",
+description: "Infórmate por medios oficiales sobre GataBot",
 sections: [
-{ title: "🔮 MENUS XIA", highlight_label: "Popular",
+{ title: "ℹ️ Información", highlight_label: "Popular",
 rows: [
-{ header: "🔮 Menú Completo", title: "", description: "🍀 Menucompleto", id: usedPrefix + "allmenu" },
-{ header: "🏹 Menú Freefire", title: "", description: "🍂 Menufreefire", id: usedPrefix + "menuff" },
-{ header: "🔞 Menú Hot", title: "", description: "🔞 Menu+18", id: usedPrefix + "labiblia" },
-{ header: "🔊 Menú Audios", title: "", description: "🍂 Menuaudios", id: usedPrefix + "menuaudios" }
+{ header: "✅ Redes", title: "🔓 Para: Todos", description: "Infórmate por medios oficiales sobre GataBot", id: usedPrefix + "cuentasgb" },
+{ header: "📢 Grupos/Canales", title: "🔓 Para: Todos", description: "¡Te esperamos!", id: usedPrefix + "grupos" },
+{ header: "🎁 Donar", title: "🔓 Para: Todos", description: "GataBot se mantiene funcionando gracias a donaciones ¡tú también puedes sumarte apoyando el proyecto!", id: usedPrefix + "donar" }
 ]},
 { title: "🔖 Atajos", highlight_label: "Popular",
 rows: [
-{ header: "👻 Ser Bot (código)", title: "🔓 Para: Todos", description: "¡Conviértete en Bot con el método de código de 8 dígitos!", id: usedPrefix + "serbot --code" },
+{ header: "🆕 Ser Bot (código)", title: "🔓 Para: Todos", description: "¡Conviértete en Bot con el método de código de 8 dígitos!", id: usedPrefix + "serbot --code" },
 { header: "🤖 Ser Bot (qr)", title: "🔓 Para: Todos", description: "Forma estándar de ser bot con código QR", id: usedPrefix + "serbot" },
 { header: "🚄 Velocidad", title: "🔓 Para: Todos", description: "Seleccione esto si desea saber el ping del Bot", id: usedPrefix + "ping" },
 { header: "😺 Estado", title: "🔓 Para: Todos", description: "Conoce en que estado se encuentra GataBot", id: usedPrefix + "estado" }
+]},
+{ title: "Ⓜ️ Menú", highlight_label: "Popular",
+rows: [
+{ header: "⭐ Menú completo", title: "", description: "Visita todos los comandos", id: usedPrefix + "allmenu" }
 ]}
 ]})
 const interactiveMessage = {
 body: { text: menu },
-footer: { text: wm + ` \nSi algo no funciona utilice el comando *${usedPrefix}reporte <texto>*` },
+footer: { text: wm + ` \nSi algo no funciona utilice el comando *${usedPrefix}menu2*` },
 header: { title: `⭐ *------- NUEVO MENÚ -------* ⭐\n${lenguajeGB['smsConfi2']()} *${user.genero === 0 ? '👤' : user.genero == 'Ocultado 🕶️' ? `🕶️` : user.genero == 'Mujer 🚺' ? `🚺` : user.genero == 'Hombre 🚹' ? `🚹` : '👤'} ${user.registered === true ? user.name : taguser} 💖*`, subtitle: "test4", hasMediaAttachment: false },
 nativeFlowMessage: { buttons: [{ 
 name: "single_select",
