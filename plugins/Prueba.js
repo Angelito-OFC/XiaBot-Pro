@@ -20,14 +20,14 @@ const handler = async (m, { conn, text, usedPrefix: prefijo }) => {
     body: { text: `•🔮𝘾𝙍𝙀𝘼𝘿𝙊𝙍 
 •🔮 wa.me/59897246324
 •🔮𝙑𝙀𝙍𝙎𝙄𝙊𝙉 𝘿𝙀𝙇 𝘽𝙊𝙏: 𝟹.𝟸.𝟷
-•🔮𝙁𝙀𝘾𝙃𝘼: ${date}
-•🔮𝙉𝙄𝙑𝙀𝙇: ${level}
-•🔮𝙀𝙓𝙋: ${exp} 
-•🔮𝙍𝘼𝙉𝙂𝙊: ${role} 
-•🔮𝘿𝙄𝘼𝙈𝘼𝙉𝙏𝙀𝙎: ${limit}
-•🔮𝙓𝙄𝘼𝘾𝙊𝙄𝙉𝙎: ${money}
-•🔮𝙏𝙊𝙆𝙀𝙉𝙎: ${joincount}
-•🔮𝙏𝙄𝙀𝙈𝙋𝙊 𝘼𝘾𝙏: ${uptime}`.trim() },
+•🔮𝙁𝙀𝘾𝙃𝘼: 
+•🔮𝙉𝙄𝙑𝙀𝙇: 
+•🔮𝙀𝙓𝙋: 
+•🔮𝙍𝘼𝙉𝙂𝙊: 
+•🔮𝘿𝙄𝘼𝙈𝘼𝙉𝙏𝙀𝙎: 
+•🔮𝙓𝙄𝘼𝘾𝙊𝙄𝙉𝙎:
+•🔮𝙏𝙊𝙆𝙀𝙉𝙎:
+•🔮𝙏𝙄𝙀𝙈𝙋𝙊 𝘼𝘾𝙏:`.trim() },
     footer: { text: `${global.wm}`.trim() },  
       header: {
           title: `*🔮 ＨＥＬＰ ＭＥＮＵ 🔮*\n`,
