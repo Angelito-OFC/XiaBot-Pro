@@ -30,7 +30,7 @@ const handler = async (m, { conn, text, usedPrefix: prefijo }) => {
         {
           name: 'single_select',
           buttonParamsJson: JSON.stringify({
-            title: 'MENUS DISPONIBLES',
+            title: 'MENUS XIA',
             sections: videos.map((video) => ({
               title: video.title,
               rows: [
