@@ -30,7 +30,7 @@ const handler = async (m, { conn, text, usedPrefix: prefijo }) => {
 •🔮𝙏𝙄𝙀𝙈𝙋𝙊 𝘼𝘾𝙏:`.trim() },
     footer: { text: `${global.wm}`.trim() },  
       header: {
-          title: `*🔮 ＨＥＬＰ ＭＥＮＵ 🔮*\n`,
+          title: `*🔮 ＨＥＬＰ  ＭＥＮＵ 🔮*\n`,
           hasMediaAttachment: true,
           imageMessage: messa.imageMessage,
       },
