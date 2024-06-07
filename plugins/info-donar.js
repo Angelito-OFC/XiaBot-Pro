@@ -38,7 +38,7 @@ await conn.sendButton(m.chat, str, `𝙓𝙞𝙖𝘽𝙤𝙩-𝙋𝙧𝙤 - 𝘼
 ['𝙂𝙧𝙪𝙥𝙤𝙨 𝙊𝙛𝙞𝙘𝙞𝙖𝙡𝙚𝙨 🔰', '.grupos'],
 ['𝘾𝙧𝙚𝙖𝙙𝙤𝙧𝙖 💗', '#owner'],
 ['𝙑𝙤𝙡𝙫𝙚𝙧 𝙖𝙡 𝙈𝙚𝙣𝙪́ ☘️', '/menu']], null, [
-['🎁 𝘿𝙤𝙣𝙖𝙧 | 𝘿𝙤𝙣𝙖𝙩𝙚', `https://paypal.me/KatashiF`]], fkontak)}
+['🎁 𝘿𝙤𝙣𝙖𝙧', `https://paypal.me/KatashiF`]], fkontak)}
 /*conn.sendMessage(m.chat, { 
 text: str, 
 contextInfo:{
