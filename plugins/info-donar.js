@@ -4,7 +4,7 @@ let user = db.data.users[m.sender]
 let str = `🔮 𝘿 𝙊 𝙉 𝘼 𝙍  𝙓 𝙄 𝘼 𝙋 𝙍 𝙊
 
 » 𝙄𝙉𝙎𝙏𝘼𝙂𝙍𝘼𝙈
-${ig}
+https://www.instagram.com/usxr_angelito
 
 » 𝘾𝙍𝙀𝘼𝘿𝙊𝙍 𝘿𝙀𝙇 𝘽𝙊𝙏
 wa.me/59897246324
