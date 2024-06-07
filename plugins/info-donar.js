@@ -15,7 +15,7 @@ _Puedes apoyar el bot dando tu estrellita en nuestro repositorio_
 ${github}
 
 » 𝙂𝙍𝙐𝙋𝙊 𝙊𝙁𝘾
-${md}`
+https://chat.whatsapp.com/LcFTUnvu0Tw1tCnA2ybdR6`
 await conn.sendButton(m.chat, str, `𝙓𝙞𝙖𝘽𝙤𝙩-𝙋𝙧𝙤 - 𝘼𝙨𝙞𝙨𝙩𝙚𝙣𝙘𝙞𝙖\nwa.me/59168683798\n\n` + wm, media, [
 ['𝙂𝙧𝙪𝙥𝙤𝙨 𝙊𝙛𝙞𝙘𝙞𝙖𝙡𝙚𝙨 🔰', '.grupos'],
 ['𝘾𝙧𝙚𝙖𝙙𝙤𝙧𝙖 💗', '#owner'],
