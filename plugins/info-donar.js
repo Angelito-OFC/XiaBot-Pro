@@ -12,7 +12,7 @@ wa.me/59897246324
 _Puedes apoyar el bot dando tu estrellita en nuestro repositorio_
 
 » 𝙍𝙀𝙋𝙊𝙎𝙄𝙏𝙊𝙍𝙄𝙊
-${github}
+https://github.com/Karim-off/XiaBot-Pro
 
 » 𝙂𝙍𝙐𝙋𝙊 𝙊𝙁𝘾
 https://chat.whatsapp.com/LcFTUnvu0Tw1tCnA2ybdR6`
