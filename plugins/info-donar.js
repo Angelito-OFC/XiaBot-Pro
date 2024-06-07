@@ -43,6 +43,6 @@ body: ig,
 ['𝘾𝙧𝙚𝙖𝙙𝙤𝙧𝙖 | 𝘾𝙧𝙚𝙖𝙩𝙤𝙧 💗', '#owner'],
 ['𝙑𝙤𝙡𝙫𝙚𝙧 𝙖𝙡 𝙈𝙚𝙣𝙪́ | 𝘽𝙖𝙘𝙠 𝙩𝙤 𝙈𝙚𝙣𝙪 ☘️', '/menu']
 ], m,)}*/
-handler.command = /^dona(te|si)|donar|apoyar|paypal|donating$/i
+handler.command = /^dona(te|si)|donar|apoyar|donating$/i
 handler.exp = 80
 export default handler
