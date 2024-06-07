@@ -1,21 +1,3 @@
-var handler = async (m, { conn, command }) => {
-
-let str = `
-
-`
-
-conn.reply(m.chat, str, m, fake, )
-
-}
-handler.help = ['donar', 'donate', 'donasi']
-handler.tags = ['info']
-handler.command = /^(donar|donate|donarxia)i$/i
-
-handler.register = true
-
-export default handler
-
-
 let media = './media/menus/Menu4paypal.jpg'
 let handler = async (m, { conn, command }) => {
 let user = db.data.users[m.sender]
