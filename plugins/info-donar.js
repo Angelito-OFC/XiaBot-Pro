@@ -1,4 +1,4 @@
-let media = './Menu3.jpg'
+let media = './Menu2.jpg'
 let handler = async (m, { conn, command }) => {
 let user = db.data.users[m.sender]
 let str = `🔮 𝘿 𝙊 𝙉 𝘼 𝙍  𝙓 𝙄 𝘼 𝙋 𝙍 𝙊
