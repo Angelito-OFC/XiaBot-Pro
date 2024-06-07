@@ -1,33 +1,33 @@
-const handler = async (m, {conn}) => {
-  m.reply(global.terminos);
-};
-handler.customPrefix = /términos y condiciones y privacidad|terminosycondicionesyprivacidad|terminosycondiciones|terminos y condiciones y privacidad|terminos y condiciones|terminos y condiciones|terminos de uso|Terminos de uso|Terminó se uso|términos de uso|Términos de uso|Términos y condiciones/i;
-handler.command = new RegExp;
-export default handler;
+let handler = async (m, { conn, usedPrefix, command}) => {
 
-global.terminos = `
-*=> El desconocimiento de lo que aqui se menciona no exime al propietario del Bot, Sub Bot o usuario del bot de la sanciones que se puedan derivar❗*
+let fkontak = { "key": { "participants":"0@s.whatsapp.net", "remoteJid": "status@broadcast", "fromMe": false, "id": "Halo" }, "message": { "contactMessage": { "vcard": `BEGIN:VCARD\nVERSION:3.0\nN:Sy;Bot;;;\nFN:y\nitem1.TEL;waid=${m.sender.split('@')[0]}:${m.sender.split('@')[0]}\nitem1.X-ABLabel:Ponsel\nEND:VCARD` }}, "participant": "0@s.whatsapp.net" }
 
-*⚠️ Términos de privacidad*
-_1.- La información que reciba el Bot NO se comparte con ningún tercero ni con nadie_
-_2.- Las imágenes/videos/sticker/audios/etc no son compartidos con nadie_
-_3.- Su numero de teléfono no es compartido con absolutamente nadie_
-_4.- Datos de tarjetas, ubicaciones, direcciones, etc son eliminados inmediatamente y no se comparten con absolutamente nadie_
-_5.- Todas las conversaciones son eliminadas cada determinado tiempo y no se hace backup (no se guarda) de ningún tipo de información/conversación_
+let reglas = `🌳 *Respeta las reglas de YoshikoBot*\n
+✰ No llamar A La Bot
+✰ No hacer spam
+✰ Contacta al creador si es necesario
+✰ Pedir permiso para añadir la bot a un grupo
 
-*⚠️ Términos de uso*
-_1.- No nos hacemos responsables de un mal uso que se le pueda dar al Bot_
-_2.- No nos hacemos responsables de la ignorancia y/o desconocimiento del tema_
-_3.- El Bot no esta activo las 24 horas al menos de que el propietario decida lo contrario_
-_4.- La "empresa" no se hace responsable del uso de un Sub Bot o Bot no oficial, ya que son personas (terceros) y no tenemos control sobre ell@s_
-_5.- No nos hacemos responsables de los números que se puedan ir a soporte por el uso del Bot, es aconsejable siempre usar números virtuales para usos de Bots_
-_6.- Los audios/notas de voz/imágenes/videos o cualquier otro archivo multimedia que sean de propiedad de XiaBot son únicamente y exclusivamente de este Bot, si se detecta a otro Bot con alguno o algunos de los archivos multimedia antes mencionado se tomarán cartas en el asunto._
+🏷 𝗡𝗼𝘁𝗮: *Si no cumples con las reglas de la bot, seras bloqueado.*
 
-*➤ Mensaje del numero del Bot?*
-_- Si en algún momento recibe un mensaje del numero del Bot y no es un comando posiblemente sea de el propietario del Bot o el propietario del numero, este es un persona real por lo que se le pide que no le falte el respeto_
+☁️ 𝗔𝘃𝗶𝘀𝗼: *Puedes apoyarnos dejando una estrellita 🌟 al repositorio oficial de Yoshiko.*
 
-> wa.me/59168683799
-> Angelito
-> Instagram: https://www.instagram.com/usxr_angelito
+https://github.com/Diego-YL-177/YoshikoBot-MD`.trim()
+await conn.reply(m.chat, reglas, m, fake, )
 
-*Xia Bot*`;
+}
+handler.customPrefix = /reglas|terminosycondiciones|terminos|reglasbot, botreglas|uso, usobot|uso del bot/i
+handler.command = new RegExp
+
+handler.register = true
+
+export default handler
+
+const more = String.fromCharCode(8206)
+const readMore = more.repeat(4001)
+
+function clockString(ms) {
+let h = isNaN(ms) ? '--' : Math.floor(ms / 3600000)
+let m = isNaN(ms) ? '--' : Math.floor(ms / 60000) % 60
+let s = isNaN(ms) ? '--' : Math.floor(ms / 1000) % 60
+return [h, m, s].map(v => v.toString().padStart(2, 0)).join(':')}
