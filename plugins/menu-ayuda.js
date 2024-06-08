@@ -23,6 +23,7 @@ let msg = generateWAMessageFromContent(m.chat, {
             hasMediaAttachment: false
           }),
           nativeFlowMessage: proto.Message.InteractiveMessage.NativeFlowMessage.create({
+
 const buttonParamsJson = JSON.stringify({
 title: "VER LISTA",
 description: "Infórmate por medios oficiales sobre GataBot",
