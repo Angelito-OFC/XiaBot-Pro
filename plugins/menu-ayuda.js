@@ -25,12 +25,9 @@ let msg = generateWAMessageFromContent(m.chat, {
           nativeFlowMessage: proto.Message.InteractiveMessage.NativeFlowMessage.create({
             buttons: [
              {
-          name: 'single_select',
-          buttonParamsJson: JSON.stringify({
-            title: 'MENUS XIA',
-            sections: videos.map((video) => ({
-              title: Menus de Xia,
-              rows: [
+               "name": "single_select",
+               "buttonParamsJson": "{\"display_text\":\"MENUS XIA\",\"id\":\"message\"}"
+              },
               {
                 "name": "quick_reply",
                 "buttonParamsJson": "{\"display_text\":\".menu\",\"id\":\"message\"}"
@@ -41,7 +38,7 @@ let msg = generateWAMessageFromContent(m.chat, {
               },
               {
                 "name": "quick_reply",
-                "buttonParamsJson": "{\"display_text\":\".menuowner\",\"id\":\"message\"}"
+                "buttonParamsJson": "{\"JSON.stringify({":\".menuowner\",\"id\":\"message\"}"
               },
               {
                 "name": "quick_reply",
