@@ -30,19 +30,19 @@ let msg = generateWAMessageFromContent(m.chat, {
               },
               {
                 "name": "quick_reply",
-                "buttonParamsJson": "{\"display_text\":\"..menuff\",\"id\":\"message\"}"
+                "buttonParamsJson": "{\"display_text\":\".menuff\",\"id\":\"message\"}"
               },
               {
                 "name": "quick_reply",
-                "buttonParamsJson": "{\"display_text\":\"..menuowner\",\"id\":\"message\"}"
+                "buttonParamsJson": "{\"display_text\":\".menuowner\",\"id\":\"message\"}"
               },
               {
                 "name": "quick_reply",
-                "buttonParamsJson": "{\"display_text\":\"..labiblia\",\"id\":\"message\"}"
+                "buttonParamsJson": "{\"display_text\":\".labiblia\",\"id\":\"message\"}"
               },
               {
                 "name": "quick_reply",
-                "buttonParamsJson": "{\"display_text\":\"..menuanime\",\"id\":\"message\"}"
+                "buttonParamsJson": "{\"display_text\":\".menuanime\",\"id\":\"message\"}"
               },
               {
                 "name": "quick_reply",
