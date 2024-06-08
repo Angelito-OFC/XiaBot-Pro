@@ -170,7 +170,7 @@ rows: [{ header: "🔮 Menu Completo", title: "", id: `.allmenu`, description: `
 { header: "🔫 Menú FreeFire", title: "", id: `.menuff`, description: `Para ver el menú de Freefire\n` },
 { header: "🫅🏻 Creador", title: "", id: `.owner`, description: `comunicate con mi creador ⚙️` }
 ]})
-await conn.sendList(m.chat, '👋🏻 Hola¡! Bienvenido A Mi Menú\n\n*Creador:* Angelito\n*Versión:* 3.3.0\n\n🔮 si hay algún error puedes reportarlo, usando el comando: #reporte\n\nGracias¡! ✨', null, `𝙈𝙀𝙉𝙐𝙎 𝙓𝙄𝘼`, listSections, { mentions: [m.sender]}, {quoted: m})
+await conn.sendList(m.chat, '🔮 𝙃𝙤𝙡𝙖 𝙨𝙤𝙮 𝙓𝙞𝙖𝘽𝙤𝙩-𝙋𝙧𝙤\n\n𝙏𝙚 𝙥𝙧𝙚𝙨𝙚𝙣𝙩𝙤 𝙢𝙞 𝙢𝙚𝙣𝙪\n\n𝘾𝙧𝙚𝙖𝙙𝙤𝙧: 𝘈𝘯𝘨𝘦𝘭𝘪𝘵𝘰\n𝙑𝙚𝙧𝙨𝙞𝙤𝙣: _3.3.0_\n\n> 🔮 𝘚𝘪 𝘩𝘢𝘺 𝘢𝘭𝘨𝘶𝘯 𝘦𝘳𝘳𝘰𝘳 𝘳𝘦𝘱𝘰𝘳𝘵𝘢𝘭𝘰 𝘤𝘰𝘯 𝘦𝘭 𝘤𝘰𝘮𝘢𝘯𝘥𝘰 .𝙧𝙚𝙥𝙤𝙧𝙩𝙚 𝘱𝘢𝘳𝘢 𝘴𝘰𝘭𝘶𝘤𝘪𝘰𝘯𝘢𝘳𝘭𝘰\n\n> 𝘎𝘳𝘢𝘤𝘪𝘢𝘴¡! ✨', null, `𝙈𝙀𝙉𝙐𝙎 𝙓𝙄𝘼`, listSections, { mentions: [m.sender]}, {quoted: m})
   } catch (e) {
     conn.reply(m.chat, '❎ Lo sentimos, el menú tiene un error.', m)
     throw e
