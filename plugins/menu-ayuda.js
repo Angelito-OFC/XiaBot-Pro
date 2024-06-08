@@ -175,13 +175,13 @@ let listSections = {
           buttonParamsJson: JSON.stringify({
             title: 'MENUS XIA',
             sections: videos.map((video) => ({
-              title: video.title,
+              title: MENUS XIA,
               rows: [
                 {
-                  header: video.title,
-                  title: video.author.name,
-                  description: 'Descargar MP3',
-                  id: `${prefijo}ytmp3 ${video.url}`
+                  header: Menú Completo,
+                  title: Menú Completo 🔮,
+                  description: 'Menu Completo de XiaBot-Pro',
+                  id: `${prefijo}allmenu`
                 },
                 {
                   header: video.title,
