@@ -159,13 +159,55 @@ let handler = async (m, { conn, usedPrefix: _p, __dirname }) => {
     m.react('💻')
 
   //  conn.sendMessage(m.chat, { video: { url: [pp, pp2, pp3, pp4].getRandom() }, gifPlayback: true, caption: text.trim(), mentions: [m.sender] }, { quoted: m })
-let listSections = []    
-listSections.push({
-title: '',
-rows: [{ header: "Menu Completo", title: "", id: `.menu`, description: `Para ver todos los comandos\n` }, { header: "SudBot", title: "", id: `.serbot --code`, description: `Para volverte sudbot 🤖\n` },
-{ header: "Velocidad", title: "", id: `.ping`, description: `Ver velocidad del bot\n` },
-{ header: "Play", title: "", id: `.play`, description: `Para descargar musica 🎧\n` },
-{ header: "creador", title: "", id: `.owner`, description: `comunicate con mi creador ⚙️` }
+let listSections = {
+    body: { text: `•🧸𝘾𝙍𝙀𝘼𝘿𝙊𝙍𝘼
+•🧸 wa.me/5493585753625\n•🔮𝙑𝙀𝙍𝙎𝙄𝙊𝙉 𝘿𝙀𝙇 𝘽𝙊𝙏: 1.0.0\n•🧸𝙁𝙀𝘾𝙃𝘼: \n•🧸𝙉𝙄𝙑𝙀𝙇: \n•🧸𝙀𝙓𝙋: \n•🧸𝙍𝘼𝙉𝙂𝙊: \n•🧸𝘿𝙄𝘼𝙈𝘼𝙉𝙏𝙀𝙎: \n•🧸𝙎𝘼𝙈𝙈𝙔𝘾𝙊𝙄𝙉𝙎:\n•🧸𝙏𝙊𝙆𝙀𝙉𝙎:\n•🧸𝙏𝙄𝙀𝙈𝙋𝙊 𝘼𝘾𝙏:`.trim() },
+    footer: { text: `${global.wm}`.trim() },  
+      header: {
+          title: `*🧸 ＨＥＬＰ  ＭＥＮＵ 🧸*\n`,
+          hasMediaAttachment: true,
+          imageMessage: messa.imageMessage,
+      },
+    nativeFlowMessage: {
+      buttons: [
+        {
+          name: 'single_select',
+          buttonParamsJson: JSON.stringify({
+            title: 'MENUS XIA',
+            sections: videos.map((video) => ({
+              title: video.title,
+              rows: [
+                {
+                  header: video.title,
+                  title: video.author.name,
+                  description: 'Descargar MP3',
+                  id: `${prefijo}ytmp3 ${video.url}`
+                },
+                {
+                  header: video.title,
+                  title: video.author.name,
+                  description: 'Descargar MP4',
+                  id: `${prefijo}ytmp4 ${video.url}`
+                }
+              ]
+            }))
+          })
+        }
+      ],
+      messageParamsJson: ''
+    }
+  };        
+
+        let msg = generateWAMessageFromContent(m.chat, {
+            viewOnceMessage: {
+                message: {
+                    interactiveMessage,
+                },
+            },
+        }, { userJid: conn.user.jid, quoted: m })
+      conn.relayMessage(m.chat, msg.message, { messageId: msg.key.id});
+
+  } else {
 ]})
 await conn.sendList(m.chat, '👋🏻 Hola¡! Bienvenido A Mi Sub Menú\n\n*Creador:* Alba070503\n*Versión:* 1.0.0\n\n💮 si hay algún error puedes contactarme, usa el comando: #owner\n\nGracias¡! 🔴', null, `Selecione la opción correcta (⁠・⁠∀⁠・⁠)`, listSections, { mentions: [m.sender]}, {quoted: m})
   } catch (e) {
