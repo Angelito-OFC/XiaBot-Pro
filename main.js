@@ -380,7 +380,7 @@ global.reloadHandler = async function(restatConn) {
     conn.ev.off('creds.update', conn.credsUpdate);
   }
 
-conn.welcome = '‎ '
+conn.welcome = '‎*╭┈┈≫ MTTO  -  PolvorinBot ≪┈ ✦*\n*┆➤ GRANDIOSO TENERTE ! 🙊*\n*┆➤ @user*\n*┆➤ Lee la descripcion*\n*╰┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈*'
 conn.bye = '‎ '
 conn.spromote = '‎ '
 conn.sdemote = '‎ '
