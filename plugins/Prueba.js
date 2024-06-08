@@ -165,10 +165,10 @@ let handler = async (m, { conn, usedPrefix: _p, __dirname }) => {
 let listSections = []    
 listSections.push({
 title: '',
-rows: [{ header: "🔮 Menu Completo", title: "", id: `.allmenu`, description: `Para ver todos los comandos de XiaBot\n` }, { header: "SudBot", title: "", id: `.serbot --code`, description: `Para volverte sudbot 🤖\n` },
-{ header: "Velocidad", title: "", id: `.ping`, description: `Ver velocidad del bot\n` },
-{ header: "Play", title: "", id: `.play`, description: `Para descargar musica 🎧\n` },
-{ header: "creador", title: "", id: `.owner`, description: `comunicate con mi creador ⚙️` }
+rows: [{ header: "🔮 Menu Completo", title: "", id: `.allmenu`, description: `Para ver todos los comandos de XiaBot\n` }, { header: "🔞 Menu Hot", title: "", id: `.labiblia`, description: `Para ver el menú hot de Xia 🔥\n` },
+{ header: "🎮 Menu Juegos", title: "", id: `.menugame`, description: `Para ver el menu de juegos\n` },
+{ header: "🔫 Menú FreeFire", title: "", id: `.menuff`, description: `Para ver el menú de Freefire\n` },
+{ header: "🫅🏻 Creador", title: "", id: `.owner`, description: `comunicate con mi creador ⚙️` }
 ]})
 await conn.sendList(m.chat, '👋🏻 Hola¡! Bienvenido A Mi Menú\n\n*Creador:* Angelito\n*Versión:* 3.3.0\n\n🔮 si hay algún error puedes reportarlo, usando el comando: #reporte\n\nGracias¡! ✨', null, `𝙈𝙀𝙉𝙐𝙎 𝙓𝙄𝘼`, listSections, { mentions: [m.sender]}, {quoted: m})
   } catch (e) {
