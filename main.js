@@ -380,14 +380,14 @@ global.reloadHandler = async function(restatConn) {
     conn.ev.off('creds.update', conn.credsUpdate);
   }
 
-conn.welcome = '‎*╭┈┈≫ MTTO  -  PolvorinBot ≪┈ ✦*\n*┆➤ GRANDIOSO TENERTE ! 🙊*\n*┆➤ @user*\n*┆➤ Lee la descripcion*\n*╰┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈*'
-conn.bye = '‎ '
-conn.spromote = '‎ '
-conn.sdemote = '‎ '
-conn.sDesc = '‎ '
-conn.sSubject = '‎ '
-conn.sIcon = '‎ '
-conn.sRevoke = '‎ '
+conn.welcome = '‎*╭┈┈≫ @subject ≪┈ ✦*\n*┆➤ GRANDIOSO TENERTE ! 🙊*\n*┆➤ @user*\n*┆➤ Lee la descripcion*\n*╰┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈*'
+conn.bye = '‎*╭┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈*\n*┆➤ ADIOS BOT DE MRDA ! 🙊*\n*┆➤ @user*\n*┆➤ Que te valla bien*\n*╰┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈*'
+conn.spromote = '‎*@user AHORA ES ADMIN DEL GRUPO*'
+conn.sdemote = '‎*@user DEJO DE SER ADMIN DEL GRUPO*'
+conn.sDesc = '‎*SE HA MODIFICADO LA DESCRIPCIÓN*'
+conn.sSubject = '‎*SE HA MODIFICADO EL NOMBRE DEL GRUPO*'
+conn.sIcon = '‎*SE HA MODIFICADO LA FOTO DEL GRUPO*'
+conn.sRevoke = '‎*SE HA MODIFICADO EL ENLACE DEL GRUPO*'
 
   conn.handler = handler.handler.bind(global.conn);
   conn.participantsUpdate = handler.participantsUpdate.bind(global.conn);
