@@ -7,19 +7,19 @@ let text =
 `
 *ＧＲＵＰＯＳ  ＯＦＣ  ＸＩＡ ＢＯＴ*
 
-𝙒𝙝𝙖𝙩𝙨𝘼𝙥𝙥 𝘾𝙧𝙚𝙖𝙙𝙤𝙧
+» 𝙒𝙝𝙖𝙩𝙨𝘼𝙥𝙥 𝘾𝙧𝙚𝙖𝙙𝙤𝙧
 
 wa.me/59897246324
 
-𝙎𝙤𝙥𝙤𝙧𝙩𝙚 𝙓𝙞𝙖𝘽𝙤𝙩-𝙋𝙧𝙤
+» 𝙎𝙤𝙥𝙤𝙧𝙩𝙚 𝙓𝙞𝙖𝘽𝙤𝙩-𝙋𝙧𝙤
 
 https://chat.whatsapp.com/LcFTUnvu0Tw1tCnA2ybdR6
 
-𝙂𝙡𝙤𝙗𝙖𝙡 𝙓𝙞𝙖𝘽𝙤𝙩-𝙋𝙧𝙤
+» 𝙂𝙡𝙤𝙗𝙖𝙡 𝙓𝙞𝙖𝘽𝙤𝙩-𝙋𝙧𝙤
 
 https://chat.whatsapp.com/J4GaLNqbzAHEkzNQy9N62O
 
-𝘾𝙖𝙣𝙖𝙡 𝙓𝙞𝙖𝘽𝙤𝙩-𝙋𝙧𝙤
+» 𝘾𝙖𝙣𝙖𝙡 𝙓𝙞𝙖𝘽𝙤𝙩-𝙋𝙧𝙤
 
 https://whatsapp.com/channel/0029VaJxgcB0bIdvuOwKTM2Y
 
