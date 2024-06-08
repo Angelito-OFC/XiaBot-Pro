@@ -4,52 +4,49 @@ import fetch from 'node-fetch'
 import { xpRange } from '../lib/levelling.js'
 
 let tags = {
-  'main': 'ACERCA DE',
-  'bebot': 'SUB BOTS',
+  'main': 'INFO',
   'game': 'JUEGOS',
-  'econ': 'NIVEL & ECONOMIA',
+  'serbot': 'SUB BOTS',
+  'rpg': 'ECONOMÍA',
   'rg': 'REGISTRO',
-  'sticker': 'STICKER',
-  'img': 'IMAGEN',
-  'maker': 'MAKER',
-  'prem': 'PREMIUM',
-  'group': 'GRUPO',
-  'nable': 'EN/DISABLE OPCIONES', 
-  'nime': 'ANIME',
-  'rnime': 'ANIME REACCION',
-  'dl': 'DESCARGAS',
-  'tools': 'TOOLS',
-  'fun': 'FUN',
-  'cmd': 'DATABASE',
-  'nsfw': 'NSFW +18',
-  'ansfw': 'NSFW ANIME', 
-  'owner': 'OWNER', 
+  'downloader': 'DESCARGAS',
+  'marker': 'LOGO - MAKER',
+  'nable': 'ACTIVADORES',
+  'group': 'GRUPOS',
+  'search': 'BUSCADOR',
+  'img': 'IMÁGENES',
+  'tools': 'HERRAMIENTAS',
+  'fun': 'DIVERCIÓN',
+  'audio': 'EFECTO DE AUDIOS', 
+  'sticker': 'STICKERS',
+  'nsfw': 'NSFW',
+  'owner': 'CREADOR',
   'advanced': 'AVANZADO',
 }
 
 const defaultMenu = {
   before: `
- ◈ ━━━━━ *Senna  ┃ ᴮᴼᵀ* ━━━━━ ◈
- 
-👋🏻 Hola! *%name*
-👥 Usuarios : %totalreg
-🟢 Tiempo activo : %muptime
-%sbot
-▢ ADD
-• https://instagram.com/fg98_ff
+ > IGNA BOT FUTURE
 
-• https://fgmods.xyz
+╭━━━━━━━∙⋆⋅⋆∙━━━━━━━━╮
+➤📝 *Nombre* : %name
+➤🪙 *Euros* : %limit
+➤🤖 *User* : %taguser
+➤📈 *Nivel* : %level
+➤⭐ *XP* : %totalexp
+╰━━━━━━━∙⋆⋅⋆∙━━━━━━━━╯
 
-────────────
+╭━━━━━━━∙⋆⋅⋆∙━━━━━━━━╮
+➤🗣️ *Creador* : Daniel 🇦🇱
+➤📲 *Número* : Wa.me/51955918117
+➤⌛ *Tiempo* : %uptime
+╰━━━━━━━∙⋆⋅⋆∙━━━━━━━━╯
+
 %readmore
-  ≡ *LISTA DE MENUS*
-
-Ⓟ = Premium
-ⓓ = Diamantes
 `.trimStart(),
-  header: '┌─⊷ *%category*',
-  body: '▢ %cmd %isdiamond %isPremium',
-  footer: '└───────────\n',
+  header: '`MENU X %category`\n\n╭━━━━━━━∙⋆⋅⋆∙━━━━━━━━╮',
+  body: '➤ *%cmd*\n',
+  footer: '╰━━━━━━━∙⋆⋅⋆∙━━━━━━━━╯\n',
   after: '',
 }
 
@@ -165,12 +162,12 @@ let handler = async (m, { conn, usedPrefix: _p, __dirname }) => {
 let listSections = []    
 listSections.push({
 title: '',
-rows: [{ header: "🔮 Menu Completo", title: "", id: `.allmenu`, description: `Para ver todos los comandos de XiaBot\n` }, { header: "🔞 Menu Hot", title: "", id: `.labiblia`, description: `Para ver el menú hot de Xia 🔥\n` },
-{ header: "🎮 Menu Juegos", title: "", id: `.menugame`, description: `Para ver el menu de juegos\n` },
-{ header: "🔫 Menú FreeFire", title: "", id: `.menuff`, description: `Para ver el menú de Freefire\n` },
-{ header: "🫅🏻 Creador", title: "", id: `.owner`, description: `comunicate con mi creador ⚙️` }
+rows: [{ header: "Menu Completo", title: "", id: `.menu`, description: `Para ver todos los comandos\n` }, { header: "SudBot", title: "", id: `.serbot --code`, description: `Para volverte sudbot 🤖\n` },
+{ header: "Velocidad", title: "", id: `.ping`, description: `Ver velocidad del bot\n` },
+{ header: "Play", title: "", id: `.play`, description: `Para descargar musica 🎧\n` },
+{ header: "creador", title: "", id: `.owner`, description: `comunicate con mi creador ⚙️` }
 ]})
-await conn.sendList(m.chat, '🔮 𝙃𝙤𝙡𝙖 𝙨𝙤𝙮 𝙓𝙞𝙖𝘽𝙤𝙩-𝙋𝙧𝙤\n\n𝙏𝙚 𝙥𝙧𝙚𝙨𝙚𝙣𝙩𝙤 𝙢𝙞 𝙢𝙚𝙣𝙪\n\n𝘾𝙧𝙚𝙖𝙙𝙤𝙧: 𝘈𝘯𝘨𝘦𝘭𝘪𝘵𝘰\n𝙑𝙚𝙧𝙨𝙞𝙤𝙣: _3.3.0_\n\n> 🔮 𝘚𝘪 𝘩𝘢𝘺 𝘢𝘭𝘨𝘶𝘯 𝘦𝘳𝘳𝘰𝘳 𝘳𝘦𝘱𝘰𝘳𝘵𝘢𝘭𝘰 𝘤𝘰𝘯 𝘦𝘭 𝘤𝘰𝘮𝘢𝘯𝘥𝘰 .𝙧𝙚𝙥𝙤𝙧𝙩𝙚 𝘱𝘢𝘳𝘢 𝘴𝘰𝘭𝘶𝘤𝘪𝘰𝘯𝘢𝘳𝘭𝘰\n\n> 𝘎𝘳𝘢𝘤𝘪𝘢𝘴¡! ✨', null, `𝙈𝙀𝙉𝙐𝙎 𝙓𝙄𝘼`, listSections, { mentions: [m.sender]}, {quoted: m})
+await conn.sendList(m.chat, '👋🏻 Hola¡! Bienvenido A Mi Sub Menú\n\n*Creador:* Alba070503\n*Versión:* 1.0.0\n\n💮 si hay algún error puedes contactarme, usa el comando: #owner\n\nGracias¡! 🔴', null, `Selecione la opción correcta (⁠・⁠∀⁠・⁠)`, listSections, { mentions: [m.sender]}, {quoted: m})
   } catch (e) {
     conn.reply(m.chat, '❎ Lo sentimos, el menú tiene un error.', m)
     throw e
@@ -179,7 +176,7 @@ await conn.sendList(m.chat, '🔮 𝙃𝙤𝙡𝙖 𝙨𝙤𝙮 𝙓𝙞𝙖𝘽
 
 handler.help = ['menu']
 handler.tags = ['main']
-handler.command = ['menu', 'help', 'menú'] 
+handler.command = ['menu2', 'help', 'menú'] 
 handler.register = true 
 export default handler
 
