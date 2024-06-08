@@ -380,7 +380,7 @@ global.reloadHandler = async function(restatConn) {
     conn.ev.off('creds.update', conn.credsUpdate);
   }
 
-conn.welcome = '‎*╭┈┈≫ @subject ≪┈ ✦*\n*┆➤ GRANDIOSO TENERTE ! 🙊*\n*┆➤ @user*\n*┆➤ Lee la descripcion*\n*╰┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈*'
+conn.welcome = '‎*╭┈┈≫ @subject ≪┈ ✦*\n*┆➤ GRANDIOSO TENERTE ! 🙊*\n*┆➤ @user*\n*┆➤ Lee la descripcion*\n*╰┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈*\n\n@desc'
 conn.bye = '‎*╭┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈*\n*┆➤ ADIOS BOT DE MRDA ! 🙊*\n*┆➤ @user*\n*┆➤ Que te valla bien*\n*╰┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈*'
 conn.spromote = '‎*@user AHORA ES ADMIN DEL GRUPO*'
 conn.sdemote = '‎*@user DEJO DE SER ADMIN DEL GRUPO*'
