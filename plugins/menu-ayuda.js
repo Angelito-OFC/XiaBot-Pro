@@ -34,7 +34,7 @@ let msg = generateWAMessageFromContent(m.chat, {
               },
               {
                 "name": "quick_reply",
-                "buttonParamsJson": "{\"JSON.stringify({":\".menuowner\",\"id\":\"message\"}"
+                "buttonParamsJson": "{\"JSON.stringify({":\".menugame\",\"id\":\"message\"}"
               },
               {
                 "name": "quick_reply",
