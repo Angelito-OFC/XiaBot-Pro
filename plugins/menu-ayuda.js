@@ -18,8 +18,8 @@ let msg = generateWAMessageFromContent(m.chat, {
             text: ""
           }),
           header: proto.Message.InteractiveMessage.Header.create({
-            title: "*HELP MENU*",
-            subtitle: "",
+            title: "🔮 𝙃𝙤𝙡𝙖 𝙨𝙤𝙮 𝙓𝙞𝙖𝘽𝙤𝙩-𝙋𝙧𝙤",
+            subtitle: "hola",
             hasMediaAttachment: false
           }),
           nativeFlowMessage: proto.Message.InteractiveMessage.NativeFlowMessage.create({
