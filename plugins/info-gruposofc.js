@@ -31,6 +31,5 @@ await conn.sendFile(m.chat, pp, 'error.jpg', text, m, false, { mentions: [...gro
 handler.help = ['infogrup']
 handler.tags = ['group']
 handler.command = /^(grupos|gruposofc)$/i
-handler.admin = true;
-handler.group = true
+handler.exp = 15
 export default handler
