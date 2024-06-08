@@ -4,49 +4,52 @@ import fetch from 'node-fetch'
 import { xpRange } from '../lib/levelling.js'
 
 let tags = {
-  'main': 'INFO',
+  'main': 'ACERCA DE',
+  'bebot': 'SUB BOTS',
   'game': 'JUEGOS',
-  'serbot': 'SUB BOTS',
-  'rpg': 'ECONOMÍA',
+  'econ': 'NIVEL & ECONOMIA',
   'rg': 'REGISTRO',
-  'downloader': 'DESCARGAS',
-  'marker': 'LOGO - MAKER',
-  'nable': 'ACTIVADORES',
-  'group': 'GRUPOS',
-  'search': 'BUSCADOR',
-  'img': 'IMÁGENES',
-  'tools': 'HERRAMIENTAS',
-  'fun': 'DIVERCIÓN',
-  'audio': 'EFECTO DE AUDIOS', 
-  'sticker': 'STICKERS',
-  'nsfw': 'NSFW',
-  'owner': 'CREADOR',
+  'sticker': 'STICKER',
+  'img': 'IMAGEN',
+  'maker': 'MAKER',
+  'prem': 'PREMIUM',
+  'group': 'GRUPO',
+  'nable': 'EN/DISABLE OPCIONES', 
+  'nime': 'ANIME',
+  'rnime': 'ANIME REACCION',
+  'dl': 'DESCARGAS',
+  'tools': 'TOOLS',
+  'fun': 'FUN',
+  'cmd': 'DATABASE',
+  'nsfw': 'NSFW +18',
+  'ansfw': 'NSFW ANIME', 
+  'owner': 'OWNER', 
   'advanced': 'AVANZADO',
 }
 
 const defaultMenu = {
   before: `
- > IGNA BOT FUTURE
+ ◈ ━━━━━ *Senna  ┃ ᴮᴼᵀ* ━━━━━ ◈
+ 
+👋🏻 Hola! *%name*
+👥 Usuarios : %totalreg
+🟢 Tiempo activo : %muptime
+%sbot
+▢ ADD
+• https://instagram.com/fg98_ff
 
-╭━━━━━━━∙⋆⋅⋆∙━━━━━━━━╮
-➤📝 *Nombre* : %name
-➤🪙 *Euros* : %limit
-➤🤖 *User* : %taguser
-➤📈 *Nivel* : %level
-➤⭐ *XP* : %totalexp
-╰━━━━━━━∙⋆⋅⋆∙━━━━━━━━╯
+• https://fgmods.xyz
 
-╭━━━━━━━∙⋆⋅⋆∙━━━━━━━━╮
-➤🗣️ *Creador* : Daniel 🇦🇱
-➤📲 *Número* : Wa.me/51955918117
-➤⌛ *Tiempo* : %uptime
-╰━━━━━━━∙⋆⋅⋆∙━━━━━━━━╯
-
+────────────
 %readmore
+  ≡ *LISTA DE MENUS*
+
+Ⓟ = Premium
+ⓓ = Diamantes
 `.trimStart(),
-  header: '`MENU X %category`\n\n╭━━━━━━━∙⋆⋅⋆∙━━━━━━━━╮',
-  body: '➤ *%cmd*\n',
-  footer: '╰━━━━━━━∙⋆⋅⋆∙━━━━━━━━╯\n',
+  header: '┌─⊷ *%category*',
+  body: '▢ %cmd %isdiamond %isPremium',
+  footer: '└───────────\n',
   after: '',
 }
 
