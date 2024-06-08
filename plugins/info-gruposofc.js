@@ -1,25 +1,23 @@
-let handler = async (m, { conn, command }) => {
-let media = imagen4
-let str = `💕 𝘽𝙄𝙀𝙉𝙑𝙀𝙉𝙄𝘿𝙊(𝘼) 𝘼 𝙇𝙊𝙎 𝙂𝙍𝙐𝙋𝙊𝙎 𝙊𝙁𝙄𝘾𝙄𝘼𝙇𝙀𝙎
-┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈
-𓃠 *Versión de *
-➥ 
-┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈
-✅ 𝙂𝙍𝙐𝙋𝙊 𝙊𝙁𝙄𝘾𝙄𝘼𝙇 ${gt}
-┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈
-✨ *Informate de las Novedades!!!*
-🐈 *\n
-┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈
-🐈 \n
-┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈
-🐈 𝐆𝐫𝐮𝐩𝐨 𝐎𝐟𝐢𝐜𝐢𝐚𝐥 𝟓
-\n
-*https://chat.whatsapp.com/JqcMEpuH7OW9gZNWbtZMnx*\n
-┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈
-*Por favor, no ingresar con números de Bots, y mantener el respeto.*\n
-*Please, do not enter with Bot numbers, and maintain respect.*`
+let handler = async (m, { conn, participants, groupMetadata }) => { 
+const pp = imagen4;
+const groupAdmins = participants.filter(p => p.admin) 
+const listAdmin = groupAdmins.map((v, i) => `${i + 1}. @${v.id.split('@')[0]}`).join('\n')
+const owner = groupMetadata.owner || groupAdmins.find(p => p.admin === 'superadmin')?.id || m.chat.split`-`[0] + '@s.whatsapp.net'
+let text = 
+`
+╭──────>⋆☽⋆ ⋆☾⋆<──────╮
+ㅤ   𝙂𝙐𝙀𝙍𝙍𝘼 𝘿𝙀 𝘾𝙇𝘼𝙉𝙀𝙎
+         ${groupMetadata.subject}
+╰──────>⋆☽⋆ ⋆☾⋆<──────╯
 
-handler.command = /^linkgc|grupos|gruposgatabot|gatabotgrupos|gruposdegatabot|groupofc|gruposgb|grupogb|groupgb$/i
-handler.exp = 33
+`.trim()
 
+await conn.sendFile(m.chat, pp, 'error.jpg', text, m, false, { mentions: [...groupAdmins.map(v => v.id), owner] })   
+//await conn.sendButton(m.chat, wm, text, pp, [[lenguajeGB.smsGI10(), '.on'], [lenguajeGB.smsConMenu(), '/menu']], m, { mentions: [...groupAdmins.map(v => v.id), owner] })
+}
+handler.help = ['infogrup']
+handler.tags = ['group']
+handler.command = /^(grupos|gruposofc)$/i
+handler.admin = true;
+handler.group = true
 export default handler
