@@ -170,7 +170,7 @@ rows: [{ header: "Menu Completo", title: "", id: `.menu`, description: `Para ver
 { header: "Play", title: "", id: `.play`, description: `Para descargar musica 🎧\n` },
 { header: "creador", title: "", id: `.owner`, description: `comunicate con mi creador ⚙️` }
 ]})
-await conn.sendList(m.chat, '👋🏻 Hola¡! Bienvenido A Mi Sub Menú\n\n*Creador:* Alba070503\n*Versión:* 1.0.0\n\n💮 si hay algún error puedes contactarme, usa el comando: #owner\n\nGracias¡! 🔴', null, `Selecione la opción correcta (⁠・⁠∀⁠・⁠)`, listSections, { mentions: [m.sender]}, {quoted: m})
+await conn.sendList(m.chat, '👋🏻 Hola¡! Bienvenido A Mi Menú\n\n*Creador:* Angelito\n*Versión:* 3.3.0\n\n🔮 si hay algún error puedes reportarlo, usando el comando: #reporte\n\nGracias¡! ✨', null, `𝙈𝙀𝙉𝙐𝙎 𝙓𝙄𝘼`, listSections, { mentions: [m.sender]}, {quoted: m})
   } catch (e) {
     conn.reply(m.chat, '❎ Lo sentimos, el menú tiene un error.', m)
     throw e
@@ -179,7 +179,7 @@ await conn.sendList(m.chat, '👋🏻 Hola¡! Bienvenido A Mi Sub Menú\n\n*Crea
 
 handler.help = ['menu']
 handler.tags = ['main']
-handler.command = ['menu2', 'help', 'menú'] 
+handler.command = ['menu', 'help', 'menú'] 
 handler.register = true 
 export default handler
 
