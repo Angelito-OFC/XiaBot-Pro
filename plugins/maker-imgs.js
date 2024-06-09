@@ -1,5 +1,5 @@
 let handler = async (m, { conn, command, text, usedPrefix }) => {
-  if (!text) throw `*ejemplo:* ${usedPrefix + command} Batman`
+  if (!text) throw `❱❱ 𝙄 𝙉 𝙁 𝙊 𝙍 𝙈 𝘼 𝘾 𝙄 𝙊 𝙉 ❰❰\n\n🔮 𝙁𝙤𝙧𝙢𝙖𝙩𝙤 𝙞𝙣𝙘𝙤𝙧𝙧𝙚𝙘𝙩𝙤\n\n» 𝙐𝙨𝙚 𝙚𝙡 𝙘𝙤𝙢𝙖𝙣𝙙𝙤:\n𝘌𝘫𝘦𝘮𝘱𝘭𝘰: ${usedPrefix + command} Batman`
   await conn.reply(m.chat, wait, m)
   try {
     if (command == 'giraffe') {
@@ -248,7 +248,7 @@ let handler = async (m, { conn, command, text, usedPrefix }) => {
    } 
    } catch (err) {
   console.error(err)
-  throw "ðŸš© Terjadi kesalahan"
+  throw "❱❱ 𝙄 𝙉 𝙁 𝙊 𝙍 𝙈 𝘼 𝘾 𝙄 𝙊 𝙉 ❰❰\n\n🔮 𝘚𝘦 𝘱𝘳𝘰𝘥𝘶𝘫𝘰 𝘶𝘯 𝘦𝘳𝘳𝘰𝘳"
    };
 };
 handler.command = handler.help = ['giraffe','magma','batman','marvelstudio2','marvelstudio','avengers','ninjalogo','glitch3','glitch2','glitch','grafity','grafity2','blood','jokerlogo','hallowen2','space','thunder2','1917','3dstone','harrypotter','wolflogo','naturalleaves','blackpink','blackpink2','dropwater','christmas','gradient','captainamerica','rusty','ice','honey','blood','koi','lava','bread','strawberry','toxic','wicker','fabric','pornhub','holograpic','deluxesilver','writing','engraved','gluetext','neondevil','skytext','vintage','multicolor','robot','scifi','artpapper','glossy','watercolor','neongreen','brokenglass','artpapper','valentine2','neonlight','neongalaxy','magma','hallowen','valentine']
