@@ -1,4 +1,7 @@
 const handler = async (m, {conn, usedPrefix, command, args, isOwner, isAdmin, isROwner}) => {
+
+let fkontak = { "key": { "participants":"0@s.whatsapp.net", "remoteJid": "status@broadcast", "fromMe": false, "id": "Halo" }, "message": { "contactMessage": { "vcard": `BEGIN:VCARD\nVERSION:3.0\nN:Sy;Bot;;;\nFN:y\nitem1.TEL;waid=${m.sender.split('@')[0]}:${m.sender.split('@')[0]}\nitem1.X-ABLabel:Ponsel\nEND:VCARD` }}, "participant": "0@s.whatsapp.net" }
+
   const optionsFull = `🤖𝙁𝙐𝙉𝘾𝙄𝙊𝙉𝙀𝙎 𝘿𝙀𝙇 𝘽𝙊𝙏\n\n
 🔮𝙊𝙥𝙘𝙞𝙤𝙣: ✨ | 𝘞𝘌𝘓𝘊𝘖𝘔𝘌
 🔮𝘾𝙤𝙢𝙖𝙣𝙙𝙤-𝙤𝙣: .𝘦𝘯𝘢𝘣𝘭𝘦 𝘸𝘦𝘭𝘤𝘰𝘮𝘦
