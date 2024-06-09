@@ -47,7 +47,11 @@ let msg = generateWAMessageFromContent(m.chat, {
               },
               {
                 "name": "quick_reply",
-                "buttonParamsJson": "{\"display_text\":\".menuapks\",\"id\":\"message\"}"
+                "buttonParamsJson": "{\"display_text\":\".grupos\",\"id\":\"message\"}"
+              },
+              {
+                "name": "quick_reply",
+                "buttonParamsJson": "{\"display_text\":\".owner\",\"id\":\"message\"}"
               }
            ],
           })
@@ -59,6 +63,6 @@ let msg = generateWAMessageFromContent(m.chat, {
 await conn.relayMessage(msg.key.remoteJid, msg.message, { messageId: msg.key.id })
 
 }
-handler.command = /^(help|ayuda)$/i
+handler.command = /^(help|menu|menú|ayuda)$/i
 
 export default handler
