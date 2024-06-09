@@ -3,11 +3,11 @@
 import axios from 'axios';
 
 const handler = async (m, { conn, command, text, usedPrefix }) => {
-  if (!text) throw `Gunakan: ${usedPrefix}${command} <url>`;
+  if (!text) throw `❱❱ 𝙄 𝙉 𝙁 𝙊 𝙍 𝙈 𝘼 𝘾 𝙄 𝙊 𝙉 ❰❰\n\n🔮 𝙁𝙤𝙧𝙢𝙖𝙩𝙤 𝙞𝙣𝙘𝙤𝙧𝙧𝙚𝙘𝙩𝙤\n\n» 𝙐𝙨𝙚 𝙚𝙡 𝙘𝙤𝙢𝙖𝙣𝙙𝙤:\n𝘌𝘫𝘦𝘮𝘱𝘭𝘰: .𝘪𝘨𝘧𝘰𝘵𝘰 <𝘭𝘪𝘯𝘬>`;
   const req = await igeh(text);
   const { url_list } = req;
   const sender = m.sender.split('@')[0];
-  const message = `Foto berhasil diunduh, request dari ${sender}`;
+  const message = `❱❱ 𝙄 𝙉 𝙁 𝙊 𝙍 𝙈 𝘼 𝘾 𝙄 𝙊 𝙉 ❰❰\n\n🔮 𝘍𝘰𝘵𝘰 𝘥𝘦𝘴𝘤𝘢𝘳𝘨𝘢𝘥𝘢 𝘦𝘹𝘪𝘵𝘰𝘴𝘢𝘮𝘦𝘯𝘵𝘦, 𝘴𝘰𝘭𝘪𝘤𝘪𝘵𝘶𝘥 𝘥𝘦\n» ${sender}`;
   
   if (url_list.length > 1) {
     const media = [];
