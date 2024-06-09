@@ -1,6 +1,6 @@
 import { googleImage } from '@bochilteam/scraper'
 var handler = async (m, { conn, text, usedPrefix, command }) => {
-    if (!text) throw `Use example ${usedPrefix}${command} Minecraft`
+    if (!text) throw `❱❱ 𝙄 𝙉 𝙁 𝙊 𝙍 𝙈 𝘼 𝘾 𝙄 𝙊 𝙉 ❰❰\n\n🔮 𝙁𝙤𝙧𝙢𝙖𝙩𝙤 𝙞𝙣𝙘𝙤𝙧𝙧𝙚𝙘𝙩𝙤\n\n» 𝙐𝙨𝙚 𝙚𝙡 𝙘𝙤𝙢𝙖𝙣𝙙𝙤:\n𝘌𝘫𝘦𝘮𝘱𝘭𝘰: .𝘧𝘰𝘵𝘰 𝘮𝘪𝘯𝘦𝘤𝘳𝘢𝘧𝘵`
     try {
     const res = await googleImage(text)
     let image = res.getRandom()
@@ -9,9 +9,7 @@ var handler = async (m, { conn, text, usedPrefix, command }) => {
 *Source:* Google
 `,m)
 } catch (e) {
-  m.reply(`𝘕𝘰 𝘦𝘯𝘤𝘰𝘯𝘵𝘳𝘢𝘮𝘰𝘴 𝘭𝘰 𝘲𝘶𝘦 𝘣𝘶𝘴𝘤𝘢𝘴
-
-Tidak Dapat Menemukan Apa Yang Kamu Cari`)
+  m.reply(`❱❱ 𝙄 𝙉 𝙁 𝙊 𝙍 𝙈 𝘼 𝘾 𝙄 𝙊 𝙉 ❰❰\n\n🔮 » 𝘕𝘰 𝘦𝘯𝘤𝘰𝘯𝘵𝘳𝘢𝘮𝘰𝘴 𝘭𝘰 𝘲𝘶𝘦 𝘣𝘶𝘴𝘤𝘢𝘴`)
   }
 }
 handler.help = ['foto <query>']
