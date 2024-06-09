@@ -5,8 +5,8 @@ var handler = async (m, { conn, text, usedPrefix, command }) => {
     const res = await googleImage(text)
     let image = res.getRandom()
     let link = image
-    conn.sendFile(m.chat, link, 'google.jpg', `*Result:* ${text}
-*Source:* Google
+    conn.sendFile(m.chat, link, 'google.jpg', `» 𝙍𝙚𝙨𝙪𝙡𝙩𝙖𝙙𝙤: ${text}
+» 𝙁𝙪𝙚𝙣𝙩𝙚: Google
 `,m)
 } catch (e) {
   m.reply(`❱❱ 𝙄 𝙉 𝙁 𝙊 𝙍 𝙈 𝘼 𝘾 𝙄 𝙊 𝙉 ❰❰\n\n🔮 » 𝘕𝘰 𝘦𝘯𝘤𝘰𝘯𝘵𝘳𝘢𝘮𝘰𝘴 𝘭𝘰 𝘲𝘶𝘦 𝘣𝘶𝘴𝘤𝘢𝘴`)
