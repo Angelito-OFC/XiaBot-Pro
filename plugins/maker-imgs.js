@@ -1,5 +1,5 @@
 let handler = async (m, { conn, command, text, usedPrefix }) => {
-  if (!text) throw `ðŸš© *Contoh:* ${usedPrefix + command} Hayanasi`
+  if (!text) throw `*ejemplo:* ${usedPrefix + command} Batman`
   await conn.reply(m.chat, wait, m)
   try {
     if (command == 'giraffe') {
