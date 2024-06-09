@@ -4,7 +4,7 @@ import { Pixiv } from '@ibaraki-douji/pixivts'
 const pixiv = new Pixiv()
 
 let handler = async (m, { conn, text }) => {
-	if (!text) throw 'Masukan Query Atau Url Pixiv'
+	if (!text) throw '❱❱ 𝙄 𝙉 𝙁 𝙊 𝙍 𝙈 𝘼 𝘾 𝙄 𝙊 𝙉 ❰❰\n\n🔮 𝙁𝙤𝙧𝙢𝙖𝙩𝙤 𝙞𝙣𝙘𝙤𝙧𝙧𝙚𝙘𝙩𝙤\n\n» 𝙐𝙨𝙚 𝙚𝙡 𝙘𝙤𝙢𝙖𝙣𝙙𝙤:\n𝘌𝘫𝘦𝘮𝘱𝘭𝘰: .𝘱𝘪𝘹𝘪𝘷 <𝘭𝘪𝘯𝘬>'
 	let res = await pixivDl(text)
 	await m.reply(wait)
 	for (let i = 0; i < res.media.length; i++) {
@@ -24,7 +24,7 @@ async function pixivDl(query) {
 		if (!/https:\/\/www.pixiv.net\/en\/artworks\/[0-9]+/i.test(query)) throw 'Invalid Pixiv Url'
 		query = query.replace(/\D/g, '')
 		let res = await pixiv.getIllustByID(query).catch(() => null)
-		if (!res) throw `Pencarian "${query}" Tidak Ditemukan`
+		if (!res) throw `❱❱ 𝙄 𝙉 𝙁 𝙊 𝙍 𝙈 𝘼 𝘾 𝙄 𝙊 𝙉 ❰❰\n\n🔮 𝙀𝙧𝙧𝙤𝙧\n\n» 𝘉𝘶𝘴𝘲𝘶𝘦𝘥𝘢 "${query}" 𝘯𝘰 𝘦𝘯𝘤𝘰𝘯𝘵𝘳𝘢𝘥𝘢`
 		let media = []
 		for (let x = 0; x < res.urls.length; x++) media.push(await pixiv.download(new URL(res.urls[x].original)))
 		return {
