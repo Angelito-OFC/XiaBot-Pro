@@ -16,7 +16,7 @@ ${v.content}${v.attachments.length > 0 ? `\n𝙐𝙧𝙡: ${v.attachments.join('
 	} else {
 		let answer = await (await fetch(API('violetics', '/api/media/brainly', { query: text }, 'apikey'))).json()
 		answer = answer.result
-		if (!answer.length) throw 'no encontró'
+		if (!answer.length) throw '❱❱ 𝙄 𝙉 𝙁 𝙊 𝙍 𝙈 𝘼 𝘾 𝙄 𝙊 𝙉 ❰❰\n\n🔮 𝘕𝘰 𝘴𝘦 𝘦𝘯𝘤𝘰𝘯𝘵𝘳𝘢𝘳𝘰𝘯 𝘳𝘦𝘴𝘶𝘭𝘵𝘢𝘥𝘰𝘴'
 		for (let x = 0; x < answer.length; x++) {
 			await m.reply(`*${answer[x].pertanyaan}*\n_${answer[x].source}_\n${answer[x].jawaban}`)
 			await baileys.delay(2000)
