@@ -10,7 +10,7 @@ let handler = async (m, { conn, text }) => {
 	if (res) {
 		let answer = res.map(({ question, answers }, i) => `
 *Pregunta*${question.grade ? ` (${question.grade})` : ''}\n${question.content}${answers.map((v, i) => `
-*Jawaban Ke ${i + 1}*${v.verification ? ' (Verified)' : ''}${v.isBest ? ' (Best)' : ''}
+*Respuesta para ${i + 1}*${v.verification ? ' (Verified)' : ''}${v.isBest ? ' (Best)' : ''}
 ${v.content}${v.attachments.length > 0 ? `\n*Media Url*: ${v.attachments.join(', ')}` : ''}`).join``}`).join('\n' + '-'.repeat(45))
 		m.reply(answer.trim())
 	} else {
