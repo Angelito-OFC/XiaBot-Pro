@@ -1,89 +1,46 @@
-/*
-ð™†ð™®ð™¯ð™ð™®ð™¯ð™¯ ð™“ð˜¿ 
-ð˜¸ð˜¢: wa.me/6287815560235
-ð˜µð˜¦ð˜­ð˜¦: t.me/kyzoffc
-ð˜¸ð˜¦ð˜£: s.id/kyzzxd
-ðŸš¨Di Larang Menghapus Wm IniðŸš¨
-*/
+import fg from 'api-dylux'
+import { tiktokdl } from '@bochilteam/scraper'
 
-import axios from 'axios'
+var handler = async (m, { conn, text, args, usedPrefix, command}) => {
 
-let handler = async (m, {
-    conn,
-    args,
-    usedPrefix,
-    text,
-    command
-}) => {
-    let input = `[â—] *Masukan Salah*
-	
-Contoh : ${usedPrefix + command} https://vt.tiktok.com/ZSFSqcuXb/`
-    if (!text) return m.reply(input)
-    conn.sendMessage(m.chat, {
-        react: {
-            text: 'â±ï¸',
-            key: m.key
-        }
-    })
-    try {
-        const data = await tiktok(text)
-        let stats = data.stats
-        if (data.video) {
-            let cap = `${data.title}
+if (!args[0]) throw `*⚠️ 𝙸𝙽𝙶𝚁𝙴𝚂𝙴 𝚄𝙽 𝙻𝙸𝙽𝙺 𝙳𝙴 𝚃𝙸𝙺𝚃𝙾𝙺*\n\n❕ 𝙴𝙹𝙴𝙼𝙿𝙻𝙾:\n${usedPrefix + command} https://vm.tiktok.com/ZMjbonqPu/`
+if (!args[0].match(/tiktok/gi)) throw `*⚠️ 𝚅𝙴𝚁𝙸𝙵𝙸𝚀𝚄𝙴 𝚀𝚄𝙴 𝙴𝙻 𝙻𝙸𝙽𝙺 𝚂𝙴𝙰 𝙲𝙾𝚁𝚁𝙴𝚃𝙾*`
 
-â¤: ${stats.likeCount}
-ðŸ”: ${stats.shareCount}
-â–¶ï¸: ${stats.playCount}
-ðŸ’¬: ${stats.commentCount}
-ðŸ“©: ${stats.saveCount}`
-            conn.sendFile(m.chat, data.video.noWatermark, '', cap, m)
-            await conn.sendMessage(m.chat, {
-                react: {
-                    text: 'âœ…',
-                    key: m.key
-                }
-            })
-        } else if (data.images) {
-            let caption = `${data.title}
+//m.react('❗')
 
-â¤: ${stats.likeCount}
-ðŸ”: ${stats.shareCount}
-â–¶ï¸: ${stats.playCount}
-ðŸ’¬: ${stats.commentCount}
-ðŸ“©: ${stats.saveCount}`
-            for (let result of data.images) {
-                conn.sendMessage(m.sender, {
-                    image: {
-                        url: result.url
-                    },
-                    caption: caption
-                }, {
-                    quoted: m
-                })
-            }
-            conn.sendMessage(m.chat, {
-                react: {
-                    text: 'âœ…',
-                    key: m.key
-                }
-            })
-        }
-    } catch (e) {
-        throw eror
-    }
+const { key } = await conn.sendMessage(m.chat, {text: `${wait}`}, {quoted: m})
+await delay(1000 * 1)
+await conn.sendMessage(m.chat, {text: `${waitt}`, edit: key})
+await delay(1000 * 1);
+await conn.sendMessage(m.chat, {text: `${waittt}`, edit: key})
+await delay(1000 * 1)
+await conn.sendMessage(m.chat, {text: `${waitttt}`, edit: key})
+
+try {
+let p = await fg.tiktok(args[0])
+let te = `𝆺𝅥𝅮 🔥 *𝙽𝙾𝙼𝙱𝚁𝙴:* ${p.nickname}
+ 𝆺𝅥𝅮 👤 *𝚄𝚂𝚄𝙰𝚁𝙸𝙾:* ${p.unique_id}
+𝆺𝅥𝅮 ⏰ *𝙳𝚄𝚁𝙰𝙲𝙸𝙾𝙽:* ${p.duration}
+𝆺𝅥𝅮 📄 *𝙳𝙴𝚂𝙲𝚁𝙸𝙲𝙸𝙾𝙽:* ${p.description}`
+conn.sendFile(m.chat, p.play, 'tiktok.mp4', te, m)
+//m.react('⚠️')
+} catch {
+try {
+const { author: { nickname }, video, description } = await tiktokdl(args[0])
+const url = video.no_watermark2 || video.no_watermark || 'https://tikcdn.net' + video.no_watermark_raw || video.no_watermark_hd
+if (!url) throw '*⚠️ ERROR AL DESACARGAR EL VÍDEO*'
+conn.sendFile(m.chat, url, 'fb.mp4', `• 🧃 *Nombre:* ${nickname}\n• 📄 *Descripción:* ${description}`, m)
+m.react(done)
+} catch {
+m.reply(`*⚠️ ERROR AL DESCARGAR EL VÍDEO*`)
+}}
+
 }
-
-handler.help = ['tiktok <link>']
-handler.tags = ['downloader']
-handler.command = /^(tiktok|tt|ttdl)$/i
-handler.limit = true
-handler.register = true
+handler.help = ['tiktok']
+handler.tags = ['descargas']
+handler.command = /^(tiktok|tt|ttdl|tiktokdl|tiktoknowm)$/i
+handler.diamond = true
 
 export default handler
 
-async function tiktok(url) {
-    const ngaji = await axios.get('https://api.tiklydown.eu.org/api/download?url=' +
-        encodeURIComponent(url)
-    )
-    return ngaji.data
-}
+const delay = (ms) => new Promise((resolve) => setTimeout(resolve, ms))
