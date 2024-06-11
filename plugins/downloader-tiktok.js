@@ -5,7 +5,7 @@ import { tiktok } from "@xct007/frieren-scraper";
 let generateWAMessageFromContent = (await import(global.baileys)).default
 import { tiktokdl } from '@bochilteam/scraper'
 let handler = async (m, { conn, text, args, usedPrefix, command}) => {
-if (!text) return conn.reply(m.chat, `${lenguajeGB['smsAvisoMG']()}${mid.smsTikTok2}\n*${usedPrefix + command} https://vm.tiktok.com/ZM6n8r8Dk/*`, fkontak,  m)
+if (!text) return conn.reply(m.chat, `❱❱ 𝙄 𝙉 𝙁 𝙊 𝙍 𝙈 𝘼 𝘾 𝙄 𝙊 𝙉 ❰❰\n\n🔮 𝘋𝘦𝘣𝘦 𝘪𝘯𝘨𝘳𝘦𝘴𝘢𝘳 𝘶𝘯 𝘦𝘯𝘭𝘢𝘤𝘦 𝘷𝘢𝘭𝘪𝘥𝘰 𝘥𝘦 𝘵𝘪𝘬𝘵𝘰𝘬 𝘱𝘢𝘳𝘢 𝘭𝘢 𝘥𝘦𝘴𝘤𝘢𝘳𝘨𝘢 𝘥𝘦𝘭 𝘷𝘪𝘥𝘦𝘰\n𝘌𝘫𝘦𝘮𝘱𝘭𝘰: .𝘵𝘪𝘬𝘵𝘰𝘬 <𝘭𝘪𝘯𝘬>`, fkontak,  m)
 if (!/(?:https:?\/{2})?(?:w{3}|vm|vt|t)?\.?tiktok.com\/([^\s&]+)/gi.test(text)) return conn.reply(m.chat, `${lenguajeGB['smsAvisoFG']()}${mid.smsTikTok3}`, fkontak,  m)  
 await conn.reply(m.chat, `${lenguajeGB['smsAvisoEG']()}${mid.smsTikTok4}`, fkontak,  m) 
 try {
