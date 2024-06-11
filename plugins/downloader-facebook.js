@@ -1,70 +1,72 @@
-importar axios desde 'axios';
-importar buscar desde 'nodo-fetch';
+// support me on https://trakteer.id/xnuvers007 or https://tr.deployers.repl.co/images
 
-controlador var = asíncrono (m, {argumentos}) => {
-    si (!args[0]) {
-        throw 'Ingresar URL\nEj: .fb https://www.facebook.com/groups/175204112986693/permalink/1621191825054574/?mibextid=Nif5oz';
+import axios from 'axios';
+import fetch from 'node-fetch';
+
+var handler = async (m, { args }) => {
+    if (!args[0]) {
+        throw 'Input URL\nEx: .fb https://www.facebook.com/groups/175204112986693/permalink/1621191825054574/?mibextid=Nif5oz';
     }
     
-    intentar {
-        URL constante = argumentos[0];
-        lista de encabezados constante = {
-            "Aceptar": "*/*",
-            "Agente de usuario": "Cliente Thunder (https://www.thunderclient.com)"
+    try {
+        const url = args[0];
+        const headersList = {
+            "Accept": "*/*",
+            "User-Agent": "Thunder Client (https://www.thunderclient.com)"
         };
 
-        opcionesreq constantes = {
-            URL: `https://tr.deployers.repl.co/fb?u=${url}`,
-            método: "OBTENER",
-            encabezados: lista de encabezados,
+        const reqOptions = {
+            url: `https://tr.deployers.repl.co/fb?u=${url}`,
+            method: "GET",
+            headers: headersList,
         };
 
-        respuesta constante = esperar axios.request(reqOptions);
-        const firstUrls = respuesta.data.map(item => item.split(','));
+        const response = await axios.request(reqOptions);
+        const firstUrls = response.data.map(item => item.split(','));
 
-        const hdMedia = primeras URL[0][0];
-        const sdMedia = primeras URL [1] [0];
+        const hdMedia = firstUrls[0][0];
+        const sdMedia = firstUrls[1][0];
 
-        m.reply(`apoyame en https://trakteer.id/xnuvers007 \n https://tr.deployers.repl.co/images`);
+        m.reply(`support me on https://trakteer.id/xnuvers007 \n https://tr.deployers.repl.co/images`);
         
-        const hdCaption = `Video Kualitas HD\nEnlace HD: ${hdMedia}`;
-        const sdCaption = `Video Kualitas SD\nEnlace SD: ${sdMedia}`;
+        const hdCaption = `Video Kualitas HD\nLink HD: ${hdMedia}`;
+        const sdCaption = `Video Kualitas SD\nLink SD: ${sdMedia}`;
         
         m.reply('_Sedang diproses, mohon tunggu..._');
 
-        intentar {
-            // Enviar vídeo HD
-            const hdFile = esperar a buscar (hdMedia);
+        try {
+            // Send HD video
+            const hdFile = await fetch(hdMedia);
             conn.sendFile(m.chat, await hdFile.buffer(), 'video_hd.mp4', hdCaption, m);
 
-            intentar {
-                //Envía vídeo SD
-                const sdFile = esperar a buscar (sdMedia);
+            try {
+                // Send SD video
+                const sdFile = await fetch(sdMedia);
                 conn.sendFile(m.chat, await sdFile.buffer(), 'video_sd.mp4', sdCaption, m);
-            } atrapar {
-                // Si falla el envío de vídeo SD, no es necesario realizar ninguna otra acción
+            } catch {
+                // If SD video sending fails, no further action needed
             }
-        } atrapar {
-            intentar {
-                //Envía vídeo SD
-                const sdFile = esperar a buscar (sdMedia);
+        } catch {
+            try {
+                // Send SD video
+                const sdFile = await fetch(sdMedia);
                 conn.sendFile(m.chat, await sdFile.buffer(), 'video_sd.mp4', sdCaption, m);
-            } atrapar {
-                // Si no existen videos HD y SD, envía un mensaje de error
+            } catch {
+                // If both HD and SD videos don't exist, send an error message
                 const cap = 'Gagal mengunduh video FB';
                 conn.sendFile(m.chat, 'facebook.mp4', 'facebook.mp4', cap, m);
             }
         }
-    } atrapar {
+    } catch {
         // Jika terjadi kesalahan pada tahap lainnya, kirim pesan kesalahan
         const cap = 'Gagal mengunduh video FB';
         conn.sendFile(m.chat, 'facebook.mp4', 'facebook.mp4', cap, m);
     }
 };
 
-// Configuración bantuan dan tag
+// Konfigurasi bantuan dan tag
 handler.help = ['fbdownload <url>'];
-handler.tags = ['descargador'];
+handler.tags = ['downloader'];
 handler.command = /^(fbdownload|fb(dl)?)$/i;
 
-exportar el controlador predeterminado;
+export default handler;
