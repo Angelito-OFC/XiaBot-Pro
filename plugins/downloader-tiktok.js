@@ -7,7 +7,7 @@ import { tiktokdl } from '@bochilteam/scraper'
 let handler = async (m, { conn, text, args, usedPrefix, command}) => {
 if (!text) return conn.reply(m.chat, `❱❱ 𝙄 𝙉 𝙁 𝙊 𝙍 𝙈 𝘼 𝘾 𝙄 𝙊 𝙉 ❰❰\n\n🔮 𝘋𝘦𝘣𝘦 𝘪𝘯𝘨𝘳𝘦𝘴𝘢𝘳 𝘶𝘯 𝘦𝘯𝘭𝘢𝘤𝘦 𝘷𝘢𝘭𝘪𝘥𝘰 𝘥𝘦 𝘵𝘪𝘬𝘵𝘰𝘬 𝘱𝘢𝘳𝘢 𝘭𝘢 𝘥𝘦𝘴𝘤𝘢𝘳𝘨𝘢 𝘥𝘦𝘭 𝘷𝘪𝘥𝘦𝘰\n𝘌𝘫𝘦𝘮𝘱𝘭𝘰: .𝘵𝘪𝘬𝘵𝘰𝘬 <𝘭𝘪𝘯𝘬>`, fkontak,  m)
 if (!/(?:https:?\/{2})?(?:w{3}|vm|vt|t)?\.?tiktok.com\/([^\s&]+)/gi.test(text)) return conn.reply(m.chat, `❱❱ 𝙄 𝙉 𝙁 𝙊 𝙍 𝙈 𝘼 𝘾 𝙄 𝙊 𝙉 ❰❰\n\n🔮 𝘖𝘤𝘶𝘳𝘳𝘪𝘰 𝘶𝘯 𝘦𝘳𝘳𝘰𝘳 𝘪𝘯𝘦𝘴𝘱𝘦𝘳𝘢𝘥𝘰 𝘪𝘯𝘵𝘦𝘯𝘵𝘢𝘭𝘰 𝘯𝘶𝘦𝘷𝘢𝘮𝘦𝘯𝘵𝘦\n𝘌𝘫𝘦𝘮𝘱𝘭𝘰: .𝘵𝘪𝘬𝘵𝘰𝘬 <𝘭𝘪𝘯𝘬>`, fkontak,  m)  
-await conn.reply(m.chat, `${lenguajeGB['smsAvisoEG']()}${mid.smsTikTok4}`, fkontak,  m) 
+await conn.reply(m.chat, `❱❱ 𝙄 𝙉 𝙁 𝙊 𝙍 𝙈 𝘼 𝘾 𝙄 𝙊 𝙉 ❰❰\n\n🔮 𝘌𝘹𝘪𝘵𝘰𝘴𝘰 𝘦𝘯 𝘶𝘯 𝘮𝘰𝘮𝘦𝘯𝘵𝘰 𝘳𝘦𝘤𝘪𝘣𝘪𝘳𝘢 𝘦𝘭 𝘷𝘪𝘥𝘦𝘰`, fkontak,  m) 
 try {
 const dataF = await tiktok.v1(args[0])
 conn.sendFile(m.chat, dataF.play, 'tiktok.mp4', `⛱️ ${mid.user}\n*${nickname}*\n${description ? '\n⛱️ ${mid.smsYT14}\n*${description}*' : ''}\n${wm}`.trim(), m) 
@@ -24,7 +24,7 @@ try {
 const { author: { nickname }, video, description } = await tiktokdl(args[0])
 const url = video.no_watermark2 || video.no_watermark || 'https://tikcdn.net' + video.no_watermark_raw || video.no_watermark_hd
 conn.sendFile(m.chat, url, 'tiktok.mp4', `⛱️ ${mid.user}\n*${nickname}*\n${description ? `\n⛱️ ${mid.smsYT14}\n*${description}*` : ''}\n${wm}`.trim(), m)
-handler.limit = 2
+handler.limit = 1
 } catch (e) {
 await conn.reply(m.chat, `${lenguajeGB['smsMalError3']()}#report ${lenguajeGB['smsMensError2']()} ${usedPrefix + command}\n\n${wm}`, fkontak, m)
 console.log(`❗❗ ${lenguajeGB['smsMensError2']()} ${usedPrefix + command} ❗❗`)
