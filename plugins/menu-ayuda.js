@@ -15,11 +15,11 @@ let msg = generateWAMessageFromContent(m.chat, {
             text: ""
           }),
           footer: proto.Message.InteractiveMessage.Footer.create({
-            text: ""
+            text: "hola"
           }),
           header: proto.Message.InteractiveMessage.Header.create({
             title: "🔮 𝙃𝙤𝙡𝙖 𝙨𝙤𝙮 𝙓𝙞𝙖𝘽𝙤𝙩-𝙋𝙧𝙤",
-            subtitle: "hola",
+            subtitle: "",
             hasMediaAttachment: false
           }),
           nativeFlowMessage: proto.Message.InteractiveMessage.NativeFlowMessage.create({
