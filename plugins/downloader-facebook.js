@@ -1,5 +1,3 @@
-// apóyame en https://trakteer.id/xnuvers007 o https://tr.deployers.repl.co/images
-
 importar axios desde 'axios';
 importar buscar desde 'nodo-fetch';
 
