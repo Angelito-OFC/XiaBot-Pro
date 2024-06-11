@@ -387,7 +387,7 @@ para desactivar usa .disable_
       if (!/[01]/.test(command)) return await conn.sendMessage(m.chat, {text: optionsFull}, {quoted: fkontak});
       throw false;
   }
-  conn.sendMessage(m.chat, {text: `❱❱ 𝙁𝙐𝙉𝘾𝙄𝙊𝙉𝙀𝙎 𝙓𝙄𝘼 ❰❰\n\n» 𝙊𝙋𝘾𝙄𝙊𝙉 | ${type}\n» 𝙀𝙎𝙏𝘼𝘿𝙊 | ${isEnable ? '𝘈𝘊𝘛𝘐𝘝𝘈𝘋𝘖' : '𝘋𝘌𝘚𝘈𝘊𝘛𝘐𝘝𝘈𝘋𝘖'}\n» 𝙋𝘼𝙍𝘼 | ${isAll ? '𝘌𝘚𝘛𝘌 𝘊𝘏𝘈𝘛' : isUser ? '' : '𝘌𝘚𝘛𝘌 𝘊𝘏𝘈𝘛'}`}, {quoted: m});
+  conn.sendMessage(m.chat, {text: `❱❱ 𝙁𝙐𝙉𝘾𝙄𝙊𝙉𝙀𝙎 𝙓𝙄𝘼 ❰❰\n\n» 𝙊𝙋𝘾𝙄𝙊𝙉 | ${type}\n» 𝙀𝙎𝙏𝘼𝘿𝙊 | ${isEnable ? '𝘈𝘊𝘛𝘐𝘝𝘈𝘋𝘖' : '𝘋𝘌𝘚𝘈𝘊𝘛𝘐𝘝𝘈𝘋𝘖'}\n» 𝙋𝘼𝙍𝘼 | ${isAll ? '𝘌𝘚𝘛𝘌 𝘊𝘏𝘈𝘛' : isUser ? '' : '𝘌𝘚𝘛𝘌 𝘊𝘏𝘈𝘛'}`}, {quoted: fkontak});
 };
 handler.help = ['en', 'dis'].map((v) => v + 'able <option>');
 handler.tags = ['group', 'owner'];
