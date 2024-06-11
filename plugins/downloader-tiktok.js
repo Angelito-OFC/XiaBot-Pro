@@ -1,46 +1,47 @@
-import fg from 'api-dylux'
-import { tiktokdl } from '@bochilteam/scraper'
-
-var handler = async (m, { conn, text, args, usedPrefix, command}) => {
-
-if (!args[0]) throw `*⚠️ 𝙸𝙽𝙶𝚁𝙴𝚂𝙴 𝚄𝙽 𝙻𝙸𝙽𝙺 𝙳𝙴 𝚃𝙸𝙺𝚃𝙾𝙺*\n\n❕ 𝙴𝙹𝙴𝙼𝙿𝙻𝙾:\n${usedPrefix + command} https://vm.tiktok.com/ZMjbonqPu/`
-if (!args[0].match(/tiktok/gi)) throw `*⚠️ 𝚅𝙴𝚁𝙸𝙵𝙸𝚀𝚄𝙴 𝚀𝚄𝙴 𝙴𝙻 𝙻𝙸𝙽𝙺 𝚂𝙴𝙰 𝙲𝙾𝚁𝚁𝙴𝚃𝙾*`
-
-//m.react('❗')
-
-const { key } = await conn.sendMessage(m.chat, {text: `${wait}`}, {quoted: m})
-await delay(1000 * 1)
-await conn.sendMessage(m.chat, {text: `${waitt}`, edit: key})
-await delay(1000 * 1);
-await conn.sendMessage(m.chat, {text: `${waittt}`, edit: key})
-await delay(1000 * 1)
-await conn.sendMessage(m.chat, {text: `${waitttt}`, edit: key})
-
+import fetch from 'node-fetch'
+import { generateWAMessageFromContent } from '@adiwajshing/baileys'
+import { tiktokdl, tiktokdlv2 } from '@bochilteam/scraper'
+let handler = async (m, { conn, text, usedPrefix, command, args }) => {
+if (!text) throw `*[❗𝐈𝐍𝐅𝐎❗] 𝙴𝙽𝙻𝙰𝙲𝙴 𝙳𝙴 𝚃𝙸𝙺𝚃𝙾𝙺 𝙵𝙰𝙻𝚃𝙰𝙽𝚃𝙴, 𝙿𝙾𝚁 𝙵𝙰𝚅𝙾𝚁 𝙸𝙽𝙶𝚁𝙴𝚂𝙴 𝙴𝙽 𝙴𝙽𝙻𝙰𝙲𝙴/𝙻𝙸𝙽𝙺 𝙳𝙴 𝙰𝙻𝙶𝚄𝙽 𝚅𝙸𝙳𝙴𝙾 𝙳𝙴 𝚃𝙸𝙺𝚃𝙾𝙺*\n\n*—◉ 𝙴𝙹𝙴𝙼𝙿𝙻𝙾:*\n*${usedPrefix + command} https://vm.tiktok.com/ZML42vSnn/*`
+if (!/(?:https:?\/{2})?(?:w{3}|vm|vt|t)?\.?tiktok.com\/([^\s&]+)/gi.test(text)) throw `*[❗𝐈𝐍𝐅𝐎❗] 𝙴𝙽𝙻𝙰𝙲𝙴 𝙳𝙴 𝚃𝙸𝙺𝚃𝙾𝙺 𝙸𝙽𝙲𝙾𝚁𝚁𝙴𝙲𝚃𝙾, 𝙿𝙾𝚁 𝙵𝙰𝚅𝙾𝚁 𝙸𝙽𝙶𝚁𝙴𝚂𝙴 𝙴𝙽 𝙴𝙽𝙻𝙰𝙲𝙴/𝙻𝙸𝙽𝙺 𝙳𝙴 𝙰𝙻𝙶𝚄𝙽 𝚅𝙸𝙳𝙴𝙾 𝙳𝙴 𝚃𝙸𝙺𝚃𝙾𝙺*\n\n*—◉ 𝙴𝙹𝙴𝙼𝙿𝙻𝙾:*\n*${usedPrefix + command} https://vm.tiktok.com/ZML42vSnn/*`
+let texto = `
+╭─────────────┈⊷
+│◦➛☘️✨𝐌𝐈𝐊𝐔_𝐁𝐎𝐓💫
+╰┬────────────┈⊷
+┌┤📚𝚃𝙸𝙺𝚃𝙾𝙺🌱
+│◦➛📔ᩭ✎@${m.sender.split`@`[0]}
+│◦➛⌛ᩭ✎𝙰𝙶𝚄𝙰𝚁𝙳𝙴 𝚄𝙽 𝙼𝙾𝙼𝙴𝙽𝚃𝙾 𝙴𝙽 𝙻𝙾 𝚀𝚄𝙴 𝙴𝙽𝚅𝙸𝙾 𝚂𝚄 𝚅𝙸𝙳𝙴𝙾 𝙳𝙴 𝚃𝙸𝙺𝚃𝙾𝙺
+│◦➛🌱𝐎𝐅𝐂 𝐘𝐎𝐕𝐀𝐍𝐈☘️ 
+╰────────────┈⊷`
 try {
-let p = await fg.tiktok(args[0])
-let te = `𝆺𝅥𝅮 🔥 *𝙽𝙾𝙼𝙱𝚁𝙴:* ${p.nickname}
- 𝆺𝅥𝅮 👤 *𝚄𝚂𝚄𝙰𝚁𝙸𝙾:* ${p.unique_id}
-𝆺𝅥𝅮 ⏰ *𝙳𝚄𝚁𝙰𝙲𝙸𝙾𝙽:* ${p.duration}
-𝆺𝅥𝅮 📄 *𝙳𝙴𝚂𝙲𝚁𝙸𝙲𝙸𝙾𝙽:* ${p.description}`
-conn.sendFile(m.chat, p.play, 'tiktok.mp4', te, m)
-//m.react('⚠️')
+let prep = generateWAMessageFromContent(m.chat, { extendedTextMessage: { text: texto, contextInfo: { externalAdReply: { title: '📚𝐌𝐈𝐊𝐔_𝐁𝐎𝐓🌱', body: null, thumbnail: imagen1, sourceUrl: 'https://github.com/Yovanihades1212/MIKU_BOT.git' }, mentionedJid: [m.sender] }}}, { quoted: m })
+let url = (await fetch(text)).url
+let res = await (await fetch(`https://api2.musical.ly/aweme/v1/aweme/detail/?aweme_id=${url.split('?')[0].split('/')[5]}`)).json()
+let data = res.aweme_detail.video.play_addr.url_list
+let meta = await getInfo(url).catch(_ => {})
+await conn.relayMessage(m.chat, prep.message, { messageId: prep.key.id, mentions: [m.sender] })
+let buttons = [{ buttonText: { displayText: '𝙰𝚄𝙳𝙸𝙾' }, buttonId: `${usedPrefix}mp3` }]
+conn.sendMessage(m.chat, { video: { url: data[data.length - 1] }, caption: '📚𝐌𝐈𝐊𝐔_𝐁𝐎𝐓🌱', footer: await shortUrl(data[data.length - 1]), buttons }, { quoted: m })
 } catch {
 try {
-const { author: { nickname }, video, description } = await tiktokdl(args[0])
-const url = video.no_watermark2 || video.no_watermark || 'https://tikcdn.net' + video.no_watermark_raw || video.no_watermark_hd
-if (!url) throw '*⚠️ ERROR AL DESACARGAR EL VÍDEO*'
-conn.sendFile(m.chat, url, 'fb.mp4', `• 🧃 *Nombre:* ${nickname}\n• 📄 *Descripción:* ${description}`, m)
-m.react(done)
+let prep = generateWAMessageFromContent(m.chat, { extendedTextMessage: { text: texto, contextInfo: { externalAdReply: { title: '📚𝐌𝐈𝐊𝐔_𝐁𝐎𝐓🌱', body: null, thumbnail: imagen1, sourceUrl: 'https://github.com/Yovanihades1212/MIKU_BOT.git' }, mentionedJid: [m.sender] }}}, { quoted: m })
+const { author: { nickname }, video, description } = await tiktokdl(args[0]).catch(async _ => await tiktokdlv2(args[0]))
+const url = video.no_watermark_raw || video.no_watermark || video.no_watermark_hd || video.with_watermark
+await conn.relayMessage(m.chat, prep.message, { messageId: prep.key.id, mentions: [m.sender] })
+let buttons = [{ buttonText: { displayText: '𝙰𝚄𝙳𝙸𝙾' }, buttonId: `${usedPrefix}mp3` }]
+conn.sendMessage(m.chat, { video: { url: url}, caption: '📚𝐌𝐈𝐊𝐔_𝐁𝐎𝐓🌱', footer: await shortUrl(url), buttons }, { quoted: m })
 } catch {
-m.reply(`*⚠️ ERROR AL DESCARGAR EL VÍDEO*`)
-}}
-
-}
+await m.reply('*[❗𝐈𝐍𝐅𝐎❗] 𝙻𝙾 𝙻𝙰𝙼𝙴𝙽𝚃𝙾, 𝙾𝙲𝚄𝚁𝚁𝙸𝙾 𝚄𝙽 𝙴𝚁𝚁𝙾𝚁 𝙰𝙻 𝙳𝙴𝚂𝙲𝙰𝚁𝙶𝙰𝚁 𝚂𝚄 𝚅𝙸𝙳𝙴𝙾, 𝙿𝙾𝚁 𝙵𝙰𝚅𝙾𝚁 𝚅𝚄𝙴𝙻𝚅𝙰 𝙰 𝙸𝙽𝚃𝙴𝙽𝚃𝙰𝚁𝙻𝙾*')  
+}}}
 handler.help = ['tiktok']
-handler.tags = ['descargas']
-handler.command = /^(tiktok|tt|ttdl|tiktokdl|tiktoknowm)$/i
-handler.diamond = true
-
+handler.tags = ['downloader']
+handler.alias = ['tiktok', 'tikdl', 'tiktokdl', 'tiktoknowm']
+handler.command = /^(tt|tiktok)(dl|nowm)?$/i
 export default handler
 
-const delay = (ms) => new Promise((resolve) => setTimeout(resolve, ms))
+async function getInfo(url) {
+let id = url.split('?')[0].split('/')
+let res = await (await fetch(`https://www.tiktok.com/node/share/video/${id[3]}/${id[5]}/`)).json()
+return res?.seoProps?.metaParams}
+async function shortUrl(url) {
+return await (await fetch(`https://tinyurl.com/api-create.php?url=${url}`)).text()}
