@@ -94,7 +94,7 @@ termux-wake-lock && npm i -g pm2 && pm2 start index.js && pm2 save && pm2 logs
 > Copyright (c) 2024 **[Karim-off](https://github.com/Karim-off/LuckyBot-MD/blob/master/LICENSE)**.
 
 ### 🔮 DESARROLLADORES
-<a href="https://github.com/karim-off">
+<a href="https://github.com/karim-off/graphs">
 <img src="https://contrib.rocks/image?repo=GataNina-Li/GataBot-MD" /> 
 </a>
 
@@ -103,4 +103,16 @@ termux-wake-lock && npm i -g pm2 && pm2 start index.js && pm2 save && pm2 logs
 
 ### 🔮 CREADOR 
 [![GataNina-Li](https://github.com/karim-off.png?size=100)](https://github.com/Karim-off) 
+> Copyright (c) 2023 **[GataNina-Li](https://github.com/GataNina-Li/GataBot-MD/blob/master/LICENSE)**.
+
+### 🌟 DESARROLLADORES
+<a href="https://github.com/GataNina-Li/GataBot-MD/graphs/contributors">
+<img src="https://contrib.rocks/image?repo=GataNina-Li/GataBot-MD" /> 
+</a>
+
+### 🌟 AGRADECIMIENTOS
+[![TheShadowBrokers1](https://github.com/BrunoSobrino.png?size=60)](https://github.com/BrunoSobrino) 
+
+### 🌟 CREADORA 
+[![GataNina-Li](https://github.com/GataNina-Li.png?size=100)](https://github.com/GataNina-Li) 
 > Copyright (c) 2023 **[GataNina-Li](https://github.com/GataNina-Li/GataBot-MD/blob/master/LICENSE)**.
