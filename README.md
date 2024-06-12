@@ -3,9 +3,9 @@
 <img src="https://telegra.ph/file/39b0aa3fe324550a3000a.jpg" alt="XiaBot-MD" width="900"/>
 </p>
 
-####🔮𝗩𝗲𝗿𝘀𝗶𝗼𝗻 𝗗𝗲𝗹 𝗕𝗼𝘁: 3.3.0 
+#### Version De Xia: 3.3.0 
 
-####🔮𝗖𝗿𝗲𝗮𝗱𝗼𝗿: Angelito⚡
+#### Creador y Dueño: Angelito⚡
 
 
 ### CONTACTOS 💻
