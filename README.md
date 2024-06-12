@@ -101,6 +101,6 @@ termux-wake-lock && npm i -g pm2 && pm2 start index.js && pm2 save && pm2 logs
 ### 🔮 AGRADECIMIENTOS
 [![TheShadowBrokers1](https://github.com/BrunoSobrino.png?size=60)](https://github.com/BrunoSobrino) 
 
-### 🔮 CREADORA 
+### 🔮 CREADOR 
 [![GataNina-Li](https://github.com/karim-off.png?size=100)](https://github.com/Karim-off) 
 > Copyright (c) 2023 **[GataNina-Li](https://github.com/GataNina-Li/GataBot-MD/blob/master/LICENSE)**.
