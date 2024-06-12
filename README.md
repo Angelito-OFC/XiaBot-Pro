@@ -2,12 +2,10 @@
 
 >● 🔮𝗖𝗿𝗲𝗮𝗱𝗼𝗿: 𝙺𝙰𝚁𝙸𝙼-𝙾𝙵𝙵⚡
 
-### 🔮𝙓𝙞𝙖𝘽𝙤𝙩-𝙈𝘿 
+### 🔮 XIA BOT-MD 🔮
 <p align="center">
 <img src="https://telegra.ph/file/39b0aa3fe324550a3000a.jpg" alt="XiaBot-MD" width="900"/>
 </p>
-
-### 🔮 XIA BOT-MD 🔮
 
 ### CONTACTOS 💻
 <p>
