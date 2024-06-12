@@ -70,6 +70,7 @@ termux-wake-lock && npm i -g pm2 && pm2 start index.js && pm2 save && pm2 logs
 <a href="https://whatsapp.com/channel/0029VaJxgcB0bIdvuOwKTM2Y" target="blank"><img src="https://img.shields.io/badge/CANAL_DE_BOT-25D366?style=for-the-badge&logo=whatsapp&logoColor=white" />
 
 ### USUARIOS AUTORIZADOS
+
 <details>
 <summary><b>¿Te gustaría ser un Distribuidores Autorizados o reseller de GataBot?</b></summary>
 
