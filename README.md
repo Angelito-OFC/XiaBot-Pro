@@ -53,7 +53,7 @@ npm start
 > **Note** Guardar los archivos en la ubicación: storage/downloads/RubyBot-MD-master/RubyBot-MD-master   
 ----
 ### 💟 USAR XIA 24/7 EN TERMUX 
-> Ejecutar estos comandos dentro de la carpeta RubyBot-MD
+> Ejecutar estos comandos dentro de la carpeta XiaBot-MD
 ```bash
 termux-wake-lock && npm i -g pm2 && pm2 start index.js && pm2 save && pm2 logs
 ```
