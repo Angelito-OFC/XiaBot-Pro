@@ -94,7 +94,7 @@ termux-wake-lock && npm i -g pm2 && pm2 start index.js && pm2 save && pm2 logs
 > Copyright (c) 2024 **[Karim-off](https://github.com/Karim-off/LuckyBot-MD/blob/master/LICENSE)**.
 
 ### 🔮 DESARROLLADORES
-<a href="https://github.com/GataNina-Li/GataBot-MD/graphs/contributors">
+<a href="https://github.com/karim-off/XiaBot-Pro/graphs/contributors">
 <img src="https://contrib.rocks/image?repo=GataNina-Li/GataBot-MD" /> 
 </a>
 
