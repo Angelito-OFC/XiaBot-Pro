@@ -69,6 +69,24 @@ termux-wake-lock && npm i -g pm2 && pm2 start index.js && pm2 save && pm2 logs
 ### 📄 CANAL DE WHATSAPP
 <a href="https://whatsapp.com/channel/0029VaJxgcB0bIdvuOwKTM2Y" target="blank"><img src="https://img.shields.io/badge/CANAL_DE_BOT-25D366?style=for-the-badge&logo=whatsapp&logoColor=white" />
 
+### USUARIOS AUTORIZADOS
+<details>
+<summary><b>¿Te gustaría ser un Distribuidores Autorizados o reseller de GataBot?</b></summary>
+
+- ¡Contáctanos **[correo electrónico](centergatabot@gmail.com)** o **[Telegram](https://t.me/SoporteGataBot)** para solicitar tu [**Licencia**](https://github.com/GataNina-Li/GataBot-MD/blob/master/terms.md)!
+</details>
+
+<details>
+<summary><b>¿Qué significa ser un Distribuidor Autorizado o reseller en GataBot?</b></summary>
+
+- Aquellos usuarios que adquieran la licencia de Distribuidores Autorizados o resellers obtienen el derecho legal de utilizar este repositorio para fines educativos, políticos o comerciales, sin poner en riesgo su reputación personal u organizacional.
+</details>
+
+<details>
+<summary><b>¿Dónde puedes solicitar la licencia para ser Distribuidor Autorizado o reseller de GataBot?</b></summary>
+
+  - Te ofrecemos opciones exclusivas: **[Instagram](https://www.instagram.com/gata_dios/)**, **[Telegram](https://t.me/SoporteGataBot)**, y **[correo electrónico](centergatabot@gmail.com)**.
+</details>
 
 
 ### 🔮 CREADOR 
