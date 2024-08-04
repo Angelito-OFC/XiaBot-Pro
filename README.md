@@ -7,6 +7,12 @@
 
 #### Creador y Dueño: Angelito⚡
 
+***
+
+> [!IMPORTANT]
+> **Si vas a instalar el Bot, te recomiendo usar otro número ya que no vas a poder ejecutar Comandos desde el número del Bot por la protección antes mencionado.**
+
+***
 
 ### CONTACTOS 💻
 <p>
