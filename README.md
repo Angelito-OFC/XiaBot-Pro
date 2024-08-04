@@ -9,7 +9,7 @@
 
 ***
 
-> [!IMPORTANT]
+> [!AVISO]
 > **Si vas a instalar el Bot, o extraerlo toma en cuenta que está totalmente prohibida su venta en cualquier sentido xfavor toma en cuenta y respeta el trabajo del creador.**
 
 ***
