@@ -10,7 +10,7 @@
 ***
 
 > [!IMPORTANT]
-> **Si vas a instalar el Bot, te recomiendo usar otro número ya que no vas a poder ejecutar Comandos desde el número del Bot por la protección antes mencionado.**
+> **Si vas a instalar el Bot, o extraerlo toma en cuenta que está totalmente prohibida su venta en cualquier sentido xfavor toma en cuenta y respeta el trabajo del creador.**
 
 ***
 
